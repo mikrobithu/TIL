@@ -1,0 +1,85 @@
+
+==== footnotes 
+
+[source,adoc]
+----
+# footnotes
+
+footnote:[]
+
+footnote:id[]
+
+# example
+Ported from upstreamsfootnote:[https://git.home.lan/app1],footnote:[https://git.home.lan/app2]
+----
+
+==== images
+[source,adoc]
+----
+
+image::sunset.jpg[alt text]
+
+.Title of image
+[#imgID link=https://home.lan/img1.jpg]
+image::img1.jpg[alt text,width,height]
+----
+
+==== syntac highlighting 
+
+[source,adoc]
+....
+[source, python]
+----
+print "Hello World"
+----
+....
+
+Enable line numbering
+
+[source,adoc]
+....
+[%linenums,shell]
+----
+puts 1
+puts 2
+puts 3
+----
+....
+
+link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md[Supported languages]:
+
+- asciidoc, adoc
+- awk, mawk, nawk, gawk
+- bash, sh, zsh (link:https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-highlighter/#shell-vs-console[shell-vs-console])
+- crmsh, crm, pcmk
+- curl
+- dns, zone, bind
+- dockerfile, docker
+- xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg
+- http, https
+- ini, toml
+- json
+- less
+- ldif
+- markdown, md, mkdown, mkd
+- nginx, nginxconf
+- plaintext, txt, text
+- pgsql, postgres, postgresql
+- python, py, gyp
+- rpm-specfile, rpm, spec, rpm-spec, specfile
+- shell, console (link:https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-highlighter/#shell-vs-console[shell-vs-console])
+- sql
+- terraform, tf, hcl
+- vim
+- yml, yaml
+- 
+
+[source,adoc]
+....
+==== title
+
+[source,adoc]
+----
+
+----
+....
