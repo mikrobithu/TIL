@@ -11,6 +11,10 @@ shortnames:
 
 [%linenums,shell]
 ----
+### Specify drives:
+- A range of drives (one to three): 1E:1:1-1E:1:3
+- Drives that are unassigned: allunassigned
+
 # Show - Controller Slot 1 Controller configuration basic
 ./ssacli ctrl slot=1 show config
 
@@ -69,10 +73,10 @@ shortnames:
 ./ssacli ctrl slot=1 ld 2 modify led=off
 
 # Led - Activate LED on physical drive
-ctrl slot=0 pd 1I:0:1 modify led=on
+./ssacli ctrl slot=0 pd 1I:0:1 modify led=on
 
 # Led - Deactivate LED on physical drive
-ctrl slot=0 pd 1I:0:1 modify led=off
+./ssacli ctrl slot=0 pd 1I:0:1 modify led=off
 
 # Show - Cache Ratio Status
 ./ssacli ctrl slot=1 modify cacheratio=?
@@ -116,6 +120,14 @@ ctrl slot=0 pd 1I:0:1 modify led=off
 # Modify - Set rebuildpriority to High
 ./ssacli ctrl slot=1 modify rebuildpriority=high
 
+
+# You can modify the HPE SDD Smart Path feature by disabling or enabling. To make clear what the HPE SDD Smart Path includes, here is a official statement by HPE: 
+# https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00044117en_us&docLocale=en_US
+“HP SmartCache feature is a controller-based read and write caching solution that caches the most frequently accessed data (“hot” data) onto lower latency SSDs to dynamically accelerate application workloads. This can be implemented on direct-attached storage and SAN storage.”
+
+For example, when running VMware vSAN SSD Smart Path must be disabled for better performance. In some cases worse the entire vSAN disk group fails.
+# https://kb.vmware.com/s/article/2092190
+
 # Note: This command requires the array naming type like A/B/C/D/E
 
 # Modify - Enable SSD Smart Path
@@ -129,6 +141,13 @@ ctrl slot=0 pd 1I:0:1 modify led=off
 
 # Delete - Logical Drive 2
 ./ssacli ctrl slot=1 ld 2 delete
+
+# ssd info
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 ssdpd all show detail
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 show ssdinfo
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 show ssdinfo detail
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 show ssdinfo summary
+
 
 # Erase physical drive with default erasepattern
 ./ssacli ctrl slot=1 pd 2I:1:1 modify erase
