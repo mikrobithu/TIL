@@ -10,6 +10,7 @@ shortnames:
 * licensekey = lk
 
 [%linenums,shell]
+----
 # Show - Controller Slot 1 Controller configuration basic
 ./ssacli ctrl slot=1 show config
 
@@ -149,3 +150,4 @@ ctrl slot=0 pd 1I:0:1 modify led=off
 
 # License key removal
 ./ssacli ctrl slot=5 lk XXXXXXXXXXXXXXXXXXXXXXXXX delete 
+----
