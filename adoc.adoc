@@ -89,7 +89,7 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 
 ==== convert asciidoc to markdown
 
-steps: asciidoc ---> XML ---> markdown
+steps: asciidoc -> XML -> markdown
 
 [source,bash]
 ----
