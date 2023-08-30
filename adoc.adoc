@@ -1,3 +1,4 @@
+:source-highlighter: rouge
 
 ==== footnotes 
 
@@ -28,6 +29,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:source-highlighter: rouge
 [source, python]
 ----
 print "Hello World"
