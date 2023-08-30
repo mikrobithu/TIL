@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[%linenums,bash]
 ....
 
 lsblk --json | jq -r
