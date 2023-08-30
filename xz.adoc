@@ -1,0 +1,9 @@
+[%linenums,shell]
+----
+xz foo
+xz -dk bar.xz
+xz -dcf a.txt b.txt.xz c.txt d.txt.lzma > abcd.txt
+xz --robot --list *.xz | awk '/^totals/{print $5-$4}'
+xz --lzma2=preset=1,dict=32MiB foo.tar
+xz -vv --lzma2=dict=192MiB big_foo.tar
+----
