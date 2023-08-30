@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ----
 find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 ----

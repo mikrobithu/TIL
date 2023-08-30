@@ -42,7 +42,7 @@ Enable line numbering
 
 [source,adoc]
 ....
-[%linenums,shell]
+[source,shell]
 ----
 puts 1
 puts 2

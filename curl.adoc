@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ....
 cat << EOF > curl-format.txt
 time_namelookup:  %{time_namelookup}s\n

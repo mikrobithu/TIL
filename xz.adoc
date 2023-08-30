@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ----
 xz foo
 xz -dk bar.xz

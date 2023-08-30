@@ -28,14 +28,14 @@ jq -r '.[]|keys'
 
 concat, append string to output
 
-[%linenums,shell]
+[source,shell]
 ----
 jq -r '.[].username+"@npsh.hu"'
 ----
 
 print multiple fields
 
-[%linenums,shell]
+[source,shell]
 ----
 jq -r '.[]|"\(.name) \(.id)"'
 

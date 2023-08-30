@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ----
 crm cluster run 'echo 1 > /sys/block/sdb/device/rescan'
 crm cluster run 'pvresize /dev/sdb'

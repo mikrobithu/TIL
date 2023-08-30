@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ....
 # remove all package that installed by pattern
 zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -F'|' '{print $2}' |xargs)

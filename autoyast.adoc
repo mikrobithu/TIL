@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ----
 #lint
 xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml

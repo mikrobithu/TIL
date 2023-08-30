@@ -1,6 +1,6 @@
 :source-highlighter: rouge
 
-[%linenums,shell]
+[source,shell]
 ----
 # list all pods and its nodes
 kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
