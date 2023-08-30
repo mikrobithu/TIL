@@ -1,7 +1,5 @@
 :source-highlighter: rouge
 
-:source-highlighter: rouge
-
 ==== footnotes 
 
 [source,adoc]
@@ -38,7 +36,7 @@ print "Hello World"
 ----
 ....
 
-Enable line numbering
+==== Enable line numbering
 
 [source,adoc]
 ....
@@ -89,7 +87,7 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 ....
 
 
-convert asciidoc to markdown
+==== convert asciidoc to markdown
 
 steps: asciidoc ---> XML ---> markdown
 
