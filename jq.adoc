@@ -1,7 +1,7 @@
 :source-highlighter: rouge
 
-[%linenums,bash]
-....
+[source,bash]
+----
 
 lsblk --json | jq -r
 lsblk --json -o name | jq -r '.blockdevices[]'
@@ -24,7 +24,7 @@ lsblk --json | python3 -c "import sys, json; print(json.load(sys.stdin)['blockde
 
 jq -r '.|keys'
 jq -r '.[]|keys'
-....
+----
 
 concat, append string to output
 
