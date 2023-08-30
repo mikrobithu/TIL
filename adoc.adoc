@@ -1,5 +1,7 @@
 :source-highlighter: rouge
 
+:source-highlighter: rouge
+
 ==== footnotes 
 
 [source,adoc]

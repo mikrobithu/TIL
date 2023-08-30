@@ -1,0 +1,25 @@
+:source-highlighter: rouge
+
+= Git
+
+== BASH functions
+
+[%linenums,shell]
+----
+cat << EOF >> ~/.bashrc
+function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
+function gignore() { curl -sL https://www.gitignore.io/api/$@ ;}
+function gistatus() { git status ;  }
+function gilog() { git log ;  }
+function gipush() { git push ;  }
+function gipull() { git pull ;  }
+function giaddall() { git add -A ;  }
+function giadd() { git add $1 ;  }
+function gicommitall() { git commit -m -a "$1" ;  }
+EOF
+source ~/.bashrc
+----
+
+== use github with multiple user
+
+

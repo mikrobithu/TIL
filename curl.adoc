@@ -1,3 +1,5 @@
+:source-highlighter: rouge
+
 [%linenums,shell]
 ....
 cat << EOF > curl-format.txt

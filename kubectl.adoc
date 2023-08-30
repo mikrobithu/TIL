@@ -1,0 +1,12 @@
+:source-highlighter: rouge
+
+[%linenums,shell]
+----
+# list all pods and its nodes
+kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
+kubectl get pod -o=custom-columns=NAME:.metadata.name,STATUS:.status.phase,NODE:.spec.nodeName --all-namespaces
+kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces
+kubectl get pod --all-namespaces -o json | jq '.items[] | .spec.nodeName + " " + .metadata.name + " " + .status.podIP'
+kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nodeName}{" "}{.metadata.namespace}{" "}{.metadata.name}{"\n"}{end}'
+----
+
