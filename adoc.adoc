@@ -94,6 +94,7 @@ convert asciidoc to markdown
 steps: asciidoc ---> XML ---> markdown
 
 [source,bash]
+----
 # single file
 asciidoc -b docbook README.adoc
 pandoc -f docbook -t markdown_strict file.xml -o README.md
