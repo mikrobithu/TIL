@@ -105,6 +105,6 @@ for i in *.adoc; do asciidoc -b docbook $i; done
 for i in *.xml; do pandoc -f docbook -t markdown_gfm $i -o $i.md; done
 
 podman run --rm -v $PWD:/documents/ --entrypoint '["/usr/bin/asciidoctor", "-w", "--trace", "-b", "docbook", "-t", "/documents/*.adoc"]' docker.io/asciidoctor/docker-asciidoctor
-for i in *.xml; do echo podman run --rm -v $PWD:/data  pandoc/core -f docbook -t markdown $i -o ${i%.*}.md ; done
+for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t markdown $i -o ${i%.*}.md ; done
 ----
 
