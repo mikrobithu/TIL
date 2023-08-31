@@ -1,0 +1,10 @@
+:source-highlighter: rouge
+
+[source,text]
+----
+# /etc/systemd/journald.conf
+# log messages received by the journal daemon shall be forwarded to a traditional syslog daemon
+# https://www.freedesktop.org/software/systemd/man/journald.conf.html#ForwardToSyslog=
+ForwardToSyslog=yes
+----
+
