@@ -15,4 +15,16 @@ EOF
 
 curl -w "@curl-format.txt" -o /dev/null -s "https://test.hu"
 
+
+# post json with variable substitution
+curl "http://localhost:8080" \
+-H "Accept: application/json" \
+-H "Content-Type:application/json" \
+--data @<(cat <<EOF
+{
+  "me": "$USER",
+  "something": $(date +%s)
+  }
+EOF
+)
 ....
