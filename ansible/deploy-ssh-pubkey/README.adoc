@@ -1,0 +1,8 @@
+:source-highlighter: rouge
+
+[source,shell]
+----
+
+ANSIBLE_HOST_KEY_CHECKING=false ansible-playbook -bK -i srv1,srv2, -e SSHUSER=username -e SSHPUBKEYPATH=/tmp/my_rsa.pub deploy-ssh-pub-keys.yaml
+
+----

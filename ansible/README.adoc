@@ -1,0 +1,23 @@
+:source-highlighter: rouge
+
+
+connection 
+[source,shell]
+----
+ansible -u <user> --ask-pass --ask-become-pass -i hosts.ini -bK -m ping all
+# passwordless root access
+ansible-playbook -u root -i hosts.ini site.yml
+# root access with password
+ansible-playbook -u <user> --ask-pass -i hosts.ini site.yml
+# passwordless <user> with sudo via ssh
+ansible-playbook -u <user> --ask-become-pass -i hosts.ini site.yml
+# <user> with sudo
+ansible-playbook -u <user> --ask-pass --ask-become-pass -i hosts.ini site.yml
+----
+
+deploy ssh pubkey
+
+[source,shell]
+----
+ANSIBLE_HOST_KEY_CHECKING=false ansible -i hosts all -u USERNAME --ask-pass -m authorized_key -a "user='tpapp' state='present' key='{{ lookup('file','/tmp/pubkeyfile')}}'" -CD
+----
