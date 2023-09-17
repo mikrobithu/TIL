@@ -30,8 +30,8 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
-# Title
 :source-highlighter: rouge
+
 [source, python]
 ----
 print "Hello World"
@@ -104,6 +104,10 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 
 ==== Table of Contents (TOC)
 
+[source,adoc]
+....
+:toc:
+....
 
 ==== convert asciidoc to markdown
 
