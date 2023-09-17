@@ -1,3 +1,4 @@
+:toc:
 :source-highlighter: rouge
 
 ==== footnotes 
@@ -29,6 +30,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+# Title
 :source-highlighter: rouge
 [source, python]
 ----
@@ -40,12 +42,25 @@ print "Hello World"
 
 [source,adoc]
 ....
-[source,shell]
+
+[%linenums,bash]
 ----
-puts 1
-puts 2
-puts 3
+echo "users"
+getent passwd
+echo "groups"
+getent 
 ----
+
+# or
+
+[,python,linenums]
+----
+echo "users"
+getent passwd
+echo "groups"
+getent 
+----
+
 ....
 
 link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md[Supported languages]:
@@ -85,6 +100,9 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 
 ----
 ....
+
+
+==== Table of Contents (TOC)
 
 
 ==== convert asciidoc to markdown
