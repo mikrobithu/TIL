@@ -1,8 +1,31 @@
+= kubectl
 :source-highlighter: rouge
+:toc:
 
+==== Merge multiple kubeconfig
 [source,shell]
 ----
-# list all pods and its nodes
+mkdir ~/.kube/conf.d
+cp cluster1-config ~/.kube/conf.d/
+cp cluster2-config ~/.kube/conf.d/
+cp cluster3-condig ~/.kube/conf.d/
+KUBECONFIG=$(find ~/.kube/conf.d/ -type f -printf "%p:" | sed 's/:$//g')
+echo $KUBECONFIG
+kubectl config view --flatten > ~/.kube/config
+----
+
+[source,console]
+----
+kubectl config get-clusters 
+NAME
+cluster1
+cluster2
+cluster3
+----
+
+====  list all pods and its nodes
+[source,shell]
+----
 kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
 kubectl get pod -o=custom-columns=NAME:.metadata.name,STATUS:.status.phase,NODE:.spec.nodeName --all-namespaces
 kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces
