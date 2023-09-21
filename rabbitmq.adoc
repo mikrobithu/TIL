@@ -1,4 +1,3 @@
-= Title
 :toc
 :source-highlighter: rouge
 
