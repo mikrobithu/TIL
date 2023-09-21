@@ -10,7 +10,7 @@ cp cluster1-config ~/.kube/conf.d/
 cp cluster2-config ~/.kube/conf.d/
 cp cluster3-condig ~/.kube/conf.d/
 # the contexts must be different!
-grep -rA1 contexts ~/.kube/conf.d/ | grep name:
+grep -rA5 context: ~/.kube/conf.d/ 
 KUBECONFIG=$(find ~/.kube/conf.d/ -type f -printf "%p:" | sed 's/:$//g')
 echo $KUBECONFIG
 kubectl config view --flatten > ~/.kube/config
