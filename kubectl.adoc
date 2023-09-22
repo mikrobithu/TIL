@@ -35,3 +35,11 @@ kubectl get pod --all-namespaces -o json | jq '.items[] | .spec.nodeName + " " +
 kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nodeName}{" "}{.metadata.namespace}{" "}{.metadata.name}{"\n"}{end}'
 ----
 
+=== List All Container Images Running in a Cluster
+[source,shell]
+----
+kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" |\
+tr -s '[[:space:]]' '\n' |\
+sort |\
+uniq -c
+----
