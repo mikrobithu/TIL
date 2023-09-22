@@ -11,10 +11,16 @@ cp cluster2-config ~/.kube/conf.d/
 cp cluster3-condig ~/.kube/conf.d/
 # the contexts must be different!
 grep -rA5 context: ~/.kube/conf.d/ 
-KUBECONFIG=$(find ~/.kube/conf.d/ -type f -printf "%p:" | sed 's/:$//g')
+KUBECONFIG=$(find ~/.kube/conf.d/  -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g')
 echo $KUBECONFIG
 kubectl config view --flatten > ~/.kube/config
 ----
+
+[source,shell]
+----
+KUBECONFIG=$(find ~/.kube/conf.d/oracle/ -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
+----
+
 
 [source,console]
 ----
