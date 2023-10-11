@@ -130,3 +130,5 @@ podman run --rm -v $PWD:/documents/ --entrypoint '["/usr/bin/asciidoctor", "-w",
 for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t markdown $i -o ${i%.*}.md ; done
 ----
 
+
+- https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
