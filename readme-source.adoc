@@ -40,8 +40,6 @@ include::adoc/rsyslog.adoc[adoc/rsyslog]
 
 include::adoc/salt.adoc[adoc/salt]
 
-include::adoc/template.adoc[adoc/template]
-
 include::adoc/xz.adoc[adoc/xz]
 
 include::adoc/zypper.adoc[adoc/zypper]
