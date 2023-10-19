@@ -1,11 +1,8 @@
 :source-highlighter: rouge
 :toc:
-:toc-placement!:
 
 
 Today in learned.
-
-toc::[]
 
 
 include::adoc/adoc.adoc[adoc/adoc]
@@ -41,6 +38,8 @@ include::adoc/rancher.adoc[adoc/rancher]
 include::adoc/rsyslog.adoc[adoc/rsyslog]
 
 include::adoc/salt.adoc[adoc/salt]
+
+include::adoc/template.adoc[adoc/template]
 
 include::adoc/xz.adoc[adoc/xz]
 
