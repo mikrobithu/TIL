@@ -2,7 +2,6 @@
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -706,7 +705,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -1410,7 +1408,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -2114,7 +2111,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -2818,7 +2814,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -3522,7 +3517,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -4226,7 +4220,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -4930,7 +4923,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -5634,7 +5626,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -6338,7 +6329,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -7042,7 +7032,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -7746,7 +7735,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -8450,7 +8438,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -9154,7 +9141,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -9858,7 +9844,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -10562,7 +10547,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -11266,7 +11250,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -11970,7 +11953,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -12674,7 +12656,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -13378,7 +13359,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -14082,7 +14062,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -14786,7 +14765,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -15490,7 +15468,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -16194,7 +16171,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -16898,7 +16874,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -17602,7 +17577,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -18306,7 +18280,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -19010,7 +18983,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -19714,7 +19686,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -20418,7 +20389,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -21122,7 +21092,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -21826,7 +21795,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -22530,7 +22498,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -23234,7 +23201,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -23938,7 +23904,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -24642,7 +24607,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -25346,7 +25310,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -26050,7 +26013,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -26754,7 +26716,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -27458,7 +27419,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -28162,7 +28122,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -28866,7 +28825,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -29570,7 +29528,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -30274,7 +30231,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -30978,7 +30934,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -31682,7 +31637,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -32386,7 +32340,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -33090,7 +33043,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -33794,7 +33746,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -34498,7 +34449,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -35202,7 +35152,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -35906,7 +35855,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -36610,7 +36558,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -37314,7 +37261,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -38018,7 +37964,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -38722,7 +38667,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -39426,7 +39370,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -40130,7 +40073,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -40834,7 +40776,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -41538,7 +41479,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -42242,7 +42182,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -42946,7 +42885,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -43650,7 +43588,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -44354,7 +44291,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
@@ -45058,7 +44994,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 

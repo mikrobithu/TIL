@@ -2,7 +2,6 @@
 :toc:
 :toc-placement!:
 
-== TIL
 
 Today in learned.
 
