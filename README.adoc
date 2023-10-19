@@ -3,7 +3,6 @@
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -704,7 +703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -1405,7 +1403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -2106,7 +2103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -2807,7 +2803,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -3508,7 +3503,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -4209,7 +4203,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -4910,7 +4903,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -5611,7 +5603,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -6312,7 +6303,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -7013,7 +7003,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -7714,7 +7703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -8415,7 +8403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -9116,7 +9103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -9817,7 +9803,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -10518,7 +10503,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -11219,7 +11203,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -11920,7 +11903,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -12621,7 +12603,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -13322,7 +13303,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -14023,7 +14003,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -14724,7 +14703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -15425,7 +15403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -16126,7 +16103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -16827,7 +16803,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -17528,7 +17503,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -18229,7 +18203,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -18930,7 +18903,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -19631,7 +19603,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -20332,7 +20303,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -21033,7 +21003,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -21734,7 +21703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -22435,7 +22403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -23136,7 +23103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -23837,7 +23803,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -24538,7 +24503,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -25239,7 +25203,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -25940,7 +25903,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -26641,7 +26603,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -27342,7 +27303,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -28043,7 +28003,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -28744,7 +28703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -29445,7 +29403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -30146,7 +30103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -30847,7 +30803,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -31548,7 +31503,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -32249,7 +32203,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -32950,7 +32903,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -33651,7 +33603,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -34352,7 +34303,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -35053,7 +35003,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -35754,7 +35703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -36455,7 +36403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -37156,7 +37103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -37857,7 +37803,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -38558,7 +38503,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -39259,7 +39203,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -39960,7 +39903,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -40661,7 +40603,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -41362,7 +41303,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -42063,7 +42003,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -42764,7 +42703,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -43465,7 +43403,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -44166,7 +44103,6 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 
@@ -44867,5 +44803,4 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:

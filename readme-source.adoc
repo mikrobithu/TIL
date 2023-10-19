@@ -3,7 +3,6 @@
 :source-highlighter: rouge
 
 Today in learned.
-
 :toc:
 
 include::adoc/adoc.adoc[adoc/adoc]
