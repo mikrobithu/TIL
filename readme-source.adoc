@@ -1,5 +1,5 @@
 
-= TIL
+=TIL
 :source-highlighter: rouge
 
 Today in learned.
@@ -46,5 +46,5 @@ include::adoc/xz.adoc[adoc/xz]
 
 include::adoc/zypper.adoc[adoc/zypper]
 
-
+include::readme-source.adoc[readme-source]
 
