@@ -1,12 +1,11 @@
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -39,6 +38,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -145,6 +145,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -156,6 +157,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -190,6 +192,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -201,6 +204,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -211,6 +215,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -238,6 +243,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -414,6 +420,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -424,6 +431,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -488,6 +496,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -560,6 +569,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -587,6 +597,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -600,6 +611,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -613,6 +625,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -625,6 +638,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -644,6 +658,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -659,6 +674,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -672,6 +688,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -686,6 +703,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -699,14 +717,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -739,6 +756,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -845,6 +863,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -856,6 +875,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -890,6 +910,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -901,6 +922,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -911,6 +933,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -938,6 +961,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -1114,6 +1138,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -1124,6 +1149,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -1188,6 +1214,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -1260,6 +1287,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -1287,6 +1315,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -1300,6 +1329,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -1313,6 +1343,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -1325,6 +1356,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -1344,6 +1376,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -1359,6 +1392,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -1372,6 +1406,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -1386,6 +1421,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -1399,14 +1435,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -1439,6 +1474,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -1545,6 +1581,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -1556,6 +1593,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -1590,6 +1628,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -1601,6 +1640,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -1611,6 +1651,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -1638,6 +1679,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -1814,6 +1856,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -1824,6 +1867,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -1888,6 +1932,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -1960,6 +2005,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -1987,6 +2033,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -2000,6 +2047,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -2013,6 +2061,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2025,6 +2074,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -2044,6 +2094,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -2059,6 +2110,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -2072,6 +2124,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2086,6 +2139,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -2099,14 +2153,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -2139,6 +2192,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -2245,6 +2299,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2256,6 +2311,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -2290,6 +2346,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -2301,6 +2358,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -2311,6 +2369,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -2338,6 +2397,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -2514,6 +2574,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -2524,6 +2585,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -2588,6 +2650,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -2660,6 +2723,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2687,6 +2751,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -2700,6 +2765,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -2713,6 +2779,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2725,6 +2792,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -2744,6 +2812,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -2759,6 +2828,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -2772,6 +2842,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2786,6 +2857,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -2799,14 +2871,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -2839,6 +2910,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -2945,6 +3017,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -2956,6 +3029,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -2990,6 +3064,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -3001,6 +3076,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -3011,6 +3087,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -3038,6 +3115,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -3214,6 +3292,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -3224,6 +3303,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -3288,6 +3368,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -3360,6 +3441,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -3387,6 +3469,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -3400,6 +3483,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -3413,6 +3497,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -3425,6 +3510,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -3444,6 +3530,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -3459,6 +3546,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -3472,6 +3560,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -3486,6 +3575,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -3499,14 +3589,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -3539,6 +3628,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -3645,6 +3735,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -3656,6 +3747,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -3690,6 +3782,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -3701,6 +3794,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -3711,6 +3805,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -3738,6 +3833,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -3914,6 +4010,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -3924,6 +4021,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -3988,6 +4086,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -4060,6 +4159,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4087,6 +4187,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -4100,6 +4201,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -4113,6 +4215,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4125,6 +4228,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -4144,6 +4248,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -4159,6 +4264,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -4172,6 +4278,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4186,6 +4293,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -4199,14 +4307,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -4239,6 +4346,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -4345,6 +4453,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4356,6 +4465,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -4390,6 +4500,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -4401,6 +4512,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -4411,6 +4523,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -4438,6 +4551,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -4614,6 +4728,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -4624,6 +4739,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -4688,6 +4804,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -4760,6 +4877,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4787,6 +4905,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -4800,6 +4919,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -4813,6 +4933,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4825,6 +4946,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -4844,6 +4966,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -4859,6 +4982,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -4872,6 +4996,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -4886,6 +5011,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -4899,14 +5025,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -4939,6 +5064,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -5045,6 +5171,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -5056,6 +5183,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -5090,6 +5218,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -5101,6 +5230,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -5111,6 +5241,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -5138,6 +5269,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -5314,6 +5446,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -5324,6 +5457,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -5388,6 +5522,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -5460,6 +5595,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -5487,6 +5623,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -5500,6 +5637,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -5513,6 +5651,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -5525,6 +5664,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -5544,6 +5684,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -5559,6 +5700,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -5572,6 +5714,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -5586,6 +5729,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -5599,14 +5743,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -5639,6 +5782,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -5745,6 +5889,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -5756,6 +5901,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -5790,6 +5936,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -5801,6 +5948,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -5811,6 +5959,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -5838,6 +5987,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -6014,6 +6164,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -6024,6 +6175,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -6088,6 +6240,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -6160,6 +6313,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6187,6 +6341,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -6200,6 +6355,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -6213,6 +6369,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6225,6 +6382,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -6244,6 +6402,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -6259,6 +6418,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -6272,6 +6432,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6286,6 +6447,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -6299,14 +6461,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -6339,6 +6500,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -6445,6 +6607,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6456,6 +6619,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -6490,6 +6654,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -6501,6 +6666,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -6511,6 +6677,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -6538,6 +6705,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -6714,6 +6882,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -6724,6 +6893,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -6788,6 +6958,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -6860,6 +7031,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6887,6 +7059,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -6900,6 +7073,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -6913,6 +7087,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6925,6 +7100,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -6944,6 +7120,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -6959,6 +7136,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -6972,6 +7150,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -6986,6 +7165,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -6999,14 +7179,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -7039,6 +7218,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -7145,6 +7325,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -7156,6 +7337,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -7190,6 +7372,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -7201,6 +7384,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -7211,6 +7395,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -7238,6 +7423,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -7414,6 +7600,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -7424,6 +7611,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -7488,6 +7676,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -7560,6 +7749,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -7587,6 +7777,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -7600,6 +7791,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -7613,6 +7805,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -7625,6 +7818,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -7644,6 +7838,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -7659,6 +7854,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -7672,6 +7868,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -7686,6 +7883,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -7699,14 +7897,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -7739,6 +7936,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -7845,6 +8043,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -7856,6 +8055,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -7890,6 +8090,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -7901,6 +8102,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -7911,6 +8113,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -7938,6 +8141,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -8114,6 +8318,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -8124,6 +8329,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -8188,6 +8394,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -8260,6 +8467,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -8287,6 +8495,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -8300,6 +8509,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -8313,6 +8523,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -8325,6 +8536,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -8344,6 +8556,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -8359,6 +8572,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -8372,6 +8586,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -8386,6 +8601,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -8399,14 +8615,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -8439,6 +8654,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -8545,6 +8761,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -8556,6 +8773,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -8590,6 +8808,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -8601,6 +8820,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -8611,6 +8831,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -8638,6 +8859,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -8814,6 +9036,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -8824,6 +9047,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -8888,6 +9112,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -8960,6 +9185,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -8987,6 +9213,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -9000,6 +9227,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -9013,6 +9241,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9025,6 +9254,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -9044,6 +9274,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -9059,6 +9290,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -9072,6 +9304,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9086,6 +9319,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -9099,14 +9333,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -9139,6 +9372,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -9245,6 +9479,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9256,6 +9491,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -9290,6 +9526,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -9301,6 +9538,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -9311,6 +9549,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -9338,6 +9577,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -9514,6 +9754,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -9524,6 +9765,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -9588,6 +9830,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -9660,6 +9903,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9687,6 +9931,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -9700,6 +9945,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -9713,6 +9959,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9725,6 +9972,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -9744,6 +9992,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -9759,6 +10008,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -9772,6 +10022,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9786,6 +10037,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -9799,14 +10051,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -9839,6 +10090,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -9945,6 +10197,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -9956,6 +10209,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -9990,6 +10244,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -10001,6 +10256,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -10011,6 +10267,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -10038,6 +10295,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -10214,6 +10472,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -10224,6 +10483,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -10288,6 +10548,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -10360,6 +10621,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -10387,6 +10649,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -10400,6 +10663,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -10413,6 +10677,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -10425,6 +10690,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -10444,6 +10710,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -10459,6 +10726,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -10472,6 +10740,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -10486,6 +10755,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -10499,14 +10769,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -10539,6 +10808,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -10645,6 +10915,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -10656,6 +10927,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -10690,6 +10962,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -10701,6 +10974,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -10711,6 +10985,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -10738,6 +11013,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -10914,6 +11190,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -10924,6 +11201,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -10988,6 +11266,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -11060,6 +11339,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11087,6 +11367,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -11100,6 +11381,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -11113,6 +11395,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11125,6 +11408,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -11144,6 +11428,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -11159,6 +11444,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -11172,6 +11458,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11186,6 +11473,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -11199,14 +11487,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -11239,6 +11526,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -11345,6 +11633,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11356,6 +11645,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -11390,6 +11680,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -11401,6 +11692,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -11411,6 +11703,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -11438,6 +11731,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -11614,6 +11908,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -11624,6 +11919,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -11688,6 +11984,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -11760,6 +12057,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11787,6 +12085,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -11800,6 +12099,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -11813,6 +12113,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11825,6 +12126,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -11844,6 +12146,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -11859,6 +12162,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -11872,6 +12176,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -11886,6 +12191,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -11899,14 +12205,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -11939,6 +12244,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -12045,6 +12351,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -12056,6 +12363,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -12090,6 +12398,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -12101,6 +12410,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -12111,6 +12421,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -12138,6 +12449,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -12314,6 +12626,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -12324,6 +12637,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -12388,6 +12702,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -12460,6 +12775,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -12487,6 +12803,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -12500,6 +12817,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -12513,6 +12831,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -12525,6 +12844,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -12544,6 +12864,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -12559,6 +12880,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -12572,6 +12894,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -12586,6 +12909,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -12599,14 +12923,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -12639,6 +12962,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -12745,6 +13069,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -12756,6 +13081,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -12790,6 +13116,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -12801,6 +13128,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -12811,6 +13139,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -12838,6 +13167,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -13014,6 +13344,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -13024,6 +13355,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -13088,6 +13420,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -13160,6 +13493,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13187,6 +13521,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -13200,6 +13535,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -13213,6 +13549,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13225,6 +13562,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -13244,6 +13582,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -13259,6 +13598,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -13272,6 +13612,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13286,6 +13627,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -13299,14 +13641,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -13339,6 +13680,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -13445,6 +13787,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13456,6 +13799,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -13490,6 +13834,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -13501,6 +13846,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -13511,6 +13857,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -13538,6 +13885,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -13714,6 +14062,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -13724,6 +14073,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -13788,6 +14138,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -13860,6 +14211,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13887,6 +14239,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -13900,6 +14253,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -13913,6 +14267,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13925,6 +14280,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -13944,6 +14300,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -13959,6 +14316,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -13972,6 +14330,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -13986,6 +14345,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -13999,14 +14359,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -14039,6 +14398,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -14145,6 +14505,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -14156,6 +14517,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -14190,6 +14552,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -14201,6 +14564,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -14211,6 +14575,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -14238,6 +14603,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -14414,6 +14780,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -14424,6 +14791,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -14488,6 +14856,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -14560,6 +14929,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -14587,6 +14957,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -14600,6 +14971,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -14613,6 +14985,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -14625,6 +14998,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -14644,6 +15018,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -14659,6 +15034,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -14672,6 +15048,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -14686,6 +15063,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -14699,14 +15077,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -14739,6 +15116,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -14845,6 +15223,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -14856,6 +15235,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -14890,6 +15270,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -14901,6 +15282,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -14911,6 +15293,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -14938,6 +15321,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -15114,6 +15498,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -15124,6 +15509,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -15188,6 +15574,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -15260,6 +15647,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -15287,6 +15675,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -15300,6 +15689,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -15313,6 +15703,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -15325,6 +15716,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -15344,6 +15736,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -15359,6 +15752,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -15372,6 +15766,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -15386,6 +15781,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -15399,14 +15795,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -15439,6 +15834,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -15545,6 +15941,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -15556,6 +15953,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -15590,6 +15988,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -15601,6 +16000,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -15611,6 +16011,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -15638,6 +16039,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -15814,6 +16216,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -15824,6 +16227,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -15888,6 +16292,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -15960,6 +16365,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -15987,6 +16393,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -16000,6 +16407,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -16013,6 +16421,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16025,6 +16434,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -16044,6 +16454,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -16059,6 +16470,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -16072,6 +16484,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16086,6 +16499,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -16099,14 +16513,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -16139,6 +16552,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -16245,6 +16659,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16256,6 +16671,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -16290,6 +16706,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -16301,6 +16718,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -16311,6 +16729,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -16338,6 +16757,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -16514,6 +16934,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -16524,6 +16945,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -16588,6 +17010,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -16660,6 +17083,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16687,6 +17111,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -16700,6 +17125,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -16713,6 +17139,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16725,6 +17152,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -16744,6 +17172,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -16759,6 +17188,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -16772,6 +17202,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16786,6 +17217,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -16799,14 +17231,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -16839,6 +17270,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -16945,6 +17377,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -16956,6 +17389,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -16990,6 +17424,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -17001,6 +17436,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -17011,6 +17447,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -17038,6 +17475,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -17214,6 +17652,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -17224,6 +17663,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -17288,6 +17728,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -17360,6 +17801,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -17387,6 +17829,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -17400,6 +17843,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -17413,6 +17857,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -17425,6 +17870,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -17444,6 +17890,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -17459,6 +17906,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -17472,6 +17920,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -17486,6 +17935,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -17499,14 +17949,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -17539,6 +17988,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -17645,6 +18095,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -17656,6 +18107,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -17690,6 +18142,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -17701,6 +18154,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -17711,6 +18165,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -17738,6 +18193,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -17914,6 +18370,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -17924,6 +18381,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -17988,6 +18446,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -18060,6 +18519,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18087,6 +18547,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -18100,6 +18561,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -18113,6 +18575,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18125,6 +18588,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -18144,6 +18608,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -18159,6 +18624,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -18172,6 +18638,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18186,6 +18653,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -18199,14 +18667,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -18239,6 +18706,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -18345,6 +18813,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18356,6 +18825,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -18390,6 +18860,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -18401,6 +18872,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -18411,6 +18883,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -18438,6 +18911,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -18614,6 +19088,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -18624,6 +19099,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -18688,6 +19164,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -18760,6 +19237,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18787,6 +19265,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -18800,6 +19279,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -18813,6 +19293,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18825,6 +19306,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -18844,6 +19326,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -18859,6 +19342,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -18872,6 +19356,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -18886,6 +19371,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -18899,14 +19385,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -18939,6 +19424,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -19045,6 +19531,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -19056,6 +19543,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -19090,6 +19578,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -19101,6 +19590,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -19111,6 +19601,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -19138,6 +19629,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -19314,6 +19806,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -19324,6 +19817,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -19388,6 +19882,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -19460,6 +19955,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -19487,6 +19983,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -19500,6 +19997,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -19513,6 +20011,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -19525,6 +20024,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -19544,6 +20044,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -19559,6 +20060,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -19572,6 +20074,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -19586,6 +20089,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -19599,14 +20103,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -19639,6 +20142,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -19745,6 +20249,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -19756,6 +20261,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -19790,6 +20296,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -19801,6 +20308,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -19811,6 +20319,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -19838,6 +20347,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -20014,6 +20524,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -20024,6 +20535,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -20088,6 +20600,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -20160,6 +20673,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20187,6 +20701,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -20200,6 +20715,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -20213,6 +20729,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20225,6 +20742,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -20244,6 +20762,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -20259,6 +20778,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -20272,6 +20792,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20286,6 +20807,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -20297,16 +20819,15 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
-:source-highlighter: rouge
-:toc:
 
+:source-highlighter: rouge
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -20339,6 +20860,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -20445,6 +20967,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20456,6 +20979,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -20490,6 +21014,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -20501,6 +21026,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -20511,6 +21037,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -20538,6 +21065,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -20714,6 +21242,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -20724,6 +21253,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -20788,6 +21318,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -20860,6 +21391,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20887,6 +21419,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -20900,6 +21433,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -20913,6 +21447,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20925,6 +21460,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -20944,6 +21480,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -20959,6 +21496,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -20972,6 +21510,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -20986,6 +21525,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -20999,14 +21539,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -21039,6 +21578,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -21145,6 +21685,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -21156,6 +21697,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -21190,6 +21732,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -21201,6 +21744,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -21211,6 +21755,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -21238,6 +21783,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -21414,6 +21960,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -21424,6 +21971,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -21488,6 +22036,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -21560,6 +22109,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -21587,6 +22137,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -21600,6 +22151,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -21613,6 +22165,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -21625,6 +22178,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -21644,6 +22198,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -21659,6 +22214,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -21672,6 +22228,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -21686,6 +22243,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -21699,14 +22257,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -21739,6 +22296,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -21845,6 +22403,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -21856,6 +22415,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -21890,6 +22450,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -21901,6 +22462,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -21911,6 +22473,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -21938,6 +22501,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -22114,6 +22678,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -22124,6 +22689,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -22188,6 +22754,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -22260,6 +22827,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -22287,6 +22855,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -22300,6 +22869,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -22313,6 +22883,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -22325,6 +22896,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -22344,6 +22916,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -22359,6 +22932,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -22372,6 +22946,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -22386,6 +22961,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -22399,14 +22975,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -22439,6 +23014,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -22545,6 +23121,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -22556,6 +23133,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -22590,6 +23168,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -22601,6 +23180,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -22611,6 +23191,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -22638,6 +23219,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -22814,6 +23396,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -22824,6 +23407,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -22888,6 +23472,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -22960,6 +23545,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -22987,6 +23573,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -23000,6 +23587,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -23013,6 +23601,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23025,6 +23614,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -23044,6 +23634,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -23059,6 +23650,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -23072,6 +23664,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23086,6 +23679,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -23099,14 +23693,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -23139,6 +23732,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -23245,6 +23839,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23256,6 +23851,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -23290,6 +23886,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -23301,6 +23898,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -23311,6 +23909,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -23338,6 +23937,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -23514,6 +24114,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -23524,6 +24125,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -23588,6 +24190,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -23660,6 +24263,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23687,6 +24291,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -23700,6 +24305,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -23713,6 +24319,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23725,6 +24332,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -23744,6 +24352,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -23759,6 +24368,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -23772,6 +24382,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23786,6 +24397,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -23799,14 +24411,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -23839,6 +24450,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -23945,6 +24557,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -23956,6 +24569,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -23990,6 +24604,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -24001,6 +24616,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -24011,6 +24627,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -24038,6 +24655,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -24214,6 +24832,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -24224,6 +24843,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -24288,6 +24908,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -24360,6 +24981,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -24387,6 +25009,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -24400,6 +25023,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -24413,6 +25037,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -24425,6 +25050,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -24444,6 +25070,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -24459,6 +25086,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -24472,6 +25100,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -24486,6 +25115,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -24499,14 +25129,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -24539,6 +25168,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -24645,6 +25275,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -24656,6 +25287,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -24690,6 +25322,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -24701,6 +25334,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -24711,6 +25345,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -24738,6 +25373,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -24914,6 +25550,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -24924,6 +25561,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -24988,6 +25626,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -25060,6 +25699,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25087,6 +25727,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -25100,6 +25741,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -25113,6 +25755,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25125,6 +25768,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -25144,6 +25788,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -25159,6 +25804,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -25172,6 +25818,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25186,6 +25833,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -25199,14 +25847,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -25239,6 +25886,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -25345,6 +25993,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25356,6 +26005,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -25390,6 +26040,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -25401,6 +26052,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -25411,6 +26063,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -25438,6 +26091,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -25614,6 +26268,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -25624,6 +26279,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -25688,6 +26344,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -25760,6 +26417,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25787,6 +26445,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -25800,6 +26459,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -25813,6 +26473,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25825,6 +26486,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -25844,6 +26506,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -25859,6 +26522,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -25872,6 +26536,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -25886,6 +26551,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -25899,14 +26565,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -25939,6 +26604,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -26045,6 +26711,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -26056,6 +26723,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -26090,6 +26758,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -26101,6 +26770,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -26111,6 +26781,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -26138,6 +26809,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -26314,6 +26986,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -26324,6 +26997,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -26388,6 +27062,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -26460,6 +27135,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -26487,6 +27163,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -26500,6 +27177,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -26513,6 +27191,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -26525,6 +27204,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -26544,6 +27224,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -26559,6 +27240,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -26572,6 +27254,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -26586,6 +27269,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -26599,14 +27283,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -26639,6 +27322,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -26745,6 +27429,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -26756,6 +27441,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -26790,6 +27476,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -26801,6 +27488,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -26811,6 +27499,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -26838,6 +27527,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -27014,6 +27704,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -27024,6 +27715,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -27088,6 +27780,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -27160,6 +27853,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27187,6 +27881,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -27200,6 +27895,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -27213,6 +27909,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27225,6 +27922,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -27244,6 +27942,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -27259,6 +27958,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -27272,6 +27972,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27286,6 +27987,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -27299,14 +28001,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -27339,6 +28040,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -27445,6 +28147,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27456,6 +28159,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -27490,6 +28194,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -27501,6 +28206,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -27511,6 +28217,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -27538,6 +28245,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -27714,6 +28422,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -27724,6 +28433,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -27788,6 +28498,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -27860,6 +28571,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27887,6 +28599,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -27900,6 +28613,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -27913,6 +28627,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27925,6 +28640,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -27944,6 +28660,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -27959,6 +28676,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -27972,6 +28690,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -27986,6 +28705,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -27999,14 +28719,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -28039,6 +28758,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -28145,6 +28865,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -28156,6 +28877,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -28190,6 +28912,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -28201,6 +28924,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -28211,6 +28935,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -28238,6 +28963,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -28414,6 +29140,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -28424,6 +29151,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -28488,6 +29216,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -28560,6 +29289,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -28587,6 +29317,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -28600,6 +29331,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -28613,6 +29345,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -28625,6 +29358,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -28644,6 +29378,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -28659,6 +29394,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -28672,6 +29408,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -28686,6 +29423,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -28699,14 +29437,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -28739,6 +29476,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -28845,6 +29583,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -28856,6 +29595,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -28890,6 +29630,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -28901,6 +29642,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -28911,6 +29653,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -28938,6 +29681,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -29114,6 +29858,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -29124,6 +29869,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -29188,6 +29934,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -29260,6 +30007,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -29287,6 +30035,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -29300,6 +30049,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -29313,6 +30063,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -29325,6 +30076,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -29344,6 +30096,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -29359,6 +30112,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -29372,6 +30126,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -29386,6 +30141,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -29399,14 +30155,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -29439,6 +30194,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -29545,6 +30301,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -29556,6 +30313,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -29590,6 +30348,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -29601,6 +30360,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -29611,6 +30371,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -29638,6 +30399,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -29814,6 +30576,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -29824,6 +30587,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -29888,6 +30652,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -29960,6 +30725,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -29987,6 +30753,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -30000,6 +30767,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -30013,6 +30781,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30025,6 +30794,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -30044,6 +30814,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -30059,6 +30830,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -30072,6 +30844,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30086,6 +30859,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -30099,14 +30873,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -30139,6 +30912,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -30245,6 +31019,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30256,6 +31031,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -30290,6 +31066,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -30301,6 +31078,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -30311,6 +31089,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -30338,6 +31117,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -30514,6 +31294,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -30524,6 +31305,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -30588,6 +31370,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -30660,6 +31443,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30687,6 +31471,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -30700,6 +31485,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -30713,6 +31499,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30725,6 +31512,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -30744,6 +31532,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -30759,6 +31548,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -30772,6 +31562,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30786,6 +31577,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -30799,14 +31591,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -30839,6 +31630,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -30945,6 +31737,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -30956,6 +31749,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -30990,6 +31784,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -31001,6 +31796,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -31011,6 +31807,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -31038,6 +31835,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -31214,6 +32012,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -31224,6 +32023,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -31288,6 +32088,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -31360,6 +32161,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -31387,6 +32189,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -31400,6 +32203,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -31413,6 +32217,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -31425,6 +32230,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -31444,6 +32250,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -31459,6 +32266,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -31472,6 +32280,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -31486,6 +32295,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -31499,14 +32309,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -31539,6 +32348,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -31645,6 +32455,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -31656,6 +32467,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -31690,6 +32502,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -31701,6 +32514,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -31711,6 +32525,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -31738,6 +32553,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -31914,6 +32730,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -31924,6 +32741,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -31988,6 +32806,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -32060,6 +32879,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32087,6 +32907,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -32100,6 +32921,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -32113,6 +32935,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32125,6 +32948,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -32144,6 +32968,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -32159,6 +32984,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -32172,6 +32998,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32186,6 +33013,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -32199,14 +33027,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -32239,6 +33066,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -32345,6 +33173,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32356,6 +33185,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -32390,6 +33220,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -32401,6 +33232,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -32411,6 +33243,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -32438,6 +33271,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -32614,6 +33448,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -32624,6 +33459,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -32688,6 +33524,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -32760,6 +33597,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32787,6 +33625,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -32800,6 +33639,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -32813,6 +33653,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32825,6 +33666,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -32844,6 +33686,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -32859,6 +33702,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -32872,6 +33716,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -32886,6 +33731,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -32899,14 +33745,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -32939,6 +33784,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -33045,6 +33891,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -33056,6 +33903,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -33090,6 +33938,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -33101,6 +33950,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -33111,6 +33961,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -33138,6 +33989,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -33314,6 +34166,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -33324,6 +34177,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -33388,6 +34242,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -33460,6 +34315,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -33487,6 +34343,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -33500,6 +34357,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -33513,6 +34371,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -33525,6 +34384,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -33544,6 +34404,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -33559,6 +34420,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -33572,6 +34434,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -33586,6 +34449,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -33599,14 +34463,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -33639,6 +34502,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -33745,6 +34609,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -33756,6 +34621,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -33790,6 +34656,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -33801,6 +34668,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -33811,6 +34679,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -33838,6 +34707,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -34014,6 +34884,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -34024,6 +34895,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -34088,6 +34960,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -34160,6 +35033,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34187,6 +35061,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -34200,6 +35075,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -34213,6 +35089,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34225,6 +35102,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -34244,6 +35122,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -34259,6 +35138,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -34272,6 +35152,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34286,6 +35167,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -34299,14 +35181,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -34339,6 +35220,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -34445,6 +35327,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34456,6 +35339,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -34490,6 +35374,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -34501,6 +35386,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -34511,6 +35397,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -34538,6 +35425,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -34714,6 +35602,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -34724,6 +35613,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -34788,6 +35678,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -34860,6 +35751,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34887,6 +35779,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -34900,6 +35793,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -34913,6 +35807,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34925,6 +35820,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -34944,6 +35840,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -34959,6 +35856,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -34972,6 +35870,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -34986,6 +35885,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -34999,14 +35899,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -35039,6 +35938,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -35145,6 +36045,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -35156,6 +36057,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -35190,6 +36092,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -35201,6 +36104,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -35211,6 +36115,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -35238,6 +36143,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -35414,6 +36320,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -35424,6 +36331,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -35488,6 +36396,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -35560,6 +36469,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -35587,6 +36497,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -35600,6 +36511,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -35613,6 +36525,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -35625,6 +36538,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -35644,6 +36558,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -35659,6 +36574,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -35672,6 +36588,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -35686,6 +36603,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -35699,14 +36617,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -35739,6 +36656,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -35845,6 +36763,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -35856,6 +36775,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -35890,6 +36810,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -35901,6 +36822,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -35911,6 +36833,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -35938,6 +36861,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -36114,6 +37038,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -36124,6 +37049,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -36188,6 +37114,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -36260,6 +37187,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -36287,6 +37215,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -36300,6 +37229,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -36313,6 +37243,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -36325,6 +37256,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -36344,6 +37276,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -36359,6 +37292,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -36372,6 +37306,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -36386,6 +37321,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -36399,14 +37335,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -36439,6 +37374,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -36545,6 +37481,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -36556,6 +37493,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -36590,6 +37528,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -36601,6 +37540,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -36611,6 +37551,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -36638,6 +37579,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -36814,6 +37756,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -36824,6 +37767,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -36888,6 +37832,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -36960,6 +37905,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -36987,6 +37933,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -37000,6 +37947,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -37013,6 +37961,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37025,6 +37974,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -37044,6 +37994,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -37059,6 +38010,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -37072,6 +38024,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37086,6 +38039,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -37099,14 +38053,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -37139,6 +38092,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -37245,6 +38199,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37256,6 +38211,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -37290,6 +38246,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -37301,6 +38258,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -37311,6 +38269,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -37338,6 +38297,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -37514,6 +38474,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -37524,6 +38485,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -37588,6 +38550,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -37660,6 +38623,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37687,6 +38651,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -37700,6 +38665,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -37713,6 +38679,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37725,6 +38692,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -37744,6 +38712,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -37759,6 +38728,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -37772,6 +38742,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37786,6 +38757,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -37799,14 +38771,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -37839,6 +38810,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -37945,6 +38917,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -37956,6 +38929,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -37990,6 +38964,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -38001,6 +38976,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -38011,6 +38987,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -38038,6 +39015,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -38214,6 +39192,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -38224,6 +39203,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -38288,6 +39268,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -38360,6 +39341,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -38387,6 +39369,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -38400,6 +39383,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -38413,6 +39397,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -38425,6 +39410,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -38444,6 +39430,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -38459,6 +39446,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -38472,6 +39460,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -38486,6 +39475,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -38499,14 +39489,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -38539,6 +39528,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -38645,6 +39635,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -38656,6 +39647,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -38690,6 +39682,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -38701,6 +39694,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -38711,6 +39705,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -38738,6 +39733,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -38914,6 +39910,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -38924,6 +39921,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -38988,6 +39986,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -39060,6 +40059,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39087,6 +40087,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -39100,6 +40101,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -39113,6 +40115,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39125,6 +40128,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -39144,6 +40148,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -39159,6 +40164,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -39172,6 +40178,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39186,6 +40193,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -39199,14 +40207,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -39239,6 +40246,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -39345,6 +40353,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39356,6 +40365,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -39390,6 +40400,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -39401,6 +40412,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -39411,6 +40423,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -39438,6 +40451,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -39614,6 +40628,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -39624,6 +40639,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -39688,6 +40704,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -39760,6 +40777,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39787,6 +40805,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -39800,6 +40819,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -39813,6 +40833,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39825,6 +40846,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -39844,6 +40866,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -39859,6 +40882,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -39872,6 +40896,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -39886,6 +40911,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -39899,14 +40925,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -39939,6 +40964,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -40045,6 +41071,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -40056,6 +41083,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -40090,6 +41118,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -40101,6 +41130,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -40111,6 +41141,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -40138,6 +41169,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -40314,6 +41346,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -40324,6 +41357,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -40388,6 +41422,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -40460,6 +41495,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -40487,6 +41523,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -40500,6 +41537,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -40513,6 +41551,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -40525,6 +41564,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -40544,6 +41584,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -40559,6 +41600,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -40572,6 +41614,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -40586,6 +41629,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -40599,14 +41643,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -40639,6 +41682,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -40745,6 +41789,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -40756,6 +41801,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -40790,6 +41836,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -40801,6 +41848,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -40811,6 +41859,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -40838,6 +41887,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -41014,6 +42064,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -41024,6 +42075,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -41088,6 +42140,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -41160,6 +42213,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41187,6 +42241,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -41200,6 +42255,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -41213,6 +42269,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41225,6 +42282,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -41244,6 +42302,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -41259,6 +42318,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -41272,6 +42332,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41286,6 +42347,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -41299,14 +42361,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -41339,6 +42400,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -41445,6 +42507,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41456,6 +42519,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -41490,6 +42554,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -41501,6 +42566,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -41511,6 +42577,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -41538,6 +42605,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -41714,6 +42782,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -41724,6 +42793,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -41788,6 +42858,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -41860,6 +42931,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41887,6 +42959,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -41900,6 +42973,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -41913,6 +42987,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41925,6 +43000,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -41944,6 +43020,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -41959,6 +43036,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -41972,6 +43050,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -41986,6 +43065,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -41999,14 +43079,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -42039,6 +43118,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -42145,6 +43225,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -42156,6 +43237,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -42190,6 +43272,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -42201,6 +43284,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -42211,6 +43295,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -42238,6 +43323,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -42414,6 +43500,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -42424,6 +43511,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -42488,6 +43576,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -42560,6 +43649,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -42587,6 +43677,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -42600,6 +43691,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -42613,6 +43705,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -42625,6 +43718,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -42644,6 +43738,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -42659,6 +43754,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -42672,6 +43768,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -42686,6 +43783,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -42699,14 +43797,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -42739,6 +43836,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -42845,6 +43943,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -42856,6 +43955,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -42890,6 +43990,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -42901,6 +44002,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -42911,6 +44013,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -42938,6 +44041,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -43114,6 +44218,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -43124,6 +44229,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -43188,6 +44294,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -43260,6 +44367,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -43287,6 +44395,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -43300,6 +44409,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -43313,6 +44423,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -43325,6 +44436,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -43344,6 +44456,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -43359,6 +44472,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -43372,6 +44486,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -43386,6 +44501,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -43399,14 +44515,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -43439,6 +44554,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -43545,6 +44661,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -43556,6 +44673,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -43590,6 +44708,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -43601,6 +44720,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -43611,6 +44731,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -43638,6 +44759,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -43814,6 +44936,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -43824,6 +44947,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -43888,6 +45012,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -43960,6 +45085,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -43987,6 +45113,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -44000,6 +45127,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -44013,6 +45141,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -44025,6 +45154,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -44044,6 +45174,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -44059,6 +45190,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -44072,6 +45204,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -44086,6 +45219,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -44099,14 +45233,13 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
 
-
 Today in learned.
 
 
 
 == adoc
+:toc:
 :source-highlighter: rouge
 
 
@@ -44139,6 +45272,7 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
+:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -44245,6 +45379,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -44256,6 +45391,7 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
+:toc:
 :source-highlighter: rouge
 
 
@@ -44290,6 +45426,7 @@ EOF
 
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 
@@ -44301,6 +45438,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == find
+:toc:
 :source-highlighter: rouge
 
 
@@ -44311,6 +45449,7 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
+:toc:
 :source-highlighter: rouge
 
 
@@ -44338,6 +45477,7 @@ source ~/.bashrc
 
 
 == hpacucli, hpssacli
+:toc:
 :source-highlighter: rouge
 
 
@@ -44514,6 +45654,7 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
+:toc:
 :source-highlighter: rouge
 
 
@@ -44524,6 +45665,7 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
+:toc:
 :source-highlighter: rouge
 
 
@@ -44588,6 +45730,7 @@ echo '{
 
 
 == kubectl
+:toc:
 :source-highlighter: rouge
 
 
@@ -44660,6 +45803,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 == liquidprompt
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -44687,6 +45831,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
+:toc:
 :source-highlighter: rouge
 :toc
 
@@ -44700,6 +45845,7 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
+:toc:
 :source-highlighter: rouge
 
 
@@ -44713,6 +45859,7 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -44725,6 +45872,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
+:toc:
 :source-highlighter: rouge
 
 === update
@@ -44744,6 +45892,7 @@ vi rancher-values.yaml # change image tag
 
 
 == rsyslog
+:toc:
 :source-highlighter: rouge
 
 
@@ -44759,6 +45908,7 @@ ForwardToSyslog=yes
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
@@ -44772,6 +45922,7 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -44786,6 +45937,7 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
+:toc:
 :source-highlighter: rouge
 
 
@@ -44799,7 +45951,5 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
-:toc:
-
 
 Today in learned.
