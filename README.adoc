@@ -1,0 +1,659 @@
+:source-highlighter: rouge
+
+= TIL
+
+Today in learned.
+
+
+== adoc
+:toc:
+:source-highlighter: rouge
+
+==== footnotes
+
+[source,adoc]
+----
+# footnotes
+
+footnote:[]
+
+footnote:id[]
+
+# example
+Ported from upstreamsfootnote:[https://git.home.lan/app1],footnote:[https://git.home.lan/app2]
+----
+
+==== images
+[source,adoc]
+----
+
+image::sunset.jpg[alt text]
+
+.Title of image
+[#imgID link=https://home.lan/img1.jpg]
+image::img1.jpg[alt text,width,height]
+----
+
+==== syntac highlighting
+
+[source,adoc]
+....
+:source-highlighter: rouge
+
+[source, python]
+----
+print "Hello World"
+----
+....
+
+==== Enable line numbering
+
+[source,adoc]
+....
+
+[%linenums,bash]
+----
+echo "users"
+getent passwd
+echo "groups"
+getent
+----
+
+# or
+
+[,python,linenums]
+----
+echo "users"
+getent passwd
+echo "groups"
+getent
+----
+
+....
+
+link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md[Supported languages]:
+
+- asciidoc, adoc
+- awk, mawk, nawk, gawk
+- bash, sh, zsh (link:https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-highlighter/#shell-vs-console[shell-vs-console])
+- crmsh, crm, pcmk
+- curl
+- dns, zone, bind
+- dockerfile, docker
+- xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg
+- http, https
+- ini, toml
+- json
+- less
+- ldif
+- markdown, md, mkdown, mkd
+- nginx, nginxconf
+- plaintext, txt, text
+- pgsql, postgres, postgresql
+- python, py, gyp
+- rpm-specfile, rpm, spec, rpm-spec, specfile
+- shell, console (link:https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-highlighter/#shell-vs-console[shell-vs-console])
+- sql
+- terraform, tf, hcl
+- vim
+- yml, yaml
+-
+
+[source,adoc]
+....
+==== title
+
+[source,adoc]
+----
+
+----
+....
+
+
+==== Table of Contents (TOC)
+
+[source,adoc]
+....
+:toc:
+....
+
+==== convert asciidoc to markdown
+
+steps: asciidoc -> XML -> markdown
+
+[source,bash]
+----
+# single file
+asciidoc -b docbook README.adoc
+pandoc -f docbook -t markdown_strict file.xml -o README.md
+
+podman run --rm -v $PWD:/documents/ --entrypoint '["/usr/bin/asciidoctor", "-w", "--trace", "-b", "docbook", "-t", "/documents/README.adoc"]' docker.io/asciidoctor/docker-asciidoctor
+podman run --rm -v $PWD:/data  pandoc/core -f docbook -t markdown README.xml -o README.md
+
+# all adoc files
+for i in *.adoc; do asciidoc -b docbook $i; done
+for i in *.xml; do pandoc -f docbook -t markdown_gfm $i -o $i.md; done
+
+podman run --rm -v $PWD:/documents/ --entrypoint '["/usr/bin/asciidoctor", "-w", "--trace", "-b", "docbook", "-t", "/documents/*.adoc"]' docker.io/asciidoctor/docker-asciidoctor
+for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t markdown $i -o ${i%.*}.md ; done
+----
+
+
+- https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
+
+:source-highlighter: rouge
+
+[source,shell]
+----
+#lint
+xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
+----
+
+:source-highlighter: rouge
+
+[source,shell]
+....
+cat << EOF > curl-format.txt
+time_namelookup:  %{time_namelookup}s\n
+time_connect:  %{time_connect}s\n
+time_appconnect:  %{time_appconnect}s\n
+time_pretransfer:  %{time_pretransfer}s\n
+time_redirect:  %{time_redirect}s\n
+time_starttransfer:  %{time_starttransfer}s\n
+----------\n
+time_total:  %{time_total}s\n
+EOF
+
+curl -w "@curl-format.txt" -o /dev/null -s "https://test.hu"
+
+
+# post json with variable substitution
+curl "http://localhost:8080" \
+-H "Accept: application/json" \
+-H "Content-Type:application/json" \
+--data @<(cat <<EOF
+{
+  "me": "$USER",
+  "something": $(date +%s)
+  }
+EOF
+)
+....
+
+= Title
+:toc
+:source-highlighter: rouge
+
+[source,shell]
+----
+vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(ssh srv2 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml')
+----
+
+
+:source-highlighter: rouge
+
+[source,shell]
+----
+find / -name "*.rpmnew" -not -path "/var/lib/docker*"
+----
+
+:source-highlighter: rouge
+
+= Git
+
+== BASH functions
+
+[source,shell]
+----
+cat << EOF >> ~/.bashrc
+function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
+function gignore() { curl -sL https://www.gitignore.io/api/$@ ;}
+function gistatus() { git status ;  }
+function gilog() { git log ;  }
+function gipush() { git push ;  }
+function gipull() { git pull ;  }
+function giaddall() { git add -A ;  }
+function giadd() { git add $1 ;  }
+function gicommitall() { git commit -m -a "$1" ;  }
+EOF
+source ~/.bashrc
+----
+
+== use github with multiple user
+
+
+
+:source-highlighter: rouge
+
+=== hpacucli, hpssacli
+
+shortnames:
+
+* chassisname = ch
+* controller = ctrl
+* logicaldrive = ld
+* physicaldrive = pd
+* drivewritecache = dwc
+* licensekey = lk
+
+[source,shell]
+----
+### Specify drives:
+- A range of drives (one to three): 1E:1:1-1E:1:3
+- Drives that are unassigned: allunassigned
+
+# Show - Controller Slot 1 Controller configuration basic
+./ssacli ctrl slot=1 show config
+
+# Show - Controller Slot 1 Controller configuration detailed
+./ssacli ctrl slot=1 show detail
+
+# Show - Controller Slot 1 full configuration
+./ssacli ctrl slot=1 show config detail
+
+# Show - Controller Slot 1 Status
+./ssacli ctrl slot=1 show status
+
+# Show - All Controllers Configuration
+./ssacli ctrl all show config
+
+# Show - Controller slot 1 logical drive 1 status
+./ssacli ctrl slot=1 ld 1 show status
+
+# Show - Physical Disks status basic
+./ssacli ctrl slot=1 pd all show status
+
+# Show - Physical Disk status detailed
+./ssacli ctrl slot=1 pd all show status
+
+# Show - Logical Disk status basic
+./ssacli ctrl slot=1 ld all show status
+
+# Show - Logical Disk status detailed
+./ssacli ctrl slot=1 ld all show detail
+
+# Create - New single disk volume
+./ssacli ctrl slot=1 create type=ld drives=2I:0:8 raid=0 forced
+
+# Create - New spare disk (two defined)
+./ssacli ctrl slot=1 array all add spares=2I:1:6,2I:1:7
+
+# Create - New RAID 1 volume
+./ssacli ctrl slot=1 create type=ld drives=1I:0:1,1I:0:2 raid=1 forced
+
+# Create - New RAID 5 volume
+./ssacli ctrl slot=1 create type=ld drives=1I:0:1,1I:0:2,1I:0:3 raid=5 forced
+
+# Add - All unassigned drives to logical drive 1
+./ssacli ctrl slot=1 ld 1 add drives=allunassigned
+
+# Modify - Extend logical drive 2 size to maximum (must be run with the "forced" flag)
+./ssacli ctrl slot=1 ld 2 modify size=max forced
+
+### Rescan all controllers
+./ssacli rescan
+
+# Led - Activate LEDs on logical drive 2 disks
+./ssacli ctrl slot=1 ld 2 modify led=on
+
+# Led - Deactivate LEDs on logical drive 2 disks
+./ssacli ctrl slot=1 ld 2 modify led=off
+
+# Led - Activate LED on physical drive
+./ssacli ctrl slot=0 pd 1I:0:1 modify led=on
+
+# Led - Deactivate LED on physical drive
+./ssacli ctrl slot=0 pd 1I:0:1 modify led=off
+
+# Show - Cache Ratio Status
+./ssacli ctrl slot=1 modify cacheratio=?
+
+# Modify - Cache Ratio read: 25% / write: 75%
+./ssacli ctrl slot=1 modify cacheratio=25/75
+
+# Modify - Cache Ratio read: 50% / write: 50%
+./ssacli ctrl slot=1 modify cacheratio=50/50
+
+# Modify - Cache Ratio read: 0% / Write: 100%
+./ssacli ctrl slot=1 modify cacheratio=0/100
+
+# Show - Write Cache Status
+./ssacli ctrl slot=1 modify dwc=?
+
+# Modify - Enable Write Cache on controller
+./ssacli ctrl slot=1 modify dwc=enable forced
+
+# Modify - Disable Write Cache on controller
+./ssacli ctrl slot=1 modify dwc=disable forced
+
+# Show - Write Cache Logicaldrive Status
+./ssacli ctrl slot=1 logicaldrive 1 modify aa=?
+
+# Modify - Enable Write Cache on Logicaldrive 1
+./ssacli ctrl slot=1 logicaldrive 1 modify aa=enable
+
+# Modify - Disable Write Cache on Logicaldrive 1
+./ssacli ctrl slot=1 logicaldrive 1 modify aa=disable
+
+# Show - Rebuild Priority Status
+./ssacli ctrl slot=1 modify rp=?
+
+# Modify - Set rebuildpriority to Low
+./ssacli ctrl slot=1 modify rebuildpriority=low
+
+# Modify - Set rebuildpriority to Medium
+./ssacli ctrl slot=1 modify rebuildpriority=medium
+
+# Modify - Set rebuildpriority to High
+./ssacli ctrl slot=1 modify rebuildpriority=high
+
+
+# You can modify the HPE SDD Smart Path feature by disabling or enabling. To make clear what the HPE SDD Smart Path includes, here is a official statement by HPE:
+# https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00044117en_us&docLocale=en_US
+“HP SmartCache feature is a controller-based read and write caching solution that caches the most frequently accessed data (“hot” data) onto lower latency SSDs to dynamically accelerate application workloads. This can be implemented on direct-attached storage and SAN storage.”
+
+For example, when running VMware vSAN SSD Smart Path must be disabled for better performance. In some cases worse the entire vSAN disk group fails.
+# https://kb.vmware.com/s/article/2092190
+
+# Note: This command requires the array naming type like A/B/C/D/E
+
+# Modify - Enable SSD Smart Path
+./ssacli ctrl slot=1 array a modify ssdsmartpath=enable
+
+# Modify - Disable SSD Smart Path
+./ssacli ctrl slot=1 array a modify ssdsmartpath=disable
+
+# Delete - Logical Drive 1
+./ssacli ctrl slot=1 ld 1 delete
+
+# Delete - Logical Drive 2
+./ssacli ctrl slot=1 ld 2 delete
+
+# ssd info
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 ssdpd all show detail
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 show ssdinfo
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 show ssdinfo detail
+/opt/smartstorageadmin/ssacli/bin/ssacli ctrl slot=0 show ssdinfo summary
+
+
+# Erase physical drive with default erasepattern
+./ssacli ctrl slot=1 pd 2I:1:1 modify erase
+
+# Erase physical drive with zero erasepattern
+./ssacli ctrl slot=1 pd 2I:1:1 modify erase erasepattern=zero
+
+# Erase physical drive with random zero erasepattern
+./ssacli ctrl slot=1 pd 1E:1:1-1E:1:3 modify erase erasepattern=random_zero
+
+# Erase physical drive with random random zero erasepattern
+./ssacli ctrl slot=1 pd 1E:1:1-1E:1:3 modify erase erasepattern=random_random_zero
+
+# Stop the erasing process on phsyical drive 1E:1:1
+./ssacli ctrl slot=1 pd 1E:1:1 modify stoperase
+
+# License key installation
+./ssacli ctrl slot=1 licensekey XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+
+# License key removal
+./ssacli ctrl slot=5 lk XXXXXXXXXXXXXXXXXXXXXXXXX delete
+----
+
+:source-highlighter: rouge
+
+[source,shell]
+----
+ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy ; ip route list table 220
+----
+
+:source-highlighter: rouge
+
+[source,bash]
+----
+
+lsblk --json | jq -r
+lsblk --json -o name | jq -r '.blockdevices[]'
+lsblk --json -o name | jq -r '.blockdevices[] | .name'
+lsblk --json | jq -r '.blockdevices[] | .children[]'
+lsblk --json | jq -r '.blockdevices[] | .children'
+lsblk --json | jq -r '.blockdevices[] | .children[]? |select(.name=="sda6")'
+lsblk --json | jq -r '.blockdevices[] | (.children[]?) | select(.mountpoint==null)'
+23:25
+lsblk --json | jq -r '.blockdevices[] | (.children[]?) | select(.mountpoint=="/" and .name=="sda2") '
+23:33
+lsblk --json | jq -r '.blockdevices[] | select(.children != null) | .children[]'
+lsblk --json | jq -r '.blockdevices[] | select(.children != null) | .children[] | select(.size | contains("9"))'
+lsblk --json | jq -r '.blockdevices[] | select(.children != null) | .children[] | select((.size | contains("9")) and (.name | contains("sda")))'
+lsblk --json | jq -r '.blockdevices[] | (.children[]?) | select((.size | contains("9")) and (.name | contains("sda")))'
+0:13
+lsblk --json | python3 -c "import sys, json; print(json.load(sys.stdin)['blockdevices'][0].keys())"
+lsblk --json | python3 -c "import sys, json; print(json.load(sys.stdin)['blockdevices'][0]['children'][0]['name'])"
+
+
+jq -r '.|keys'
+jq -r '.[]|keys'
+----
+
+concat, append string to output
+
+[source,shell]
+----
+jq -r '.[].username+"@npsh.hu"'
+----
+
+print multiple fields
+
+[source,shell]
+----
+jq -r '.[]|"\(.name) \(.id)"'
+
+echo '{
+	"name": "R1",
+	"type": "robot",
+	"prop1": "a5482na",
+	"prop2": null,
+	"prop3": 55
+}' |\
+jq '. | to_entries[] | select( .key | contains("prop"))'
+
+
+echo '{
+  "devDependencies": {
+	"@antora/cli": "3.1.3",
+	"@antora/site-generator": "3.1.3",
+	"@antora/site-generator-with-pdf-exporter": "gitlab:opendevise/oss/antora-site-generator-with-pdf-exporter#v2.3.0-alpha.2"
+  }
+} | jq '.devDependencies | to_entries[] | select (.key)|"\(.key)@\(.value)"
+
+----
+
+= kubectl
+:source-highlighter: rouge
+:toc:
+
+==== Merge multiple kubeconfig
+[source,shell]
+----
+mkdir ~/.kube/conf.d
+cp cluster1-config ~/.kube/conf.d/
+cp cluster2-config ~/.kube/conf.d/
+cp cluster3-condig ~/.kube/conf.d/
+# the contexts must be different!
+grep -rA5 context: ~/.kube/conf.d/
+export KUBECONFIG=$(find ~/.kube/conf.d/  -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g')
+echo $KUBECONFIG
+UMASK=0600 kubectl config view --flatten > ~/.kube/config
+----
+
+[source,shell]
+----
+UMASK=0600 KUBECONFIG=$(find ~/.kube/conf.d/  -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
+----
+
+
+[source,shell]
+----
+UMASK=0600 KUBECONFIG=$(find ~/.kube/conf.d/oracle/ -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
+----
+
+
+[source,console]
+----
+kubectl config get-clusters
+NAME
+cluster1
+cluster2
+cluster3
+----
+
+====  list all pods and its nodes
+[source,shell]
+----
+kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
+kubectl get pod -o=custom-columns=NAME:.metadata.name,STATUS:.status.phase,NODE:.spec.nodeName --all-namespaces
+kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces
+kubectl get pod --all-namespaces -o json | jq '.items[] | .spec.nodeName + " " + .metadata.name + " " + .status.podIP'
+kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nodeName}{" "}{.metadata.namespace}{" "}{.metadata.name}{"\n"}{end}'
+----
+
+=== List All Container Images Running in a Cluster
+[source,shell]
+----
+kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" |\
+tr -s '[[:space:]]' '\n' |\
+sort |\
+uniq -c
+----
+
+
+=== create secret
+
+[,shell]
+----
+kubectl create secret generic wiki-postgresql --from-literal=psqlpassword=secretpassword123
+kubectl get secrets wiki-postgresql --template='{{.data.psqlpassword}}' | base64 -d
+kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64decode}}{{ "\n" }}'
+----
+
+
+
+:toc
+:source-highlighter: rouge
+
+[source,shell]
+----
+curl --remote-name -L https://github.com/liquidprompt/liquidprompt/releases/download/v2.1.2/liquidprompt-v2.1.2.tar.gz
+tar -C ~/bin/ -xzf liquidprompt-v2.1.2.tar.gz
+----
+
+[source,console]
+----
+# .config/liquidpromptrc
+LP_TEMP=0
+LP_ENABLE_KUBECONTEXT=1
+LP_ENABLE_GIT=1
+LP_ENABLE_CONTAINER=1
+----
+
+[source,console]
+----
+.bashrc
+# liquidprompt
+[[ $- = *i* ]] && source ~/bin/liquidprompt/liquidprompt
+export LP_PS1_POSTFIX='\n$ '
+----
+
+:source-highlighter: rouge
+
+[source,shell]
+----
+crm cluster run 'echo 1 > /sys/block/sdb/device/rescan'
+crm cluster run 'pvresize /dev/sdb'
+crm cluster run 'lvextend -rl +100%FREE /dev/pgsql_data/postgres'
+crm cluster run 'df -h /var/lib/pgsql'
+----
+
+:source-highlighter: rouge
+
+[source,shell]
+----
+# count msgs
+curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&domain=lists.home.lan" | jq -r ".active_months[]"  | xargs| sed 's/ / + /g' | bc
+----
+
+
+= RabbitMQ
+:toc
+:source-highlighter: rouge
+
+[source,shell]
+----
+# test RabbitMQ AMQ Protocol
+printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
+----
+
+
+:toc
+:source-highlighter: rouge
+
+== update
+
+[source,shell]
+----
+helm repo list
+helm list -n cattle-system # show installed version
+helm repo update
+helm search repo rancher-stable # list versions in repo
+helm get values rancher -n cattle-system -o yaml > rancher-values.yaml # export current value
+helm upgrade rancher rancher-<chartrepo>/rancher -n cattle-system -f rancher-values.yaml --version=VERSION
+vi rancher-values.yaml # change image tag
+
+----
+
+
+:source-highlighter: rouge
+
+[source,text]
+----
+# /etc/systemd/journald.conf
+# log messages received by the journal daemon shall be forwarded to a traditional syslog daemon
+# https://www.freedesktop.org/software/systemd/man/journald.conf.html#ForwardToSyslog=
+ForwardToSyslog=yes
+----
+
+
+= Title
+:toc
+:source-highlighter: rouge
+
+
+== apply highsate
+[source,shell]
+----
+salt --state-output=mixed rancher[1,2,3] state.highstate
+----
+
+
+Unresolved directive in readme-source.adoc - include::adoc/template.adoc[adoc/template]
+
+:source-highlighter: rouge
+
+[source,shell]
+----
+xz foo
+xz -dk bar.xz
+xz -dcf a.txt b.txt.xz c.txt d.txt.lzma > abcd.txt
+xz --robot --list *.xz | awk '/^totals/{print $5-$4}'
+xz --lzma2=preset=1,dict=32MiB foo.tar
+xz -vv --lzma2=dict=192MiB big_foo.tar
+----
+
+:source-highlighter: rouge
+
+[source,shell]
+....
+# remove all package that installed by pattern
+zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -F'|' '{print $2}' |xargs)
+
+# remove pkgs installed by pattern
+zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
+....
