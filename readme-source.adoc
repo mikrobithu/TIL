@@ -1,10 +1,13 @@
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 include::adoc/adoc.adoc[adoc/adoc]
 

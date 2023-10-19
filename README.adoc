@@ -1,10 +1,13 @@
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -700,12 +703,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -1401,12 +1407,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -2102,12 +2111,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -2803,12 +2815,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -3504,12 +3519,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -4205,12 +4223,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -4906,12 +4927,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -5607,12 +5631,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -6308,12 +6335,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -7009,12 +7039,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -7710,12 +7743,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -8411,12 +8447,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -9112,12 +9151,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -9813,12 +9855,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -10514,12 +10559,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -11215,12 +11263,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -11916,12 +11967,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -12617,12 +12671,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -13318,12 +13375,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -14019,12 +14079,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -14720,12 +14783,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -15421,12 +15487,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -16122,12 +16191,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -16823,12 +16895,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -17524,12 +17599,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -18225,12 +18303,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -18926,12 +19007,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -19627,12 +19711,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -20328,12 +20415,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -21029,12 +21119,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -21730,14 +21823,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -22431,14 +22527,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -23132,14 +23231,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -23833,14 +23935,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -24534,14 +24639,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -25235,14 +25343,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -25936,14 +26047,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -26637,14 +26751,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -27338,14 +27455,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -28039,14 +28159,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -28740,14 +28863,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -29441,14 +29567,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -30142,14 +30271,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -30843,14 +30975,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -31544,14 +31679,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -32245,14 +32383,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -32946,14 +33087,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -33647,14 +33791,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -34348,14 +34495,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -35049,14 +35199,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -35750,14 +35903,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -36451,14 +36607,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -37152,14 +37311,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -37853,14 +38015,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -38554,14 +38719,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -39255,14 +39423,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -39956,14 +40127,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -40657,14 +40831,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -41358,14 +41535,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -42059,14 +42239,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -42760,14 +42943,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -43461,14 +43647,17 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
 
 
+
 == adoc
 :source-highlighter: rouge
 
@@ -44162,12 +44351,15 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
+
 
 
 == adoc
@@ -44863,9 +45055,11 @@ zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xa
 ....
 
 :source-highlighter: rouge
+:toc:
+:toc-placement!:
 
 = TIL
 
 Today in learned.
 
-:toc:
+toc::[]
