@@ -45,4 +45,3 @@ include::adoc/xz.adoc[adoc/xz]
 include::adoc/zypper.adoc[adoc/zypper]
 
 
-
