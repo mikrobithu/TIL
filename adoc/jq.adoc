@@ -1,7 +1,7 @@
 
 == jq
 :source-highlighter: rouge
-:toc:
+
 
 [source,bash]
 ----

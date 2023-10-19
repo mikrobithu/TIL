@@ -1,7 +1,7 @@
 
 == kubectl
 :source-highlighter: rouge
-:toc:
+
 
 ==== Merge multiple kubeconfig
 [source,shell]

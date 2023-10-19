@@ -1,6 +1,6 @@
 
 == helm
-:toc:
+
 :source-highlighter: rouge
 
 === update
