@@ -4,43 +4,43 @@
 
 Today in learned.
 
-include::./adoc.adoc[adoc]
+include::adoc/adoc.adoc[adoc/adoc]
 
-include::./autoyast.adoc[autoyast]
+include::adoc/autoyast.adoc[adoc/autoyast]
 
-include::./curl.adoc[curl]
+include::adoc/curl.adoc[adoc/curl]
 
-include::./diff.adoc[diff]
+include::adoc/diff.adoc[adoc/diff]
 
-include::./find.adoc[find]
+include::adoc/find.adoc[adoc/find]
 
-include::./git.adoc[git]
+include::adoc/git.adoc[adoc/git]
 
-include::./hpacucli-hpssacli.adoc[hpacucli-hpssacli]
+include::adoc/hpacucli-hpssacli.adoc[adoc/hpacucli-hpssacli]
 
-include::./ipsec.adoc[ipsec]
+include::adoc/ipsec.adoc[adoc/ipsec]
 
-include::./jq.adoc[jq]
+include::adoc/jq.adoc[adoc/jq]
 
-include::./kubectl.adoc[kubectl]
+include::adoc/kubectl.adoc[adoc/kubectl]
 
-include::./liquidprompt.adoc[liquidprompt]
+include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
-include::./lvm.adoc[lvm]
+include::adoc/lvm.adoc[adoc/lvm]
 
-include::./ponymail-foal.adoc[ponymail-foal]
+include::adoc/ponymail-foal.adoc[adoc/ponymail-foal]
 
-include::./rabbitmq.adoc[rabbitmq]
+include::adoc/rabbitmq.adoc[adoc/rabbitmq]
 
-include::./rancher.adoc[rancher]
+include::adoc/rancher.adoc[adoc/rancher]
 
-include::./rsyslog.adoc[rsyslog]
+include::adoc/rsyslog.adoc[adoc/rsyslog]
 
-include::./salt.adoc[salt]
+include::adoc/salt.adoc[adoc/salt]
 
-include::./template.adoc[template]
+include::adoc/template.adoc[adoc/template]
 
-include::./xz.adoc[xz]
+include::adoc/xz.adoc[adoc/xz]
 
-include::./zypper.adoc[zypper]
+include::adoc/zypper.adoc[adoc/zypper]
 

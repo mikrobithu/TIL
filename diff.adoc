@@ -1,9 +1,0 @@
-= Title
-:toc
-:source-highlighter: rouge
-
-[source,shell]
-----
-vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(ssh srv2 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml')
-----
-
