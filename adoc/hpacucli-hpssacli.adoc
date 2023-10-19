@@ -1,6 +1,7 @@
-:source-highlighter: rouge
 
-=== hpacucli, hpssacli
+== hpacucli, hpssacli
+:source-highlighter: rouge
+:toc:
 
 shortnames:
 

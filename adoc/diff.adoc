@@ -1,6 +1,7 @@
-= Title
-:toc
+
+== diff
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ----

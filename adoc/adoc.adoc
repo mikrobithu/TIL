@@ -1,9 +1,9 @@
 
 == adoc
-:toc:
 :source-highlighter: rouge
+:toc:
 
-==== footnotes 
+=== footnotes 
 
 [source,adoc]
 ----
@@ -17,7 +17,7 @@ footnote:id[]
 Ported from upstreamsfootnote:[https://git.home.lan/app1],footnote:[https://git.home.lan/app2]
 ----
 
-==== images
+=== images
 [source,adoc]
 ----
 
@@ -28,7 +28,7 @@ image::sunset.jpg[alt text]
 image::img1.jpg[alt text,width,height]
 ----
 
-==== syntac highlighting 
+=== syntac highlighting 
 
 [source,adoc]
 ....
@@ -40,7 +40,7 @@ print "Hello World"
 ----
 ....
 
-==== Enable line numbering
+=== Enable line numbering
 
 [source,adoc]
 ....
@@ -95,7 +95,7 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 
 [source,adoc]
 ....
-==== title
+=== title
 
 [source,adoc]
 ----
@@ -104,14 +104,14 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 ....
 
 
-==== Table of Contents (TOC)
+=== Table of Contents (TOC)
 
 [source,adoc]
 ....
 :toc:
 ....
 
-==== convert asciidoc to markdown
+=== convert asciidoc to markdown
 
 steps: asciidoc -> XML -> markdown
 

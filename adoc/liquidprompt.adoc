@@ -1,4 +1,6 @@
-:toc
+
+== liquidprompt
+:toc:
 :source-highlighter: rouge
 
 [source,shell]

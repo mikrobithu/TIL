@@ -1,8 +1,9 @@
+
+== git
 :source-highlighter: rouge
+:toc: 
 
-= Git
-
-== BASH functions
+=== BASH functions
 
 [source,shell]
 ----
@@ -20,6 +21,6 @@ EOF
 source ~/.bashrc
 ----
 
-== use github with multiple user
+=== use github with multiple user
 
 

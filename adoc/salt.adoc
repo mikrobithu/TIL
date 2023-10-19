@@ -1,9 +1,10 @@
-= Title
-:toc
+
+== salt
+:toc:
 :source-highlighter: rouge
 
 
-== apply highsate
+=== apply highsate
 [source,shell]
 ----
 salt --state-output=mixed rancher[1,2,3] state.highstate
