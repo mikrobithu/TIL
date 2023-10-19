@@ -1,16 +1,17 @@
-:source-highlighter: rouge
-:toc
 
 = TIL
+:source-highlighter: rouge
+:toc:
+
 
 Today in learned.
 
 
 == adoc
-:toc:
 :source-highlighter: rouge
+:toc:
 
-==== footnotes
+=== footnotes
 
 [source,adoc]
 ----
@@ -24,7 +25,7 @@ footnote:id[]
 Ported from upstreamsfootnote:[https://git.home.lan/app1],footnote:[https://git.home.lan/app2]
 ----
 
-==== images
+=== images
 [source,adoc]
 ----
 
@@ -35,7 +36,7 @@ image::sunset.jpg[alt text]
 image::img1.jpg[alt text,width,height]
 ----
 
-==== syntac highlighting
+=== syntac highlighting
 
 [source,adoc]
 ....
@@ -47,7 +48,7 @@ print "Hello World"
 ----
 ....
 
-==== Enable line numbering
+=== Enable line numbering
 
 [source,adoc]
 ....
@@ -102,7 +103,7 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 
 [source,adoc]
 ....
-==== title
+=== title
 
 [source,adoc]
 ----
@@ -111,14 +112,14 @@ link:https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.m
 ....
 
 
-==== Table of Contents (TOC)
+=== Table of Contents (TOC)
 
 [source,adoc]
 ....
 :toc:
 ....
 
-==== convert asciidoc to markdown
+=== convert asciidoc to markdown
 
 steps: asciidoc -> XML -> markdown
 
@@ -142,6 +143,9 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 - https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
 
+
+== autoyast
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -150,7 +154,10 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 ----
 
+
+== curl
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ....
@@ -181,9 +188,10 @@ EOF
 )
 ....
 
-= Title
-:toc
+
+== diff
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ----
@@ -191,18 +199,22 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 ----
 
 
+
+== find
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ----
 find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 ----
 
+
+== git
 :source-highlighter: rouge
+:toc:
 
-= Git
-
-== BASH functions
+=== BASH functions
 
 [source,shell]
 ----
@@ -220,13 +232,14 @@ EOF
 source ~/.bashrc
 ----
 
-== use github with multiple user
+=== use github with multiple user
 
 
 
+
+== hpacucli, hpssacli
 :source-highlighter: rouge
-
-=== hpacucli, hpssacli
+:toc:
 
 shortnames:
 
@@ -399,14 +412,20 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 ./ssacli ctrl slot=5 lk XXXXXXXXXXXXXXXXXXXXXXXXX delete
 ----
 
+
+== ipsec
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ----
 ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy ; ip route list table 220
 ----
 
+
+== jq
 :source-highlighter: rouge
+:toc:
 
 [source,bash]
 ----
@@ -434,14 +453,14 @@ jq -r '.|keys'
 jq -r '.[]|keys'
 ----
 
-concat, append string to output
+=== concat, append string to output
 
 [source,shell]
 ----
 jq -r '.[].username+"@npsh.hu"'
 ----
 
-print multiple fields
+=== print multiple fields
 
 [source,shell]
 ----
@@ -467,7 +486,8 @@ echo '{
 
 ----
 
-= kubectl
+
+== kubectl
 :source-highlighter: rouge
 :toc:
 
@@ -506,7 +526,7 @@ cluster2
 cluster3
 ----
 
-====  list all pods and its nodes
+===  list all pods and its nodes
 [source,shell]
 ----
 kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
@@ -537,7 +557,9 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 
 
 
-:toc
+
+== liquidprompt
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -563,7 +585,10 @@ LP_ENABLE_CONTAINER=1
 export LP_PS1_POSTFIX='\n$ '
 ----
 
+
+== crm
 :source-highlighter: rouge
+:toc
 
 [source,shell]
 ----
@@ -573,7 +598,10 @@ crm cluster run 'lvextend -rl +100%FREE /dev/pgsql_data/postgres'
 crm cluster run 'df -h /var/lib/pgsql'
 ----
 
+
+== ponymail-foal
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ----
@@ -582,8 +610,9 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 ----
 
 
-= RabbitMQ
-:toc
+
+== RabbitMQ
+:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -593,10 +622,12 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 ----
 
 
-:toc
+
+== helm
+:toc:
 :source-highlighter: rouge
 
-== update
+=== update
 
 [source,shell]
 ----
@@ -611,7 +642,10 @@ vi rancher-values.yaml # change image tag
 ----
 
 
+
+== rsyslog
 :source-highlighter: rouge
+:toc:
 
 [source,text]
 ----
@@ -622,12 +656,13 @@ ForwardToSyslog=yes
 ----
 
 
-= Title
-:toc
+
+== salt
+:toc:
 :source-highlighter: rouge
 
 
-== apply highsate
+=== apply highsate
 [source,shell]
 ----
 salt --state-output=mixed rancher[1,2,3] state.highstate
@@ -635,6 +670,9 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 
 Unresolved directive in readme-source.adoc - include::adoc/template.adoc[adoc/template]
+
+
+== xz
 
 :source-highlighter: rouge
 
@@ -648,7 +686,10 @@ xz --lzma2=preset=1,dict=32MiB foo.tar
 xz -vv --lzma2=dict=192MiB big_foo.tar
 ----
 
+
+== zypper
 :source-highlighter: rouge
+:toc:
 
 [source,shell]
 ....
