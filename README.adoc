@@ -4,47 +4,43 @@
 
 Today in learned.
 
-link::adoc.adoc[adoc]
+include::./adoc.adoc[adoc]
 
-link::autoyast.adoc[autoyast]
+include::./autoyast.adoc[autoyast]
 
-link::curl.adoc[curl]
+include::./curl.adoc[curl]
 
-link::diff.adoc[diff]
+include::./diff.adoc[diff]
 
-link::find.adoc[find]
+include::./find.adoc[find]
 
-link::fleet.adoc[fleet]
+include::./git.adoc[git]
 
-link::git.adoc[git]
+include::./hpacucli-hpssacli.adoc[hpacucli-hpssacli]
 
-link::hpacucli-hpssacli.adoc[hpacucli-hpssacli]
+include::./ipsec.adoc[ipsec]
 
-link::ipsec.adoc[ipsec]
+include::./jq.adoc[jq]
 
-link::jq.adoc[jq]
+include::./kubectl.adoc[kubectl]
 
-link::kubectl.adoc[kubectl]
+include::./liquidprompt.adoc[liquidprompt]
 
-link::liquidprompt.adoc[liquidprompt]
+include::./lvm.adoc[lvm]
 
-link::lvm.adoc[lvm]
+include::./ponymail-foal.adoc[ponymail-foal]
 
-link::packer.adoc[packer]
+include::./rabbitmq.adoc[rabbitmq]
 
-link::ponymail-foal.adoc[ponymail-foal]
+include::./rancher.adoc[rancher]
 
-link::rabbitmq.adoc[rabbitmq]
+include::./rsyslog.adoc[rsyslog]
 
-link::rancher.adoc[rancher]
+include::./salt.adoc[salt]
 
-link::rsyslog.adoc[rsyslog]
+include::./template.adoc[template]
 
-link::salt.adoc[salt]
+include::./xz.adoc[xz]
 
-link::template.adoc[template]
-
-link::xz.adoc[xz]
-
-link::zypper.adoc[zypper]
+include::./zypper.adoc[zypper]
 
