@@ -63,6 +63,7 @@ uniq -c
 ----
 kubectl create secret generic wiki-postgresql --from-literal=psqlpassword=secretpassword123
 kubectl get secrets wiki-postgresql --template='{{.data.psqlpassword}}' | base64 -d
+kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64decode}}{{ "\n" }}'
 ----
 
 
