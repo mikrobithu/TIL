@@ -1,7 +1,6 @@
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 

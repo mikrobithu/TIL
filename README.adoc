@@ -1,7 +1,6 @@
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -698,10 +697,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -1398,10 +1396,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -2098,10 +2095,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -2798,10 +2794,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -3498,10 +3493,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -4198,10 +4192,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -4898,10 +4891,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -5598,10 +5590,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -6298,10 +6289,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -6998,10 +6988,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -7698,10 +7687,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -8398,10 +8386,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -9098,10 +9085,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -9798,10 +9784,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -10498,10 +10483,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -11198,10 +11182,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -11898,10 +11881,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -12598,10 +12580,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -13298,10 +13279,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -13998,10 +13978,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -14698,10 +14677,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -15398,10 +15376,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -16098,10 +16075,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -16798,10 +16774,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -17498,10 +17473,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -18198,10 +18172,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -18898,10 +18871,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -19598,10 +19570,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -20298,10 +20269,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -20998,10 +20968,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -21698,10 +21667,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -22397,11 +22365,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -23097,11 +23064,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -23797,11 +23763,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -24497,11 +24462,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -25197,11 +25161,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -25897,11 +25860,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -26597,11 +26559,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -27297,11 +27258,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -27997,11 +27957,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -28697,11 +28656,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -29397,11 +29355,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -30097,11 +30054,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -30797,11 +30753,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -31497,11 +31452,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -32197,11 +32151,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -32897,11 +32850,10 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -33598,10 +33550,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -34298,10 +34249,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -34998,10 +34948,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -35698,10 +35647,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -36398,10 +36346,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -37098,10 +37045,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -37798,10 +37744,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -38498,10 +38443,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -39198,10 +39142,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -39898,10 +39841,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -40598,10 +40540,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -41298,10 +41239,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -41998,10 +41938,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -42698,10 +42637,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -43398,10 +43336,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -44098,10 +44035,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
 
-
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
 
@@ -44797,10 +44733,9 @@ zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -
 # remove pkgs installed by pattern
 zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
 ....
-
 
-= TIL
 :source-highlighter: rouge
 
+= TIL
 Today in learned.
 :toc:
