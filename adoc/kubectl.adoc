@@ -1,0 +1,69 @@
+= kubectl
+:source-highlighter: rouge
+:toc:
+
+==== Merge multiple kubeconfig
+[source,shell]
+----
+mkdir ~/.kube/conf.d
+cp cluster1-config ~/.kube/conf.d/
+cp cluster2-config ~/.kube/conf.d/
+cp cluster3-condig ~/.kube/conf.d/
+# the contexts must be different!
+grep -rA5 context: ~/.kube/conf.d/ 
+export KUBECONFIG=$(find ~/.kube/conf.d/  -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g')
+echo $KUBECONFIG
+UMASK=0600 kubectl config view --flatten > ~/.kube/config
+----
+
+[source,shell]
+----
+UMASK=0600 KUBECONFIG=$(find ~/.kube/conf.d/  -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
+----
+
+
+[source,shell]
+----
+UMASK=0600 KUBECONFIG=$(find ~/.kube/conf.d/oracle/ -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
+----
+
+
+[source,console]
+----
+kubectl config get-clusters 
+NAME
+cluster1
+cluster2
+cluster3
+----
+
+====  list all pods and its nodes
+[source,shell]
+----
+kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
+kubectl get pod -o=custom-columns=NAME:.metadata.name,STATUS:.status.phase,NODE:.spec.nodeName --all-namespaces
+kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces
+kubectl get pod --all-namespaces -o json | jq '.items[] | .spec.nodeName + " " + .metadata.name + " " + .status.podIP'
+kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nodeName}{" "}{.metadata.namespace}{" "}{.metadata.name}{"\n"}{end}'
+----
+
+=== List All Container Images Running in a Cluster
+[source,shell]
+----
+kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" |\
+tr -s '[[:space:]]' '\n' |\
+sort |\
+uniq -c
+----
+
+
+=== create secret
+
+[,shell]
+----
+kubectl create secret generic wiki-postgresql --from-literal=psqlpassword=secretpassword123
+kubectl get secrets wiki-postgresql --template='{{.data.psqlpassword}}' | base64 -d
+kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64decode}}{{ "\n" }}'
+----
+
+

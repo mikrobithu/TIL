@@ -1,0 +1,10 @@
+:source-highlighter: rouge
+
+[source,shell]
+....
+# remove all package that installed by pattern
+zypper rm $(zypper info --type pattern PATTERN_NAME |grep ' | package | ' |awk -F'|' '{print $2}' |xargs)
+
+# remove pkgs installed by pattern
+zypper info --requires PATTERN_NAME | grep '| package |' | awk '{print $3}' | xargs zypper rm
+....

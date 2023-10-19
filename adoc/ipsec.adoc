@@ -1,0 +1,6 @@
+:source-highlighter: rouge
+
+[source,shell]
+----
+ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy ; ip route list table 220
+----

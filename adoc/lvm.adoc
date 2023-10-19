@@ -1,0 +1,9 @@
+:source-highlighter: rouge
+
+[source,shell]
+----
+crm cluster run 'echo 1 > /sys/block/sdb/device/rescan'
+crm cluster run 'pvresize /dev/sdb'
+crm cluster run 'lvextend -rl +100%FREE /dev/pgsql_data/postgres'
+crm cluster run 'df -h /var/lib/pgsql'
+----

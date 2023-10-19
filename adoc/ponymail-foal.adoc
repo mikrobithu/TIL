@@ -1,0 +1,8 @@
+:source-highlighter: rouge
+
+[source,shell]
+----
+# count msgs
+curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&domain=lists.home.lan" | jq -r ".active_months[]"  | xargs| sed 's/ / + /g' | bc
+----
+

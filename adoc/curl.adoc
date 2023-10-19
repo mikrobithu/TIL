@@ -1,0 +1,30 @@
+:source-highlighter: rouge
+
+[source,shell]
+....
+cat << EOF > curl-format.txt
+time_namelookup:  %{time_namelookup}s\n
+time_connect:  %{time_connect}s\n
+time_appconnect:  %{time_appconnect}s\n
+time_pretransfer:  %{time_pretransfer}s\n
+time_redirect:  %{time_redirect}s\n
+time_starttransfer:  %{time_starttransfer}s\n
+----------\n
+time_total:  %{time_total}s\n
+EOF 
+
+curl -w "@curl-format.txt" -o /dev/null -s "https://test.hu"
+
+
+# post json with variable substitution
+curl "http://localhost:8080" \
+-H "Accept: application/json" \
+-H "Content-Type:application/json" \
+--data @<(cat <<EOF
+{
+  "me": "$USER",
+  "something": $(date +%s)
+  }
+EOF
+)
+....
