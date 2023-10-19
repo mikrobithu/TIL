@@ -1,5 +1,6 @@
 
 == diff
+:toc:
 :source-highlighter: rouge
 
 

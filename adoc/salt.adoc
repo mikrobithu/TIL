@@ -1,6 +1,7 @@
 
 == salt
 
+:toc:
 :source-highlighter: rouge
 
 
