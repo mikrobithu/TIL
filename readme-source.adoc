@@ -1,6 +1,9 @@
+==TIL
 :source-highlighter: rouge
-
+:toc:
 Today in learned.
+
+toc::[]
 
 
 include::adoc/adoc.adoc[adoc/adoc]
