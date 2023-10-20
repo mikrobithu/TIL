@@ -68,4 +68,8 @@ kubectl get secrets wiki-postgresql --template='{{.data.psqlpassword}}' | base64
 kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64decode}}{{ "\n" }}'
 ----
 
-
+=== object check (yaml lint, api version check)
+[,shell]
+----
+kubectl create --dry-run=server -f configmap.yaml
+----
