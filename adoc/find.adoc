@@ -3,7 +3,6 @@
 :toc:
 :source-highlighter: rouge
 
-
 [source,shell]
 ----
 find / -name "*.rpmnew" -not -path "/var/lib/docker*"
