@@ -4,7 +4,7 @@
 :source-highlighter: rouge
 
 
-==== Merge multiple kubeconfig
+=== Merge multiple kubeconfig
 [source,shell]
 ----
 mkdir ~/.kube/conf.d

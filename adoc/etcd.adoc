@@ -1,0 +1,34 @@
+== etcd
+:toc:
+:source-highlighter: rouge
+
+
+=== separeta to another mountpoint
+
+[source,shell]
+----
+kubectl drain node1 --delete-emptydir-data --ignore-daemonsets
+kubectl get no
+rke2-killall.sh
+fdisk -l
+parted /dev/sdX
+mklabel msdos
+mkpart primary 0% 100%
+mkfs.xfs -L etcd /dev/sdX1
+cd /var/lib/rancher/rke2/server/db/
+mv etcd etcd_
+mkdir etcd
+blkid | grep etcd
+blkid | grep etcd | cut -d' ' -f3
+echo 'UUID="4c392b90-b2f3-48c1-a055-45ac1" /var/lib/rancher/rke2/server/db/etcd  xfs defaults 0 0' >> /etc/fstab
+mount -a
+chown etcd:etcd /var/lib/rancher/rke2/server/db/etcd
+ls -lad /var/lib/rancher/rke2/server/db/etcd
+rsync -avz etcd_/ etcd/
+find etcd_
+find etcd
+diff <(find etcd -printf '%f\n'|sort) <(find etcd_ -printf '%f\n'|sort)
+systemctl start rke2-server
+kubectl uncordon node1
+----
+
