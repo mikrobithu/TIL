@@ -4,7 +4,7 @@
 :source-highlighter: rouge
 
 
-=== Merge multiple kubeconfig
+=== merge multiple kubeconfig
 [source,shell]
 ----
 mkdir ~/.kube/conf.d
@@ -49,7 +49,7 @@ kubectl get pod --all-namespaces -o json | jq '.items[] | .spec.nodeName + " " +
 kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nodeName}{" "}{.metadata.namespace}{" "}{.metadata.name}{"\n"}{end}'
 ----
 
-=== List All Container Images Running in a Cluster
+=== list all container images running in a cluster
 [source,shell]
 ----
 kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" |\
