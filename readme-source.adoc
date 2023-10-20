@@ -16,6 +16,8 @@ include::adoc/curl.adoc[adoc/curl]
 
 include::adoc/diff.adoc[adoc/diff]
 
+include::adoc/etcd.adoc[adoc/etcd]
+
 include::adoc/find.adoc[adoc/find]
 
 include::adoc/git.adoc[adoc/git]
