@@ -3,10 +3,7 @@
 = TIL
 :source-highlighter: rouge
 :toc:
-
-Today in learned.
-
-toc::[]
+:toc-title:Today in learned.
 
 
 include::adoc/adoc.adoc[adoc/adoc]
