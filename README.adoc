@@ -3,6 +3,7 @@
 = TIL
 :source-highlighter: rouge
 :toc:
+
 Today in learned.
 
 toc::[]
@@ -540,7 +541,7 @@ echo '{
 :source-highlighter: rouge
 
 
-=== Merge multiple kubeconfig
+=== merge multiple kubeconfig
 [source,shell]
 ----
 mkdir ~/.kube/conf.d
@@ -559,12 +560,10 @@ UMASK=0600 kubectl config view --flatten > ~/.kube/config
 UMASK=0600 KUBECONFIG=$(find ~/.kube/conf.d/  -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
 ----
 
-
 [source,shell]
 ----
 UMASK=0600 KUBECONFIG=$(find ~/.kube/conf.d/oracle/ -maxdepth 1 -type f -printf "%p:" | sed 's/:$//g') kubectl config view --flatten > ~/.kube/config
 ----
-
 
 [source,console]
 ----
@@ -585,7 +584,7 @@ kubectl get pod --all-namespaces -o json | jq '.items[] | .spec.nodeName + " " +
 kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nodeName}{" "}{.metadata.namespace}{" "}{.metadata.name}{"\n"}{end}'
 ----
 
-=== List All Container Images Running in a Cluster
+=== list all container images running in a cluster
 [source,shell]
 ----
 kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" |\
