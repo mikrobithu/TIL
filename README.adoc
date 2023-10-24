@@ -279,7 +279,7 @@ source ~/.bashrc
 === merge vs rebase
 
 .merge vs rebase
-image:images/merge-vs-rebase.jpg[merge vs rebase]
+image:adoc/images/merge-vs-rebase.jpg[merge vs rebase]
 
 
 == hpacucli, hpssacli
