@@ -28,3 +28,4 @@ source ~/.bashrc
 
 .merge vs rebase
 image:adoc/images/merge-vs-rebase.jpg[merge vs rebase]
+
