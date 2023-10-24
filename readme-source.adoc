@@ -2,6 +2,7 @@
 
 = TIL
 :source-highlighter: rouge
+:sectnums:
 :toc:
 :toc-title:Today in learned.
 
