@@ -276,7 +276,10 @@ source ~/.bashrc
 
 === use github with multiple user
 
+=== merge vs rebase
 
+.merge vs rebase
+image:images/merge-vs-rebase.jpg[merge vs rebase]
 
 
 == hpacucli, hpssacli
