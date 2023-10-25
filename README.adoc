@@ -283,6 +283,14 @@ source ~/.bashrc
 image:adoc/images/merge-vs-rebase.jpg[merge vs rebase]
 
 
+=== delete branch
+
+[,shell]
+----
+git branch -d localbranch # delete branch locally
+git push origin --delete remotebranch # delete branch remotely
+----
+
 
 == hpacucli, hpssacli
 :toc:
