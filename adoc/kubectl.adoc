@@ -5,6 +5,7 @@
 
 
 === merge multiple kubeconfig
+
 [source,shell]
 ----
 mkdir ~/.kube/conf.d
@@ -38,6 +39,7 @@ cluster3
 ----
 
 ===  list all pods and its nodes
+
 [source,shell]
 ----
 kubectl get pods -o wide --all-namespaces --sort-by="{.spec.nodeName}"
@@ -48,6 +50,7 @@ kubectl get pods --all-namespaces --output 'jsonpath={range .items[*]}{.spec.nod
 ----
 
 === list all container images running in a cluster
+
 [source,shell]
 ----
 kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" |\
@@ -67,6 +70,7 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 ----
 
 === object check (yaml lint, api version check)
+
 [,shell]
 ----
 kubectl create --dry-run=server -f configmap.yaml
@@ -176,8 +180,6 @@ grep listen /tmp/nginx.conf
 [,shell]
 ----
 kubectl get cm nginx-configmap -o json| jq -r '.data[]' | grep listen
-                listen       8080;
-                # listen  [::]:80;
 ----
 
 [,console]
