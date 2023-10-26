@@ -618,6 +618,131 @@ kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64d
 kubectl create --dry-run=server -f configmap.yaml
 ----
 
+=== using config map for config files
+
+./tmp/nginx.conf
+[,nginxconf]
+----
+# /tmp/nginx.conf
+user  nginx;
+worker_processes  auto;
+error_log /dev/stdout notice;
+pid        /var/run/nginx.pid;
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+    access_log  /dev/stdout  main;
+    sendfile        on;
+    #tcp_nopush     on;
+    keepalive_timeout  65;
+    #gzip  on;
+    server {
+                listen       8080;
+                # listen  [::]:80;
+                server_name  _;
+                location / {
+                        root /srv/www/htdocs;
+                        try_files $uri $uri/ /index.html;
+                }
+        }
+}
+----
+
+[,shell]
+----
+kubectl create configmap nginx-configmap --from-file=/tmp/nginx.conf
+kubectl get cm nginx-config -o json| jq -r '.data[]|keys' # use this key in volumes section of deployment
+----
+
+[,yaml]
+----
+[
+  "nginx.conf"
+]
+----
+
+./tmp/nginx-deployment.yaml
+[,yaml]
+----
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: registry.suse.com/suse/nginx:1.21
+        name: nginx
+        ports:
+        - containerPort: 8080
+          name: nginx
+        volumeMounts:
+        - name: nginx-configmap-volume
+          mountPath:  /etc/nginx/nginx.conf
+          subPath: nginx.conf
+      volumes:
+      - name: nginx-configmap-volume
+        configMap:
+          name: nginx-configmap
+          items:
+          - key: nginx.conf
+            path: nginx.conf
+----
+
+[,shell]
+----
+kubectl create -f nginx-deployment.yaml
+----
+
+[,shell]
+----
+grep listen /tmp/nginx.conf
+----
+
+[,console]
+----
+                listen       8080;
+                # listen  [::]:80;
+----
+
+[,shell]
+----
+kubectl get cm nginx-configmap -o json| jq -r '.data[]' | grep listen
+                listen       8080;
+                # listen  [::]:80;
+----
+
+[,console]
+----
+                listen       8080;
+                # listen  [::]:80;
+----
+
+[,shell]
+----
+kubectl exec -it  nginx-68c798d8f7-5crqc -- grep listen /etc/nginx/nginx.conf
+----
+
+[,console]
+----
+                listen       8080;
+                # listen  [::]:80;
+----
+
 
 == liquidprompt
 
