@@ -198,3 +198,12 @@ kubectl exec -it  nginx-68c798d8f7-5crqc -- grep listen /etc/nginx/nginx.conf
                 listen       8080;
                 # listen  [::]:80;
 ----
+
+=== object relation graph generating
+
+[source,shell]
+----
+# 0. step:  install krew https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+kubectl krew install graph
+kubectl graph -t 100 ConfigMap,deployments,ingress,secret,service -n acltool  -o mermaid
+----
