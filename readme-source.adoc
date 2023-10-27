@@ -21,6 +21,8 @@ include::adoc/find.adoc[adoc/find]
 
 include::adoc/git.adoc[adoc/git]
 
+include::adoc/har.adoc[adoc/har]
+
 include::adoc/hpacucli-hpssacli.adoc[adoc/hpacucli-hpssacli]
 
 include::adoc/ipsec.adoc[adoc/ipsec]

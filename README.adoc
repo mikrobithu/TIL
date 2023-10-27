@@ -291,6 +291,19 @@ git branch -d localbranch # delete branch locally
 git push origin --delete remotebranch # delete branch remotely
 ----
 
+== HAR - HTTP Archive format
+
+:toc:
+:source-highlighter: rouge
+
+[source,shell]
+----
+podman run --rm -it -v /tmp/har:/tmp/har registry.suse.com/bci/python
+pip install harview
+harview -vv --filter-all /tmp/har/site.har
+----
+
+
 
 == hpacucli, hpssacli
 :toc:
