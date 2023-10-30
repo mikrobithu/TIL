@@ -2,7 +2,6 @@
 == adoc
 :source-highlighter: rouge
 
-
 === footnotes 
 
 [source,adoc]
