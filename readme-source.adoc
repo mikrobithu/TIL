@@ -4,8 +4,10 @@
 :source-highlighter: rouge
 :sectnums:
 :toc:
+toc-level: 5
 :toc-title:Today in learned.
 
+:sectnumlevels: 5
 
 include::adoc/adoc.adoc[adoc/adoc]
 
