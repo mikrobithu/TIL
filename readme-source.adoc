@@ -4,7 +4,9 @@
 :source-highlighter: rouge
 :sectnums:
 :toc:
-:toc-level: 5
+:idprefix:
+:idseparator: -
+toc-level: 5
 :toc-title: Today in learned.
 
 :sectnumlevels: 5
