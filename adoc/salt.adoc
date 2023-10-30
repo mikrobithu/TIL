@@ -1,7 +1,8 @@
+:source-highlighter: rouge
+:toc:
 
 == salt
 
-:source-highlighter: rouge
 
 
 === apply highsate

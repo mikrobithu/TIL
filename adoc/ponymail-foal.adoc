@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == ponymail-foal
-:source-highlighter: rouge
 
 
 [source,shell]

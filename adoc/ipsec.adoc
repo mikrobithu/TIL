@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == ipsec
-:source-highlighter: rouge
 
 
 [source,shell]

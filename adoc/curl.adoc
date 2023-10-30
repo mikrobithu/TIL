@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == curl
-:source-highlighter: rouge
 
 
 [source,shell]

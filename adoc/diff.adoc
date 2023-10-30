@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == diff
-:source-highlighter: rouge
 
 
 [source,shell]

@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == zypper
-:source-highlighter: rouge
 
 
 [source,shell]

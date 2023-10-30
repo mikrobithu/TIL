@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == find
-:source-highlighter: rouge
 
 [source,shell]
 ----

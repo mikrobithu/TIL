@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == kubectl
-:source-highlighter: rouge
 
 
 === merge multiple kubeconfig

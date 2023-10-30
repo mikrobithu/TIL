@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == git
-:source-highlighter: rouge
  
 
 === BASH functions

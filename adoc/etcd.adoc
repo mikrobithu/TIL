@@ -1,5 +1,7 @@
-== etcd
 :source-highlighter: rouge
+:toc:
+
+== etcd
 
 
 === separate to another mountpoint

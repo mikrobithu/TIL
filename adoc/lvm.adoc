@@ -1,6 +1,7 @@
+:source-highlighter: rouge
+:toc:
 
 == crm
-:source-highlighter: rouge
 
 [source,shell]
 ----

@@ -1,7 +1,8 @@
+:source-highlighter: rouge
+:toc:
 
 == RabbitMQ
 
-:source-highlighter: rouge
 
 [source,shell]
 ----

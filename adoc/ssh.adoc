@@ -1,6 +1,8 @@
+:source-highlighter: rouge
+:toc:
+
 == ssh
 
-:source-highlighter: rouge
 
 
 === ssh-copy-id
