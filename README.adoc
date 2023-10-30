@@ -4,6 +4,7 @@
 :source-highlighter: rouge
 :sectnums:
 :toc:
+:idprefix: id_
 :idseparator: -
 toc-level: 5
 :toc-title: Today in learned.
@@ -13,7 +14,6 @@ toc-level: 5
 
 == adoc
 :source-highlighter: rouge
-
 
 === footnotes
 
