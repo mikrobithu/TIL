@@ -1,6 +1,5 @@
 
 == hpacucli, hpssacli
-:toc:
 :source-highlighter: rouge
 
 

@@ -1,6 +1,5 @@
 
 == git
-:toc:
 :source-highlighter: rouge
  
 

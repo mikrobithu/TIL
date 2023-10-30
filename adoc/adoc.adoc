@@ -1,7 +1,5 @@
 
 == adoc
-:toc:
-:toclevels: 2
 :source-highlighter: rouge
 
 
@@ -34,7 +32,6 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
-:toc:
 :source-highlighter: rouge
 
 [source, python]

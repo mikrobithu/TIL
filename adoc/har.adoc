@@ -1,6 +1,5 @@
 == HAR - HTTP Archive format
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]

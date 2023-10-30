@@ -1,6 +1,5 @@
 
 == ponymail-foal
-:toc:
 :source-highlighter: rouge
 
 

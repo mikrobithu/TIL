@@ -1,7 +1,6 @@
 
 == autoyast
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]

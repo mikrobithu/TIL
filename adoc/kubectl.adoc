@@ -1,6 +1,5 @@
 
 == kubectl
-:toc:
 :source-highlighter: rouge
 
 

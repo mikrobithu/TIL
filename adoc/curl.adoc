@@ -1,6 +1,5 @@
 
 == curl
-:toc:
 :source-highlighter: rouge
 
 

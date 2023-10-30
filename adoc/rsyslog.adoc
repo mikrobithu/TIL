@@ -1,6 +1,5 @@
 
 == rsyslog
-:toc:
 :source-highlighter: rouge
 
 

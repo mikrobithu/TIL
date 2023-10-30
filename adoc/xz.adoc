@@ -1,7 +1,6 @@
 
 == xz
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]

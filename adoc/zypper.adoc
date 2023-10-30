@@ -1,6 +1,5 @@
 
 == zypper
-:toc:
 :source-highlighter: rouge
 
 
