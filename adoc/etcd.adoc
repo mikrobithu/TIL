@@ -3,7 +3,7 @@
 :source-highlighter: rouge
 
 
-=== separeta to another mountpoint
+=== separate to another mountpoint
 
 [source,shell]
 ----

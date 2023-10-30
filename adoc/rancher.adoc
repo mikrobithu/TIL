@@ -18,3 +18,9 @@ vi rancher-values.yaml # change image tag
 
 ----
 
+=== reset admin password
+
+[,shell]
+----
+kubectl -n cattle-system exec $(kubectl -n cattle-system get pods | grep ^rancher | head -n 1 | awk '{ print $1 }') reset-password
+----
