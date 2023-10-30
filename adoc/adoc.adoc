@@ -1,6 +1,7 @@
 
 == adoc
 :toc:
+:toclevels:2
 :source-highlighter: rouge
 
 
