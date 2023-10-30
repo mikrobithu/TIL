@@ -4,7 +4,7 @@
 :source-highlighter: rouge
 :sectnums:
 :toc:
-toc-level: 5
+:toc-level: 5
 :toc-title:Today in learned.
 
 :sectnumlevels: 5
@@ -206,7 +206,6 @@ EOF
 ----
 vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(ssh srv2 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml')
 ----
-
 
 
 == etcd
