@@ -1,0 +1,11 @@
+
+== vimdiff
+
+[,text]
+----
+ctrl + w # switch between windows
+do # diff obtain, Pull the changes to the current file.
+dp # diff push, Push the changes to the current file. 
+:diffupdate # rescan diff
+
+----
