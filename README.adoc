@@ -10,9 +10,10 @@ toc-level: 5
 
 :sectnumlevels: 5
 
+:source-highlighter: rouge
+:toc:
 
 == adoc
-:source-highlighter: rouge
 
 === footnotes
 
@@ -45,7 +46,6 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
-:source-highlighter: rouge
 
 [source, python]
 ----
@@ -148,10 +148,11 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 - https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
 
+:source-highlighter: rouge
+:toc:
 
 == autoyast
 
-:source-highlighter: rouge
 
 [source,shell]
 ----
@@ -160,9 +161,10 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == curl
-:source-highlighter: rouge
 
 
 [source,shell]
@@ -194,9 +196,10 @@ EOF
 )
 ....
 
+:source-highlighter: rouge
+:toc:
 
 == diff
-:source-highlighter: rouge
 
 
 [source,shell]
@@ -206,8 +209,10 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 
-== etcd
 :source-highlighter: rouge
+:toc:
+
+== etcd
 
 
 === separate to another mountpoint
@@ -240,18 +245,20 @@ kubectl uncordon node1
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == find
-:source-highlighter: rouge
 
 [source,shell]
 ----
 find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == git
-:source-highlighter: rouge
 
 
 === BASH functions
@@ -288,9 +295,11 @@ git branch -d localbranch # delete branch locally
 git push origin --delete remotebranch # delete branch remotely
 ----
 
+:source-highlighter: rouge
+:toc:
+
 == HAR - HTTP Archive format
 
-:source-highlighter: rouge
 
 [source,shell]
 ----
@@ -300,9 +309,10 @@ harview -vv --filter-all /tmp/har/site.har
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == hpacucli, hpssacli
-:source-highlighter: rouge
 
 
 shortnames:
@@ -476,9 +486,10 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 ./ssacli ctrl slot=5 lk XXXXXXXXXXXXXXXXXXXXXXXXX delete
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == ipsec
-:source-highlighter: rouge
 
 
 [source,shell]
@@ -486,9 +497,10 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy ; ip route list table 220
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == jq
-:source-highlighter: rouge
 
 
 [source,bash]
@@ -550,9 +562,10 @@ echo '{
 
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == kubectl
-:source-highlighter: rouge
 
 
 === merge multiple kubeconfig
@@ -759,10 +772,11 @@ kubectl krew install graph
 kubectl graph -t 100 ConfigMap,deployments,ingress,secret,service -n acltool  -o mermaid
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == liquidprompt
 
-:source-highlighter: rouge
 
 [source,shell]
 ----
@@ -787,9 +801,10 @@ LP_ENABLE_CONTAINER=1
 export LP_PS1_POSTFIX='\n$ '
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == crm
-:source-highlighter: rouge
 
 [source,shell]
 ----
@@ -799,9 +814,10 @@ crm cluster run 'lvextend -rl +100%FREE /dev/pgsql_data/postgres'
 crm cluster run 'df -h /var/lib/pgsql'
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == ponymail-foal
-:source-highlighter: rouge
 
 
 [source,shell]
@@ -811,10 +827,11 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == RabbitMQ
 
-:source-highlighter: rouge
 
 [source,shell]
 ----
@@ -823,10 +840,11 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == helm
 
-:source-highlighter: rouge
 
 === update
 
@@ -849,9 +867,10 @@ vi rancher-values.yaml # change image tag
 kubectl -n cattle-system exec $(kubectl -n cattle-system get pods | grep ^rancher | head -n 1 | awk '{ print $1 }') reset-password
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == rsyslog
-:source-highlighter: rouge
 
 
 [source,text]
@@ -863,10 +882,11 @@ ForwardToSyslog=yes
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == salt
 
-:source-highlighter: rouge
 
 
 === apply highsate
@@ -876,9 +896,11 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 ----
 
 
+:source-highlighter: rouge
+:toc:
+
 == ssh
 
-:source-highlighter: rouge
 
 
 === ssh-copy-id
@@ -888,6 +910,8 @@ shpass -p server_password ssh-copy-id -oStrictHostKeyChecking=no root@$i -p 22
 ----
 
 
+:source-highlighter: rouge
+:toc:
 
 == vimdiff
 
@@ -900,10 +924,11 @@ dp # diff push, Push the changes to the current file.
 
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == xz
 
-:source-highlighter: rouge
 
 [source,shell]
 ----
@@ -915,9 +940,10 @@ xz --lzma2=preset=1,dict=32MiB foo.tar
 xz -vv --lzma2=dict=192MiB big_foo.tar
 ----
 
+:source-highlighter: rouge
+:toc:
 
 == zypper
-:source-highlighter: rouge
 
 
 [source,shell]
