@@ -5,7 +5,7 @@
 :sectnums:
 :toc:
 :toc-level: 5
-:toc-title:Today in learned.
+:toc-title: Today in learned.
 
 :sectnumlevels: 5
 
