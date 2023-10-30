@@ -211,7 +211,7 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 :source-highlighter: rouge
 
 
-=== separeta to another mountpoint
+=== separate to another mountpoint
 
 [source,shell]
 ----
@@ -856,6 +856,12 @@ vi rancher-values.yaml # change image tag
 
 ----
 
+=== reset admin password
+
+[,shell]
+----
+kubectl -n cattle-system exec $(kubectl -n cattle-system get pods | grep ^rancher | head -n 1 | awk '{ print $1 }') reset-password
+----
 
 
 == rsyslog
