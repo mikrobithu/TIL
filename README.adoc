@@ -11,8 +11,6 @@
 
 
 == adoc
-:toc:
-:toclevels: 2
 :source-highlighter: rouge
 
 
@@ -45,7 +43,6 @@ image::img1.jpg[alt text,width,height]
 
 [source,adoc]
 ....
-:toc:
 :source-highlighter: rouge
 
 [source, python]
@@ -152,7 +149,6 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 == autoyast
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -164,7 +160,6 @@ xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
 
 
 == curl
-:toc:
 :source-highlighter: rouge
 
 
@@ -199,7 +194,6 @@ EOF
 
 
 == diff
-:toc:
 :source-highlighter: rouge
 
 
@@ -211,7 +205,6 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 == etcd
-:toc:
 :source-highlighter: rouge
 
 
@@ -247,7 +240,6 @@ kubectl uncordon node1
 
 
 == find
-:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -257,7 +249,6 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 
 == git
-:toc:
 :source-highlighter: rouge
 
 
@@ -297,7 +288,6 @@ git push origin --delete remotebranch # delete branch remotely
 
 == HAR - HTTP Archive format
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -310,7 +300,6 @@ harview -vv --filter-all /tmp/har/site.har
 
 
 == hpacucli, hpssacli
-:toc:
 :source-highlighter: rouge
 
 
@@ -487,7 +476,6 @@ For example, when running VMware vSAN SSD Smart Path must be disabled for better
 
 
 == ipsec
-:toc:
 :source-highlighter: rouge
 
 
@@ -498,7 +486,6 @@ ipsec status ; iptables -L FORWARD | grep ipsec ; ip xfrm state ; ip xfrm policy
 
 
 == jq
-:toc:
 :source-highlighter: rouge
 
 
@@ -563,7 +550,6 @@ echo '{
 
 
 == kubectl
-:toc:
 :source-highlighter: rouge
 
 
@@ -774,7 +760,6 @@ kubectl graph -t 100 ConfigMap,deployments,ingress,secret,service -n acltool  -o
 
 == liquidprompt
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -802,9 +787,7 @@ export LP_PS1_POSTFIX='\n$ '
 
 
 == crm
-:toc:
 :source-highlighter: rouge
-:toc
 
 [source,shell]
 ----
@@ -816,7 +799,6 @@ crm cluster run 'df -h /var/lib/pgsql'
 
 
 == ponymail-foal
-:toc:
 :source-highlighter: rouge
 
 
@@ -830,7 +812,6 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 
 == RabbitMQ
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -843,7 +824,6 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 
 == helm
 
-:toc:
 :source-highlighter: rouge
 
 === update
@@ -869,7 +849,6 @@ kubectl -n cattle-system exec $(kubectl -n cattle-system get pods | grep ^ranche
 
 
 == rsyslog
-:toc:
 :source-highlighter: rouge
 
 
@@ -885,7 +864,6 @@ ForwardToSyslog=yes
 
 == salt
 
-:toc:
 :source-highlighter: rouge
 
 
@@ -899,7 +877,6 @@ salt --state-output=mixed rancher[1,2,3] state.highstate
 
 == xz
 
-:toc:
 :source-highlighter: rouge
 
 [source,shell]
@@ -914,7 +891,6 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == zypper
-:toc:
 :source-highlighter: rouge
 
 
