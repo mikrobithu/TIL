@@ -2,7 +2,6 @@
 
 = TIL
 :source-highlighter: rouge
-:sectnums:
 :toc:
 :idprefix: id_
 :idseparator: -
@@ -48,6 +47,10 @@ include::adoc/rancher.adoc[adoc/rancher]
 include::adoc/rsyslog.adoc[adoc/rsyslog]
 
 include::adoc/salt.adoc[adoc/salt]
+
+include::adoc/ssh.adoc[adoc/ssh]
+
+include::adoc/vi.adoc[adoc/vi]
 
 include::adoc/xz.adoc[adoc/xz]
 

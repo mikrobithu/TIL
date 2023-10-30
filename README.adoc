@@ -2,7 +2,6 @@
 
 = TIL
 :source-highlighter: rouge
-:sectnums:
 :toc:
 :idprefix: id_
 :idseparator: -
@@ -20,6 +19,8 @@ toc-level: 5
 [source,adoc]
 ----
 # footnotes
+
+
 
 footnote:[]
 
@@ -874,6 +875,30 @@ ForwardToSyslog=yes
 salt --state-output=mixed rancher[1,2,3] state.highstate
 ----
 
+
+== ssh
+
+:source-highlighter: rouge
+
+
+=== ssh-copy-id
+[source,shell]
+----
+shpass -p server_password ssh-copy-id -oStrictHostKeyChecking=no root@$i -p 22
+----
+
+
+
+== vimdiff
+
+[,text]
+----
+ctrl + w # switch between windows
+do # diff obtain, Pull the changes to the current file.
+dp # diff push, Push the changes to the current file.
+:diffupdate # rescan diff
+
+----
 
 
 == xz
