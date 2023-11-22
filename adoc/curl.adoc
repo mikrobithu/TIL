@@ -31,4 +31,8 @@ curl "http://localhost:8080" \
   }
 EOF
 )
+
+
+# post json from file
+curl -X POST -H "Content-Type: application/json" -d @FILENAME DESTINATION
 ....

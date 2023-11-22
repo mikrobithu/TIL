@@ -11,3 +11,11 @@
 salt --state-output=mixed rancher[1,2,3] state.highstate
 ----
 
+
+=== list, apply state
+[,shell]
+----
+salt srv1 state.show_states
+salt --state-output=mixed  srv1 state.sls statename
+----
+

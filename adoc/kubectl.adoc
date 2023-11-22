@@ -206,4 +206,8 @@ kubectl exec -it  nginx-68c798d8f7-5crqc -- grep listen /etc/nginx/nginx.conf
 # 0. step:  install krew https://krew.sigs.k8s.io/docs/user-guide/setup/install/
 kubectl krew install graph
 kubectl graph -t 100 ConfigMap,deployments,ingress,secret,service -n acltool  -o mermaid
+
+kubectl graph -t 100 $(kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found --no-headers=true -A | awk '{print $2}' | cut -d'/' -f1 | sort -u | tail -n +4 | xargs| tr ' ' ',') -A -o graphviz | dot -T svg -o context.svg
+
 ----
+
