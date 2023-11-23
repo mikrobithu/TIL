@@ -566,6 +566,13 @@ echo '{
 
 ----
 
+:toc:
+:source-highlighter: rouge
+
+== Troubleshooting Kubernetes commands
+
+https://gist.github.com/superseb/3cccbfa910bf2fbe831ede4f201284c3
+
 :source-highlighter: rouge
 :toc:
 

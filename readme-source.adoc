@@ -32,6 +32,8 @@ include::adoc/ipsec.adoc[adoc/ipsec]
 
 include::adoc/jq.adoc[adoc/jq]
 
+include::adoc/k8s-troubleshoot.adoc[adoc/k8s-troubleshoot]
+
 include::adoc/kubectl.adoc[adoc/kubectl]
 
 include::adoc/liquidprompt.adoc[adoc/liquidprompt]
