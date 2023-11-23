@@ -875,6 +875,33 @@ vi rancher-values.yaml # change image tag
 kubectl -n cattle-system exec $(kubectl -n cattle-system get pods | grep ^rancher | head -n 1 | awk '{ print $1 }') reset-password
 ----
 
+:toc:
+:source-highlighter: rouge
+
+== RKE2 commands
+
+
+
+https://gist.github.com/superseb/3b78f47989e0dbc1295486c186e944bf
+
+
+
+:toc:
+:source-highlighter: rouge
+
+== RMT
+
+[source,shell]
+----
+rmt-cli products list --version='15 SP5' --arch=x86_64
+rmt-cli products enable 2517
+# or
+rmt-cli products list --version='15 SP5' --arch=x86_64 --name="Web and Scripting Module" --all
+rmt-cli sync
+tail -f /var/log/messages
+----
+
+
 :source-highlighter: rouge
 :toc:
 
@@ -939,6 +966,18 @@ dp # diff push, Push the changes to the current file.
 :diffupdate # rescan diff
 
 ----
+
+:toc:
+:source-highlighter: rouge
+
+== vsphere
+
+[source,shell]
+----
+govc vm.change -vm /Datacenter/vm/srv1 -e="disk.enableUUID=1"
+govc vm.option.info -vm /Datacenter/vm/srv1 -json | jq -r '.GuestOSDescriptor.[].DiskUuidEnabled'
+----
+
 
 :source-highlighter: rouge
 :toc:

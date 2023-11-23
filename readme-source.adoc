@@ -44,6 +44,10 @@ include::adoc/rabbitmq.adoc[adoc/rabbitmq]
 
 include::adoc/rancher.adoc[adoc/rancher]
 
+include::adoc/rke2.adoc[adoc/rke2]
+
+include::adoc/rmt.adoc[adoc/rmt]
+
 include::adoc/rsyslog.adoc[adoc/rsyslog]
 
 include::adoc/salt.adoc[adoc/salt]
@@ -51,6 +55,8 @@ include::adoc/salt.adoc[adoc/salt]
 include::adoc/ssh.adoc[adoc/ssh]
 
 include::adoc/vi.adoc[adoc/vi]
+
+include::adoc/vsphere.adoc[adoc/vsphere]
 
 include::adoc/xz.adoc[adoc/xz]
 
