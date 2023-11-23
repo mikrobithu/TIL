@@ -1,0 +1,15 @@
+:toc:
+:source-highlighter: rouge
+
+== RMT
+
+[source,shell]
+----
+rmt-cli products list --version='15 SP5' --arch=x86_64
+rmt-cli products enable 2517
+# or
+rmt-cli products list --version='15 SP5' --arch=x86_64 --name="Web and Scripting Module" --all
+rmt-cli sync
+tail -f /var/log/messages
+----
+

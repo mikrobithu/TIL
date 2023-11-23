@@ -1,0 +1,11 @@
+:toc:
+:source-highlighter: rouge
+
+== vsphere
+
+[source,shell]
+----
+govc vm.change -vm /Datacenter/vm/srv1 -e="disk.enableUUID=1"
+govc vm.option.info -vm /Datacenter/vm/srv1 -json | jq -r '.GuestOSDescriptor.[].DiskUuidEnabled'
+----
+
