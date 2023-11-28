@@ -211,3 +211,11 @@ kubectl graph -t 100 $(kubectl api-resources --verbs=list --namespaced -o name |
 
 ----
 
+
+=== delete evicted pod
+
+[soruce,bash]
+----
+kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains("Evicted")) | "kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)"' | xargs -n 1 bash -c
+----
+
