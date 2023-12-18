@@ -576,6 +576,17 @@ https://gist.github.com/superseb/3cccbfa910bf2fbe831ede4f201284c3
 :source-highlighter: rouge
 :toc:
 
+== bash completion
+
+[,shell]
+----
+source <(kubectl completion bash)
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+alias k=kubectl
+complete -F __start_kubectl k
+----
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/#bash
+
 == kubectl
 
 
@@ -1043,6 +1054,20 @@ salt srv1 state.show_states
 salt --state-output=mixed  srv1 state.sls statename
 ----
 
+=== call single state of sls file
+
+.foo.sls
+[,yaml]
+----
+bar:
+   file.managed:
+       - source: salt://some/file
+----
+
+[,bash]
+----
+salt '*' state.sls_id bar foo
+----
 
 :source-highlighter: rouge
 :toc:
