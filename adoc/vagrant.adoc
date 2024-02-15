@@ -1,0 +1,13 @@
+
+== Vagrant
+:toc:
+:source-highlighter: rouge
+
+[source,console]
+----
+if Vagrant.has_plugin?("vagrant-vbguest") then
+  config.vbguest.auto_update = false
+end
+----
+
+* https://github.com/dotless-de/vagrant-vbguest

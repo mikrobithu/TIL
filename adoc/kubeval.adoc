@@ -1,0 +1,11 @@
+:toc:
+:source-highlighter: rouge
+
+== kubeval
+
+[source,shell]
+----
+podman run -it -v ${PWD}/k8s:/k8s docker.io/garethr/kubeval k8s/*
+podman run -it -v ${PWD}/k8s:/k8s docker.io/garethr/kubeval --skip-kinds Kustomization -s https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master  -v 1.25.11 k8s/*
+----
+
