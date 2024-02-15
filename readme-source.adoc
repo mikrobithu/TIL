@@ -36,6 +36,8 @@ include::adoc/k8s-troubleshoot.adoc[adoc/k8s-troubleshoot]
 
 include::adoc/kubectl.adoc[adoc/kubectl]
 
+include::adoc/kubeval.adoc[adoc/kubeval]
+
 include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
 include::adoc/lvm.adoc[adoc/lvm]
@@ -55,6 +57,10 @@ include::adoc/rsyslog.adoc[adoc/rsyslog]
 include::adoc/salt.adoc[adoc/salt]
 
 include::adoc/ssh.adoc[adoc/ssh]
+
+include::adoc/traefik.adoc[adoc/traefik]
+
+include::adoc/vagrant.adoc[adoc/vagrant]
 
 include::adoc/vi.adoc[adoc/vi]
 
