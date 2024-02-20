@@ -1,0 +1,97 @@
+
+== Bash scripting
+:toc:
+:source-highlighter: rouge
+
+=== Using Variable Substitution
+
+==== tl;dr
+
+[source,bash]
+----
+${parameter:-defaultValue}  Get default shell variables value
+${parameter:=defaultValue}  Set default shell variables value
+${parameter:?"Error Message"}  Display an error message if parameter is not set
+${#var}  Find the length of the string
+${var%pattern}  Remove from shortest rear (end) pattern
+${var%%pattern}  Remove from longest rear (end) pattern
+${var:num1:num2} Substring
+${var#pattern}  Remove from shortest front pattern
+${var##pattern}  Remove from longest front pattern
+${var/pattern/string}  Find and replace (only replace first occurrence)
+${var//pattern/string}  Find and replace all occurrences
+
+var="This is a test"
+echo "${var~~}" # Reverse var #
+echo "${var^^}" # UPPERCASE var #
+echo "${var,,}" # lowercase var #
+----
+
+
+==== ${VAR#pattern} removes the shortest possible match from the left:
+
+
+[source,shell]
+----
+file=/home/tux/book/book.tar.bz2
+echo ${file#*/}
+home/tux/book/book.tar.bz2
+----
+
+
+==== ${VAR##pattern} removes the longest possible match from the left:
+
+
+[source,shell]
+----
+file=/home/tux/book/book.tar.bz2
+echo ${file##*/}
+book.tar.bz2
+----
+
+
+
+==== ${VAR%pattern} removes the shortest possible match from the right:
+
+
+[source,shell]
+----
+file=/home/tux/book/book.tar.bz2
+echo ${file%.*}
+/home/tux/book/book.tar
+----
+
+
+==== ${VAR%%pattern} removes the longest possible match from the right:
+
+
+[source,shell]
+----
+file=/home/tux/book/book.tar.bz2
+echo ${file%%.*}
+/home/tux/book/book
+
+----
+
+
+
+==== ${VAR/pattern_1/pattern_2} substitutes the content of VAR from the PATTERN_1 with PATTERN_2:
+
+[source,shell]
+----
+file=/home/tux/book/book.tar.bz2
+echo ${file/tux/wilber}
+/home/wilber/book/book.tar.bz2
+----
+
+
+==== ${VAR//pattern_1/pattern_2} To replace all matches of pattern, enter :
+
+
+[source,shell]
+----
+file=/home/tux/book/book.tar.bz2
+echo ${file//book/newspaper}
+/home/tux/newspaper/newspaper.tar.bz2
+----
+
