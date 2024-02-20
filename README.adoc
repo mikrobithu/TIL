@@ -636,7 +636,7 @@ jq -r '.[]|keys'
 
 [source,shell]
 ----
-jq -r '.[].username+"@npsh.hu"'
+jq -r '.[].username+"@mikrobit.hu"'
 ----
 
 === print multiple fields
