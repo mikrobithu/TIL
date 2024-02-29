@@ -149,6 +149,208 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 - https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
 
+
+== amavis
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+amavisd-release banned-89Q-3pMnkIOA
+----
+
+
+
+== ansible
+:toc:
+:source-highlighter: rouge
+
+
+[source,yaml]
+----
+- name: copy 1 file
+  copy:
+    src: files/motd
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+- name: copy lot of files
+  ansible.posix.synchronize:
+    src: some/relative/path
+    dest: /some/absolute/path
+
+- name: copy content
+  copy:
+    content: "Welcome to this system."
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+
+- name: create user
+  user:
+    name: ricardo
+    group: users
+    groups: wheel
+    uid: 2001
+    password: "{{ 'mypassword' | password_hash('sha512') }}"
+    state: present
+
+- name: install package
+  package:
+    name: httpd
+    state: present
+
+
+- name: start service
+  service:
+    name: sshd
+    state: started
+
+
+# firewalld
+
+- name: Ensure port 80 (http) is open
+  firewalld:
+    service: http
+    state: enabled
+    permanent: yes
+    immediate: yes
+
+
+# open port test
+
+- name: Ensure port 3000/TCP is open
+  firewalld:
+    port: 3000/tcp
+    state: enabled
+    permanent: yes
+    immediate: yes
+
+
+
+# create dir
+
+- name: Ensure directory /app exists
+  file:
+    path: /app
+    state: directory
+    owner: ricardo
+    group: users
+    mode: 0770
+
+
+# lineinfile
+
+- name: Ensure host rh8-vm03 in hosts file
+  lineinfile:
+    path: /etc/hosts
+    line: 192.168.122.236 rh8-vm03
+    state: present
+
+# edit config
+
+- name: Ensure root cannot login via ssh
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRootLogin'
+    line: PermitRootLogin no
+    state: present
+
+
+# unarchive
+
+- name: Extract contents of app.tar.gz
+  unarchive:
+    src: /tmp/app.tar.gz
+    dest: /app
+    remote_src: yes
+
+
+# run command
+
+- name: Run the app installer
+  command: "/app/install.sh"
+
+----
+
+
+=== template
+
+.templates/motd.j2
+[source,console]
+----
+Welcome to {{ inventory_hostname }}.
+----
+
+[source,yaml]
+----
+- name: copy from template
+  template:
+    src: templates/motd.j2
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+    validate: cat /etc/motd
+
+----
+
+=== adhoc commnand
+
+[,bash]
+----
+# zypper patch
+ansible -e ZYPP_LOCK_TIMEOUT=60 -f 10 -i hosts -m zypper -a 'name="*" state="latest" type="patch"' all
+ansible -f 10 -i hosts -m apt -a 'name="*" state="latest" update_cache="yes"' all
+ansible -i hosts -m shell -a 'zypper ps -s' all -o |grep 'The following running processes use deleted files:' | awk '{print $1}'
+
+# postgres
+ansible --become --become-user=postgres -i hosts -m postgresql_query -a 'db=postgres query="GRANT pg_monitor TO zabbix_user;"' all
+ansible -i hosts -m shell -a 'grep -i permission /var/lib/pgsql/log/postgresql-2023-04-*| head -1' -o all |sort
+ansible --become --become-user=postgres -i hosts -m postgresql_db -a 'name=DBNAME state=absent' $DBHOST # delete DB
+ansible --become --become-user=postgres -i hosts -m postgresql_db -a 'name=DBNAME state=present' $DBHOST # create DB
+ansible --become --become-user=postgres -i hosts -m shell  -a 'psql -c "select * from pg_stat_activity"' $DBHOST
+
+# cron
+ansible -i hosts -m cron -a 'name=pg_dump_global-only weekday=* minute=0 hour=23 user=postgres job="pg_dumpall  --globals-only > ~/roles-$(date +%A).sql" cron_file=pg_dump_global-only' -CD all
+
+#autohorized_key
+# if you have sudo rights (-bK)
+ansible -bK all -m authorized_key -a "user=automation key={{ lookup('file\', '/home/automation/.ssh/id.pub\') }}" -CD
+ansible -bK all -m authorized_key -a "user=automation key='{{ lookup(\"file\", \"/home/automation/.ssh/id.pub\") }}'" -CD
+ansible -bK all -m authorized_key -a "user=automation key='{{ lookup(\\'file\\', \\'/home/automation/.ssh/id.pub\\') }}'" -CD
+ansible -bK all -m authorized_key -a "user=automation key=\"{{ lookup('file', '/home/automation/.ssh/id.pub') }}\"" -CD
+ansible -bK all -m authorized_key -a "user=automation key=\"{{ lookup(\\\"file\\\", \\\"/home/automation/.ssh/id.pub\\\") }}\"" -CD
+
+# root, become, pass
+# ssh root@
+ansible-playbook -u root --ask-pass --ask-become-pass
+
+# create file
+ansible -i hosts -m file -a "path=/var/lib/pgsql/log state=directory mode=755 owner=postgres group=postgres"
+
+# copy file
+ansible -i hosts -m copy -a "src=motd-gen.sh dest=/usr/local/sbin/motd-gen.sh owner=root group=root mode=0755 state=present" -CD all
+
+
+# without inventory
+# append , to after hosts
+ansible -k --user root  --become all -i srv.example.com,srv1,  -m setup
+ansible-playbook -i example.com, playbook.yml
+----
+
+* https://sites.google.com/site/cloud1impulse/ansible-cheatsheet
+* https://www.edureka.co/blog/wp-content/uploads/2018/11/Ansible-Cheat_Sheet_Edureka.pdf
+* https://medium.com/edureka/ansible-cheat-sheet-guide-5fe615ad65c0
+* https://lzone.de/cheat-sheet/Ansible
+* https://www.digitalocean.com/community/cheatsheets/how-to-use-ansible-cheat-sheet-guide
+* https://devhints.io/ansible
+* https://github.com/germainlefebvre4/ansible-cheatsheet
+* https://intellipaat.com/blog/wp-content/uploads/2019/03/Ansible-cheat-sheet-1.jpg
+
 :source-highlighter: rouge
 :toc:
 
@@ -159,6 +361,33 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 ----
 #lint
 xmllint --noout --relaxng rng/profile.rng overlay/autoinst-sles15-sp3-kvm_d1.xml
+----
+
+
+
+== awk
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+awk '$1 ~ /pattern/ { ... }' infile # Match lines
+awk '{if($1 ~ /pattern) { ... }}' infile # Matching for Conditions
+awk '{print $(NF - 1)}' # Negative Indizes
+----
+
+
+
+== azure client
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+az group list --output table
+az group delete --name tailspin-space-game-rg
 ----
 
 
@@ -237,8 +466,6 @@ echo ${file%%.*}
 
 ----
 
-
-
 ==== ${VAR/pattern_1/pattern_2} substitutes the content of VAR from the PATTERN_1 with PATTERN_2:
 
 [source,shell]
@@ -248,15 +475,213 @@ echo ${file/tux/wilber}
 /home/wilber/book/book.tar.bz2
 ----
 
-
 ==== ${VAR//pattern_1/pattern_2} To replace all matches of pattern, enter :
-
 
 [source,shell]
 ----
 file=/home/tux/book/book.tar.bz2
 echo ${file//book/newspaper}
 /home/tux/newspaper/newspaper.tar.bz2
+----
+
+==== reverse, upper/lowercase variable
+[,bash]
+----
+var="This is a test"
+echo "${var~~}" # Reverse var
+echo "${var^^}" # UPPERCASE var
+echo "${var,,}" # lowercase var
+----
+
+
+
+=== function
+
+[,bash]
+### functions
+# usage: show_time $SECONDS
+function show_time () {
+  num=$1
+  min=0
+  hour=0
+  day=0
+  if((num>59));then
+    ((sec=num%60))
+    ((num=num/60))
+    if((num>59));then
+      ((min=num%60))
+      ((num=num/60))
+      if((num>23));then
+        ((hour=num%24))
+        ((day=num/24))
+      else
+        ((hour=num))
+      fi
+    else
+      ((min=num))
+    fi
+  else
+    ((sec=num))
+  fi
+echo "$day"d "$hour"h "$min"m "$sec"s
+}
+
+
+==== read sudo pass from variable
+read -s -p pass: PASS; for i in srv1 srv2 do echo $SPASS sudo -S "cat /etc/sudoers| grep -v '#' | grep -v '^$'"; done
+read -s -p"pass: " SPASS; for i in $(cat ~serverek.txt); do echo $SPASS | sudo -S "cat /etc/sudoers| grep -v '#' | grep -v '^$'"; done
+
+==== redirect
+
+[,terminal]
+----
+.---------------------------------------------------------------------------.
+|                                                                           |
+|                      Bash Redirections Cheat Sheet                        |
+|                                                                           |
++---------------------------------------------------------------------------+
+|                                                                           |
+| Created by Peteris Krumins (peter@catonmat.net)                           |
+| www.catonmat.net -- good coders code, great coders reuse                  |
+|                                                                           |
++-----------------------------.---------------------------------------------+
+| Redirection                 | Description                                 |
+'-----------------------------'---------------------------------------------'
+| cmd > file                  | Redirect the standard output (stdout) of    |
+|                             | `cmd` to a file.                            |
++-----------------------------'---------------------------------------------'
+| cmd 1> file                 | Same as `cmd > file`. 1 is the default file |
+|                             | descriptor for stdout.                      |
++-----------------------------'---------------------------------------------'
+| cmd 2> file                 | Redirect the standard error (stderr) of     |
+|                             | `cmd` to a file. 2 is the default file      |
+|                             | descriptor for stderr.                      |
++-----------------------------'---------------------------------------------'
+| cmd >> file                 | Append stdout of `cmd` to a file.           |
++-----------------------------'---------------------------------------------'
+| cmd 2>> file                | Append stderr of `cmd` to a file.           |
++-----------------------------'---------------------------------------------'
+| cmd &> file                 | Redirect stdout and stderr to a file.       |
++-----------------------------'---------------------------------------------'
+| cmd > file 2>&1             | Another way to redirect both stdout and     |
+|                             | stderr of `cmd` to a file. This *is not*    |
+|                             | same as `cmd 2>&1 > file`.                  |
+|                             | Redirection order matters!                  |
++-----------------------------'---------------------------------------------'
+| cmd > /dev/null             | Discard stdout of `cmd`.                    |
++-----------------------------'---------------------------------------------'
+| cmd 2> /dev/null            | Discard stderr of `cmd`.                    |
++-----------------------------'---------------------------------------------'
+| cmd &> /dev/null            | Discard stdout and stderr.                  |
++-----------------------------'---------------------------------------------'
+| cmd < file                  | Redirect the contents of the file to the    |
+|                             | stdin of `cmd`.                             |
++-----------------------------'---------------------------------------------'
+| cmd << EOL                  |                                             |
+| foo                         | Redirect a bunch of lines to the stdin.     |
+| bar                         | If 'EOL' is quoted, text is treated         |
+| baz                         | literally. This is called a here-document.  |
+| EOL                         |                                             |
++-----------------------------'---------------------------------------------'
+| cmd <<- EOL                 |                                             |
+| <tab>foo                    | Redirect a bunch of lines to the stdin.     |
+| <tab><tab>bar               | The <tab>'s are ignored but not the         |
+| EOL                         | whitespace. Helpful for formatting.         |
++-----------------------------'---------------------------------------------'
+| cmd <<< "string"            | Redirect a single line of text to stdin.    |
+|                             | This is called a here-string.               |
++-----------------------------'---------------------------------------------'
+| exec 2> file                | Redirect stderr of all commands to a file   |
+|                             | forever.                                    |
++-----------------------------'---------------------------------------------'
+| exec 3< file                | Open a file for reading using a custom fd.  |
++-----------------------------'---------------------------------------------'
+| exec 3> file                | Open a file for writing using a custom fd.  |
++-----------------------------'---------------------------------------------'
+| exec 3<> file               | Open a file for reading and writing using   |
+|                             | a custom file descriptor.                   |
++-----------------------------'---------------------------------------------'
+| exec 3>&-                   | Close a file descriptor.                    |
++-----------------------------'---------------------------------------------'
+| exec 4>&3                   | Make file descriptor 4 to be a copy of file |
+|                             | descriptor 3. (Copy fd 3 to 4.)             |
++-----------------------------'---------------------------------------------'
+| exec 4>&3-                  | Copy file descriptor 3 to 4 and close fd 3  |
++-----------------------------'---------------------------------------------'
+| echo "foo" >&3              | Write to a custom file descriptor.          |
++-----------------------------'---------------------------------------------'
+| cat <&3                     | Read from a custom file descriptor.         |
++-----------------------------'---------------------------------------------'
+| (cmd1; cmd2) > file         | Redirect stdout from multiple commands to a |
+|                             | file (using a sub-shell).                   |
++-----------------------------'---------------------------------------------'
+| { cmd1; cmd2; } > file      | Redirect stdout from multiple commands to a |
+|                             | file (faster; not using a sub-shell).       |
++-----------------------------'---------------------------------------------'
+| exec 3<> /dev/tcp/host/port | Open a TCP connection to host:port.         |
++-----------------------------'---------------------------------------------'
+| exec 3<> /dev/udp/host/port | Open a UDP connection to host:port.         |
++-----------------------------'---------------------------------------------'
+| cmd <(cmd1)                 | Redirect stdout of `cmd1` to an anonymous   |
+|                             | fifo, then pass the fifo to `cmd` as an     |
+|                             | argument. Useful when `cmd` doesn't read    |
+|                             | from stdin directly.                        |
++-----------------------------'---------------------------------------------'
+| cmd < <(cmd1)               | Redirect stdout of `cmd1` to an anonymous   |
+|                             | fifo, then redirect the fifo to stdin of    |
+|                         ____' `cmd`. Best example:                        |
+|                        | diff <(find /path1 | sort) <(find /path2 | sort) |
++------------------------'----.---------------------------------------------'
+| cmd <(cmd1) <(cmd2)         | Redirect stdout of `cmd1` `cmd2` to two     |
+|                             | anonymous fifos, then pass both fifos as    |
+|                             | arguments to \verb|cmd|.                    |
++-----------------------------.---------------------------------------------'
+| cmd1 >(cmd2)                | Run `cmd2` with its stdin connected to an   |
+|                             | anonymous fifo, and pass the filename of    |
+|                             | the pipe as an argument to `cmd1`.          |
++-----------------------------.---------------------------------------------'
+| cmd1 | cmd2                 | Redirect stdout of cmd1 to stdin of `cmd2`. |
+|                             | Pro-tip: This is the same as                |
+|                             | `cmd1 > >(cmd2)`, same as `cmd2 < <(cmd1)`, |
+|                             | same as `> >(cmd2) cmd1`, same as           |
+|                             | `< <(cmd1) cmd2`.                           |
++-----------------------------'---------------------------------------------'
+| cmd1 |& cmd2                | Redirect stdout and stderr of `cmd1` to     |
+|                             | stdin of `cmd2` (bash 4.0+ only).           |
+|                             | Use `cmd1 2>&1 | cmd2` for older bashes.    |
++-----------------------------'---------------------------------------------'
+| cmd | tee file              | Redirect stdout of `cmd` to a file and      |
+|                             | print it to screen.                         |
++-----------------------------'---------------------------------------------'
+| exec {filew}> file          | Open a file for writing using a named file  |
+|                             | descriptor called `{filew}` (bash 4.1+)     |
++-----------------------------'---------------------------------------------'
+| cmd 3>&1 1>&2 2>&3          | Swap stdout and stderr of `cmd`.            |
++-----------------------------'---------------------------------------------'
+| cmd > >(cmd1) 2> >(cmd2)    | Send stdout of `cmd` to `cmd1` and stderr   |
+|                             | `cmd` to `cmd2`.                            |
++-----------------------------'---------------------------------------------'
+| cmd1 | cmd2 | cmd3 | cmd4   | Find out the exit codes of all piped cmds.  |
+| echo ${PIPESTATUS[@]}       |                                             |
++-----------------------------'---------------------------------------------'
+----
+
+
+
+
+== cgroups
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+lsns                # Show all namespaces
+lsns -p <pid>       # Show everything under namespace <pid>
+
+nsenter -t <pid>               # Enter namespace
+nsenter -t <pid> -p -r         # Enter pid namespace (-p) and set root dir (-r)
+nsenter -t <pid> <cmd>         # Run command in namespace
 ----
 
 
@@ -312,6 +737,19 @@ vimdiff <(ssh srv1 'sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml') <(s
 
 
 
+
+== du
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+du -hsx * | sort -h # order by size
+du -bch archive/00000012* # total size
+----
+
+
 :source-highlighter: rouge
 :toc:
 
@@ -345,6 +783,58 @@ find etcd
 diff <(find etcd -printf '%f\n'|sort) <(find etcd_ -printf '%f\n'|sort)
 systemctl start rke2-server
 kubectl uncordon node1
+----
+
+
+
+== ffmpeg
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+# Multi Bitrate HLS VOD encrypted
+ffmpeg -re -i {$pathFileName} -c:a aac -strict -2 -b:a 128k -c:v libx264 -vf scale=-2:360 -g 48 -keyint_min 48  -sc_threshold 0 -bf 3 -b_strategy 2 -b:v 800k -maxrate 856k -bufsize 1200k -f hls -hls_time 6 -hls_list_size 0 -hls_key_info_file {$destinationFile}keyinfo {$destinationFile}low/index.m3u8 -c:a aac -strict -2 -b:a 128k -c:v libx264 -vf scale=-2:540 -g 48 -keyint_min 48 -sc_threshold 0 -bf 3 -b_strategy 2 -b:v 1400k -maxrate 1498k -bufsize 2100k -f hls -hls_time 6 -hls_list_size 0 -hls_key_info_file {$destinationFile}keyinfo {$destinationFile}sd/index.m3u8 -c:a aac -strict -2 -b:a 128k -c:v libx264 -vf scale=-2:720 -g 48 -keyint_min 48 -sc_threshold 0 -bf 3 -b_strategy 2 -b:v 2800k -maxrate 2996k -bufsize 4200k -f hls -hls_time 6 -hls_list_size 0 -hls_key_info_file {$destinationFile}keyinfo {$destinationFile}hd/index.m3u8
+
+# MP4 Low
+ffmpeg -i {$pathFileName} -vf scale=-2:360 -movflags +faststart -preset veryfast -vcodec h264 -acodec aac -strict -2 -max_muxing_queue_size 1024 -y {$destinationFile}
+
+# MP4 SD
+ffmpeg -i {$pathFileName} -vf scale=-2:540 -movflags +faststart -preset veryfast -vcodec h264 -acodec aac -strict -2 -max_muxing_queue_size 1024 -y {$destinationFile}
+
+
+# MP4 HD
+ffmpeg -i {$pathFileName} -vf scale=-2:720 -movflags +faststart -preset veryfast -vcodec h264 -acodec aac -strict -2 -max_muxing_queue_size 1024 -y {$destinationFile}
+
+
+# WEBM Low
+ffmpeg -i {$pathFileName} -vf scale=-2:360 -movflags +faststart -preset veryfast -f webm -c:v libvpx -b:v 1M -acodec libvorbis -y {$destinationFile}
+
+
+# WEBM SD
+ffmpeg -i {$pathFileName} -vf scale=-2:540 -movflags +faststart -preset veryfast -f webm -c:v libvpx -b:v 1M -acodec libvorbis -y {$destinationFile}
+
+
+# WEBM HD
+ffmpeg -i {$pathFileName} -vf scale=-2:720 -movflags +faststart -preset veryfast -f webm -c:v libvpx -b:v 1M -acodec libvorbis -y {$destinationFile}
+
+
+# MP3
+ffmpeg -i {$pathFileName} -acodec libmp3lame -y {$destinationFile}
+
+
+# OGG
+ffmpeg -i {$pathFileName} -acodec libvorbis -y {$destinationFile}
+
+
+# MP3 to Spectrum.MP4
+ffmpeg -i {$pathFileName} -filter_complex '[0:a]showwaves=s=640x360:mode=line,format=yuv420p[v]' -map '[v]' -map 0:a -c:v libx264 -c:a copy {$destinationFile}
+
+
+# Video.MP4 to Audio.MP3
+ffmpeg -i {$pathFileName} -y {$destinationFile}
+
 ----
 
 
@@ -946,10 +1436,11 @@ LP_ENABLE_CONTAINER=1
 export LP_PS1_POSTFIX='\n$ '
 ----
 
-:source-highlighter: rouge
-:toc:
 
-== crm
+== LVM
+:toc:
+:source-highlighter: rouge
+
 
 [source,shell]
 ----
@@ -958,6 +1449,65 @@ crm cluster run 'pvresize /dev/sdb'
 crm cluster run 'lvextend -rl +100%FREE /dev/pgsql_data/postgres'
 crm cluster run 'df -h /var/lib/pgsql'
 ----
+
+
+
+== meld
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+meld
+meld FILE1
+meld DIR1
+meld FILE1 FILE2
+meld FILE1 FILE2 FILE3
+meld DIR1 DIR2
+meld DIR1 DIR2 DIR3
+meld --diff FILE1 FILE2 --diff FILE3 FILE4
+----
+
+
+
+== netcat
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+nc example.org 8080
+nc -l 8080
+nc --sh-exec "ncat example.org 80" -l 8080 --keep-open
+nc --exec "/bin/bash" -l 8081 --keep-open
+nc --exec "/bin/bash" --max-conns 3 --allow 192.168.0.0/24 -l 8081 --keep-open
+nc --proxy socks4host --proxy-type socks4 --proxy-auth user smtphost 25
+nc -l --proxy-type http localhost 8888
+
+# send data (-z not send data)
+netcat -v -w 3 192.168.45.166 1556
+
+----
+
+
+
+== php
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+<?
+phpinfo();
+?>
+
+php -c /etc/php/apache2/php.ini -i
+php -i
+----
+
 
 :source-highlighter: rouge
 :toc:
@@ -969,6 +1519,36 @@ crm cluster run 'df -h /var/lib/pgsql'
 ----
 # count msgs
 curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&domain=lists.home.lan" | jq -r ".active_months[]"  | xargs| sed 's/ / + /g' | bc
+----
+
+
+
+== ps
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+ps -e
+ps -ef
+ps -eF
+ps -ely
+ps ax
+ps axu
+ps -ejH
+ps axjf
+ps -eLf
+ps axms
+ps -eo euser,ruser,suser,fuser,f,comm,label
+ps axZ
+ps -eM
+ps -U root -u root u
+ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+ps -Ao pid,tt,user,fname,tmout,f,wchan
+ps -C syslogd -o pid=
+ps -p 42 -o comm=
 ----
 
 
@@ -1113,19 +1693,17 @@ kubectl -n system-upgrade get jobs -o yaml
 ----
 
 
+
+== rmt
 :toc:
 :source-highlighter: rouge
 
-== RMT
 
 [source,shell]
 ----
-rmt-cli products list --version='15 SP5' --arch=x86_64
-rmt-cli products enable 2517
-# or
-rmt-cli products list --version='15 SP5' --arch=x86_64 --name="Web and Scripting Module" --all
-rmt-cli sync
-tail -f /var/log/messages
+zypper in -y suseconnect-ng awk
+curl -kL --remote-name https://rmt-server.example.com/tools/rmt-client-setup
+echo -e "y\ny\n"| sh rmt-client-setup https://rmt-server.example.com
 ----
 
 
@@ -1191,17 +1769,6 @@ salt '*' state.sls_id bar foo
 [source,shell]
 ----
 shpass -p server_password ssh-copy-id -oStrictHostKeyChecking=no root@$i -p 22
-----
-
-
-:toc:
-:source-highlighter: rouge
-
-==
-
-[source,shell]
-----
-
 ----
 
 

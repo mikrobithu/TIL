@@ -12,15 +12,29 @@ toc-level: 5
 
 include::adoc/adoc.adoc[adoc/adoc]
 
+include::adoc/amavis.adoc[adoc/amavis]
+
+include::adoc/ansible.adoc[adoc/ansible]
+
 include::adoc/autoyast.adoc[adoc/autoyast]
 
+include::adoc/awk.adoc[adoc/awk]
+
+include::adoc/azure-cli.adoc[adoc/azure-cli]
+
 include::adoc/bash-scripting.adoc[adoc/bash-scripting]
+
+include::adoc/cgroups.adoc[adoc/cgroups]
 
 include::adoc/curl.adoc[adoc/curl]
 
 include::adoc/diff.adoc[adoc/diff]
 
+include::adoc/du.adoc[adoc/du]
+
 include::adoc/etcd.adoc[adoc/etcd]
+
+include::adoc/ffmpeg.adoc[adoc/ffmpeg]
 
 include::adoc/find.adoc[adoc/find]
 
@@ -44,7 +58,15 @@ include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
 include::adoc/lvm.adoc[adoc/lvm]
 
+include::adoc/meld.adoc[adoc/meld]
+
+include::adoc/netcat.adoc[adoc/netcat]
+
+include::adoc/php.adoc[adoc/php]
+
 include::adoc/ponymail-foal.adoc[adoc/ponymail-foal]
+
+include::adoc/ps.adoc[adoc/ps]
 
 include::adoc/rabbitmq.adoc[adoc/rabbitmq]
 
@@ -59,8 +81,6 @@ include::adoc/rsyslog.adoc[adoc/rsyslog]
 include::adoc/salt.adoc[adoc/salt]
 
 include::adoc/ssh.adoc[adoc/ssh]
-
-include::adoc/traefik.adoc[adoc/traefik]
 
 include::adoc/vagrant.adoc[adoc/vagrant]
 
