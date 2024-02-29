@@ -1,0 +1,12 @@
+
+== azure client
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+az group list --output table
+az group delete --name tailspin-space-game-rg
+----
+

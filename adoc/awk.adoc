@@ -1,0 +1,13 @@
+
+== awk
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+awk '$1 ~ /pattern/ { ... }' infile # Match lines
+awk '{if($1 ~ /pattern) { ... }}' infile # Matching for Conditions
+awk '{print $(NF - 1)}' # Negative Indizes
+----
+

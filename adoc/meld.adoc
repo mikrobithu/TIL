@@ -1,0 +1,18 @@
+
+== meld
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+meld
+meld FILE1
+meld DIR1
+meld FILE1 FILE2
+meld FILE1 FILE2 FILE3
+meld DIR1 DIR2
+meld DIR1 DIR2 DIR3
+meld --diff FILE1 FILE2 --diff FILE3 FILE4
+----
+

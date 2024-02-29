@@ -1,0 +1,16 @@
+
+== php
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+<?
+phpinfo();
+?>
+
+php -c /etc/php/apache2/php.ini -i
+php -i
+----
+

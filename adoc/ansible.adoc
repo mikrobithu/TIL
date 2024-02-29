@@ -1,0 +1,189 @@
+
+== ansible
+:toc:
+:source-highlighter: rouge
+
+
+[source,yaml]
+----
+- name: copy 1 file
+  copy:
+    src: files/motd
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+- name: copy lot of files
+  ansible.posix.synchronize:
+    src: some/relative/path
+    dest: /some/absolute/path
+
+- name: copy content
+  copy:
+    content: "Welcome to this system."
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+
+- name: create user
+  user:
+    name: ricardo
+    group: users
+    groups: wheel
+    uid: 2001
+    password: "{{ 'mypassword' | password_hash('sha512') }}"
+    state: present
+
+- name: install package
+  package:
+    name: httpd
+    state: present
+
+
+- name: start service
+  service:
+    name: sshd
+    state: started
+
+
+# firewalld
+
+- name: Ensure port 80 (http) is open
+  firewalld:
+    service: http
+    state: enabled
+    permanent: yes
+    immediate: yes
+
+
+# open port test
+
+- name: Ensure port 3000/TCP is open
+  firewalld:
+    port: 3000/tcp
+    state: enabled
+    permanent: yes
+    immediate: yes
+    
+
+
+# create dir
+
+- name: Ensure directory /app exists
+  file:
+    path: /app
+    state: directory
+    owner: ricardo
+    group: users
+    mode: 0770
+
+
+# lineinfile
+
+- name: Ensure host rh8-vm03 in hosts file
+  lineinfile:
+    path: /etc/hosts
+    line: 192.168.122.236 rh8-vm03
+    state: present
+
+# edit config
+
+- name: Ensure root cannot login via ssh
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRootLogin'
+    line: PermitRootLogin no
+    state: present
+
+
+# unarchive
+
+- name: Extract contents of app.tar.gz
+  unarchive:
+    src: /tmp/app.tar.gz
+    dest: /app
+    remote_src: yes
+
+
+# run command
+
+- name: Run the app installer
+  command: "/app/install.sh"
+
+----
+
+
+=== template
+
+.templates/motd.j2
+[source,console]
+----
+Welcome to {{ inventory_hostname }}.
+----
+
+[source,yaml]
+----
+- name: copy from template
+  template:
+    src: templates/motd.j2
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+    validate: cat /etc/motd
+
+---- 
+
+=== adhoc commnand
+
+[,bash]
+----
+# zypper patch
+ansible -e ZYPP_LOCK_TIMEOUT=60 -f 10 -i hosts -m zypper -a 'name="*" state="latest" type="patch"' all
+ansible -f 10 -i hosts -m apt -a 'name="*" state="latest" update_cache="yes"' all
+ansible -i hosts -m shell -a 'zypper ps -s' all -o |grep 'The following running processes use deleted files:' | awk '{print $1}'
+
+# postgres
+ansible --become --become-user=postgres -i hosts -m postgresql_query -a 'db=postgres query="GRANT pg_monitor TO zabbix_user;"' all
+ansible -i hosts -m shell -a 'grep -i permission /var/lib/pgsql/log/postgresql-2023-04-*| head -1' -o all |sort
+ansible --become --become-user=postgres -i hosts -m postgresql_db -a 'name=DBNAME state=absent' $DBHOST # delete DB
+ansible --become --become-user=postgres -i hosts -m postgresql_db -a 'name=DBNAME state=present' $DBHOST # create DB
+ansible --become --become-user=postgres -i hosts -m shell  -a 'psql -c "select * from pg_stat_activity"' $DBHOST 
+
+# cron
+ansible -i hosts -m cron -a 'name=pg_dump_global-only weekday=* minute=0 hour=23 user=postgres job="pg_dumpall  --globals-only > ~/roles-$(date +%A).sql" cron_file=pg_dump_global-only' -CD all
+
+#autohorized_key
+# if you have sudo rights (-bK)
+ansible -bK all -m authorized_key -a "user=automation key={{ lookup('file\', '/home/automation/.ssh/id.pub\') }}" -CD
+ansible -bK all -m authorized_key -a "user=automation key='{{ lookup(\"file\", \"/home/automation/.ssh/id.pub\") }}'" -CD
+ansible -bK all -m authorized_key -a "user=automation key='{{ lookup(\\'file\\', \\'/home/automation/.ssh/id.pub\\') }}'" -CD
+ansible -bK all -m authorized_key -a "user=automation key=\"{{ lookup('file', '/home/automation/.ssh/id.pub') }}\"" -CD
+ansible -bK all -m authorized_key -a "user=automation key=\"{{ lookup(\\\"file\\\", \\\"/home/automation/.ssh/id.pub\\\") }}\"" -CD
+
+# root, become, pass
+# ssh root@
+ansible-playbook -u root --ask-pass --ask-become-pass
+
+# create file
+ansible -i hosts -m file -a "path=/var/lib/pgsql/log state=directory mode=755 owner=postgres group=postgres"
+
+# copy file
+ansible -i hosts -m copy -a "src=motd-gen.sh dest=/usr/local/sbin/motd-gen.sh owner=root group=root mode=0755 state=present" -CD all
+
+
+# without inventory
+# append , to after hosts
+ansible -k --user root  --become all -i srv.example.com,srv1,  -m setup
+ansible-playbook -i example.com, playbook.yml
+----
+
+* https://sites.google.com/site/cloud1impulse/ansible-cheatsheet
+* https://www.edureka.co/blog/wp-content/uploads/2018/11/Ansible-Cheat_Sheet_Edureka.pdf
+* https://medium.com/edureka/ansible-cheat-sheet-guide-5fe615ad65c0
+* https://lzone.de/cheat-sheet/Ansible
+* https://www.digitalocean.com/community/cheatsheets/how-to-use-ansible-cheat-sheet-guide
+* https://devhints.io/ansible
+* https://github.com/germainlefebvre4/ansible-cheatsheet
+* https://intellipaat.com/blog/wp-content/uploads/2019/03/Ansible-cheat-sheet-1.jpg

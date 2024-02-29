@@ -1,0 +1,21 @@
+
+== netcat  
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+nc example.org 8080
+nc -l 8080
+nc --sh-exec "ncat example.org 80" -l 8080 --keep-open
+nc --exec "/bin/bash" -l 8081 --keep-open
+nc --exec "/bin/bash" --max-conns 3 --allow 192.168.0.0/24 -l 8081 --keep-open
+nc --proxy socks4host --proxy-type socks4 --proxy-auth user smtphost 25
+nc -l --proxy-type http localhost 8888
+
+# send data (-z not send data)
+netcat -v -w 3 192.168.45.166 1556
+
+----
+

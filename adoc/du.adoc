@@ -1,0 +1,12 @@
+
+== du 
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+du -hsx * | sort -h # order by size
+du -bch archive/00000012* # total size 
+----
+

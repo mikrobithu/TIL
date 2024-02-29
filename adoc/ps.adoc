@@ -1,0 +1,29 @@
+
+== ps
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+ps -e
+ps -ef
+ps -eF
+ps -ely
+ps ax
+ps axu
+ps -ejH
+ps axjf
+ps -eLf
+ps axms
+ps -eo euser,ruser,suser,fuser,f,comm,label
+ps axZ
+ps -eM
+ps -U root -u root u
+ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+ps -Ao pid,tt,user,fname,tmout,f,wchan
+ps -C syslogd -o pid=
+ps -p 42 -o comm=
+----
+
