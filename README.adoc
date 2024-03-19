@@ -853,6 +853,10 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 
 == git
 
+[source,shell]
+----
+git log -p --follow -- filename #  generate patches for each log entry
+----
 
 === BASH functions
 
@@ -887,6 +891,9 @@ image:adoc/images/merge-vs-rebase.jpg[merge vs rebase]
 git branch -d localbranch # delete branch locally
 git push origin --delete remotebranch # delete branch remotely
 ----
+
+
+
 
 :source-highlighter: rouge
 :toc:
@@ -1727,7 +1734,10 @@ ForwardToSyslog=yes
 
 == salt
 
-
+[,shell]
+----
+salt '*' cmd.run 'ls -l | grep foo'
+----
 
 === apply highsate
 [source,shell]
