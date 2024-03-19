@@ -3,7 +3,10 @@
 
 == salt
 
-
+[,shell]
+----
+salt '*' cmd.run 'ls -l | grep foo'
+----
 
 === apply highsate
 [source,shell]
