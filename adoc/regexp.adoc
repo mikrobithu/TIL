@@ -1,0 +1,22 @@
+
+== regexp
+:toc:
+:source-highlighter: rouge
+
+add questionmark around words
+
+one line: 1
+two line: 2
+
+vcode:
+(^.*:)
+"$1"
+
+"one line:" 1
+"two line:" 2
+
+[source,shell]
+----
+
+----
+

@@ -1,0 +1,21 @@
+
+== postgresql
+:toc:
+:source-highlighter: rouge
+
+
+=== manual archive cleanup
+[source,shell]
+----
+# pssql version 9.6
+WAL_FILE=$(pg_controldata -D /var/lib/pgsql/data/ | grep "Latest checkpoint's REDO WAL file:" | cut -d: -f2)
+WAL_CLEAN=$(ls -rt /var/lib/pgsql/data/pg_xlog/ | grep $WAL_FILE -B3 | head -1)
+pg_archivecleanup -nd /var/lib/pgsql/data/pg_xlog/ $WAL_CLEAN
+# from psql version 10
+WAL_FILE=$(pg_controldata -D /var/lib/pgsql/data/ | grep "Latest checkpoint's REDO WAL file:" | cut -d: -f2)
+WAL_CLEAN=$(ls -rt /var/lib/pgsql/data/pg_wal/ | grep $WAL_FILE -B3 | head -1)
+pg_archivecleanup -nd /var/lib/pgsql/data/pg_wal/ $WAL_CLEAN
+----
+
+
+
