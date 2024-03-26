@@ -66,11 +66,15 @@ include::adoc/php.adoc[adoc/php]
 
 include::adoc/ponymail-foal.adoc[adoc/ponymail-foal]
 
+include::adoc/postgres.adoc[adoc/postgres]
+
 include::adoc/ps.adoc[adoc/ps]
 
 include::adoc/rabbitmq.adoc[adoc/rabbitmq]
 
 include::adoc/rancher.adoc[adoc/rancher]
+
+include::adoc/regexp.adoc[adoc/regexp]
 
 include::adoc/rke2.adoc[adoc/rke2]
 
