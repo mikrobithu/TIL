@@ -1,0 +1,16 @@
+
+== sed
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+sed -ibak 's/On/Off/' php.ini 		# Backup and modify input file directly
+sed -n '1,4 p' input.txt 		# Print lines 1-4
+sed -n -e '1,4 p' -e '6,7 p' input.txt 	# Print lines 1-4 and 6-7
+sed '1,4 d' input.txt			# Print lines except 1-4
+sed '2 a new-line' input.txt 		# Append line after
+sed '2 i new-line' input.txt 		# Insert line before
+----
+
