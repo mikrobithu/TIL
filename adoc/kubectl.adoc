@@ -74,13 +74,14 @@ uniq -c
 ----
 
 
-=== create secret
+=== create,get secret
 
 [,shell]
 ----
 kubectl create secret generic wiki-postgresql --from-literal=psqlpassword=secretpassword123
 kubectl get secrets wiki-postgresql --template='{{.data.psqlpassword}}' | base64 -d
 kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64decode}}{{ "\n" }}'
+kubectl get secret -n cattle-system tls-rancher -o "jsonpath={.data['tls\.crt']}"| base64 -d | openssl x509 -noout -text
 ----
 
 === object check (yaml lint, api version check)
@@ -233,3 +234,9 @@ kubectl graph -t 100 $(kubectl api-resources --verbs=list --namespaced -o name |
 kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains("Evicted")) | "kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)"' | xargs -n 1 bash -c
 ----
 
+
+=== node conditions
+[source,bash]
+----
+kubectl get nodes -o jsonpath='{range .items[*]}{@.metadata.name}:{" "}{range @.status.conditions[*]}{@.type}={@.status};  {end}{"\n"}{end}'
+---- 

@@ -1,0 +1,14 @@
+
+== bash
+:toc:
+:source-highlighter: rouge
+
+=== history
+
+
+[source,shell]
+----
+# get user1 history with timestamp
+HISTTIMEFORMAT=${HISTTIMEFORMAT:-"%F %H:%M:%S "} HISTFILE=/home/user1/.bash_history history
+----
+
