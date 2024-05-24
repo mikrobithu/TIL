@@ -22,6 +22,8 @@ include::adoc/awk.adoc[adoc/awk]
 
 include::adoc/azure-cli.adoc[adoc/azure-cli]
 
+include::adoc/bash.adoc[adoc/bash]
+
 include::adoc/bash-scripting.adoc[adoc/bash-scripting]
 
 include::adoc/cgroups.adoc[adoc/cgroups]
@@ -83,6 +85,8 @@ include::adoc/rmt.adoc[adoc/rmt]
 include::adoc/rsyslog.adoc[adoc/rsyslog]
 
 include::adoc/salt.adoc[adoc/salt]
+
+include::adoc/sed.adoc[adoc/sed]
 
 include::adoc/ssh.adoc[adoc/ssh]
 

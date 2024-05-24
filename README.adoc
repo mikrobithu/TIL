@@ -392,6 +392,21 @@ az group delete --name tailspin-space-game-rg
 
 
 
+== bash
+:toc:
+:source-highlighter: rouge
+
+=== history
+
+
+[source,shell]
+----
+# get user1 history with timestamp
+HISTTIMEFORMAT=${HISTTIMEFORMAT:-"%F %H:%M:%S "} HISTFILE=/home/user1/.bash_history history
+----
+
+
+
 == Bash scripting
 :toc:
 :source-highlighter: rouge
@@ -1245,13 +1260,14 @@ uniq -c
 ----
 
 
-=== create secret
+=== create,get secret
 
 [,shell]
 ----
 kubectl create secret generic wiki-postgresql --from-literal=psqlpassword=secretpassword123
 kubectl get secrets wiki-postgresql --template='{{.data.psqlpassword}}' | base64 -d
 kubectl get secrets wiki-postgresql -o go-template='{{.data.psqlpassword|base64decode}}{{ "\n" }}'
+kubectl get secret -n cattle-system tls-rancher -o "jsonpath={.data['tls\.crt']}"| base64 -d | openssl x509 -noout -text
 ----
 
 === object check (yaml lint, api version check)
@@ -1405,6 +1421,12 @@ kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason
 ----
 
 
+=== node conditions
+[source,bash]
+----
+kubectl get nodes -o jsonpath='{range .items[*]}{@.metadata.name}:{" "}{range @.status.conditions[*]}{@.type}={@.status};  {end}{"\n"}{end}'
+----
+
 :toc:
 :source-highlighter: rouge
 
@@ -1541,14 +1563,18 @@ curl -u user:password "https://mailarchive.home.lan/api/stats.lua?list=listname&
 === manual archive cleanup
 [source,shell]
 ----
-# pssql version 9.6
+# to psql version 9.6
 WAL_FILE=$(pg_controldata -D /var/lib/pgsql/data/ | grep "Latest checkpoint's REDO WAL file:" | cut -d: -f2)
 WAL_CLEAN=$(ls -rt /var/lib/pgsql/data/pg_xlog/ | grep $WAL_FILE -B3 | head -1)
+#dry-run
 pg_archivecleanup -nd /var/lib/pgsql/data/pg_xlog/ $WAL_CLEAN
+
 # from psql version 10
 WAL_FILE=$(pg_controldata -D /var/lib/pgsql/data/ | grep "Latest checkpoint's REDO WAL file:" | cut -d: -f2)
 WAL_CLEAN=$(ls -rt /var/lib/pgsql/data/pg_wal/ | grep $WAL_FILE -B3 | head -1)
+# dry-run
 pg_archivecleanup -nd /var/lib/pgsql/data/pg_wal/ $WAL_CLEAN
+
 ----
 
 
@@ -1815,6 +1841,23 @@ bar:
 ----
 salt '*' state.sls_id bar foo
 ----
+
+
+== sed
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+sed -ibak 's/On/Off/' php.ini 		# Backup and modify input file directly
+sed -n '1,4 p' input.txt 		# Print lines 1-4
+sed -n -e '1,4 p' -e '6,7 p' input.txt 	# Print lines 1-4 and 6-7
+sed '1,4 d' input.txt			# Print lines except 1-4
+sed '2 a new-line' input.txt 		# Append line after
+sed '2 i new-line' input.txt 		# Insert line before
+----
+
 
 :source-highlighter: rouge
 :toc:
