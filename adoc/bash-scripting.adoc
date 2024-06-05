@@ -2,6 +2,7 @@
 == Bash scripting
 :toc:
 :source-highlighter: rouge
+:sectnums: |,all|
 
 === Using Variable Substitution
 
@@ -28,7 +29,7 @@ echo "${var,,}" # lowercase var #
 ----
 
 
-==== ${VAR#pattern} removes the shortest possible match from the left:
+==== ${VAR#pattern} removes the shortest possible match from the left:"
 
 
 [source,shell]
@@ -39,7 +40,7 @@ home/tux/book/book.tar.bz2
 ----
 
 
-==== ${VAR##pattern} removes the longest possible match from the left:
+==== \${VAR##pattern} removes the longest possible match from the left:
 
 
 [source,shell]
@@ -105,6 +106,7 @@ echo "${var,,}" # lowercase var
 === function
 
 [,bash]
+----
 ### functions
 # usage: show_time $SECONDS
 function show_time () {
@@ -132,12 +134,15 @@ function show_time () {
   fi
 echo "$day"d "$hour"h "$min"m "$sec"s
 }
-
+----
 
 ==== read sudo pass from variable
+
+[,bash]
+----
 read -s -p pass: PASS; for i in srv1 srv2 do echo $SPASS sudo -S "cat /etc/sudoers| grep -v '#' | grep -v '^$'"; done
 read -s -p"pass: " SPASS; for i in $(cat ~serverek.txt); do echo $SPASS | sudo -S "cat /etc/sudoers| grep -v '#' | grep -v '^$'"; done
-
+----
 ==== redirect 
 
 [,terminal]
