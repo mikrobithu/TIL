@@ -1215,7 +1215,7 @@ https://gist.github.com/superseb/3cccbfa910bf2fbe831ede4f201284c3
 :toc:
 :source-highlighter: rouge
 
-[mermaid]
+[,mermaid]
 ----
 graph
 
