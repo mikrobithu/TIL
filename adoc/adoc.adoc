@@ -148,7 +148,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 ....
 
-[mermaid]
+[source,mermaid]
 ----
 \include::diagram.mmd[]
 ----
@@ -158,6 +158,8 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 [source,mermaid]
 ....
 graph LR
+
+A1 --> B1
 ....
 
 
