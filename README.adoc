@@ -5,10 +5,11 @@
 :toc:
 :idprefix: id_
 :idseparator: -
-toc-level: 5
+:toc-level: 5
 :toc-title: Today in learned.
-
 :sectnumlevels: 5
+:sectnums: |,all|
+
 
 :source-highlighter: rouge
 :toc:
@@ -172,6 +173,7 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 graph LR
 
 A1 --> B1
+
 ....
 
 

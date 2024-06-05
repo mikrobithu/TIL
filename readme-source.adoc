@@ -5,10 +5,11 @@
 :toc:
 :idprefix: id_
 :idseparator: -
-toc-level: 5
+:toc-level: 5
 :toc-title: Today in learned.
-
 :sectnumlevels: 5
+:sectnums: |,all|
+
 
 include::adoc/adoc.adoc[adoc/adoc]
 
