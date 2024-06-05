@@ -136,3 +136,29 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 
 
 - https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
+
+
+=== diagram (mermaid)
+:toc:
+:source-highlighter: rouge
+
+
+.diagram.adoc
+[source,shell]
+
+....
+
+[mermaid]
+----
+\include::diagram.mmd[]
+----
+....
+
+.diagram.mmd
+[source,mermaid]
+....
+graph LR
+....
+
+
+

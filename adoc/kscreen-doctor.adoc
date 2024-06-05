@@ -1,0 +1,16 @@
+
+== kscreen-doctor
+:toc:
+:source-highlighter: rouge
+
+[mermaid]
+----
+include::kscreen-doctor.mmd[]
+----
+
+[source,shell]
+----
+kscreen-doctor --json | jq -r '.outputs[]|"\(.name) \(.enabled) \(.pos) \(.connected)"'| grep true
+kscreen-doctor output.DP-1.position.0,0 output.eDP-1.position.1920,0 output.DP-3.position.3840,0
+----
+
