@@ -1677,7 +1677,7 @@ printf "HELO\n\n\n\n" | netcat pm-rabbitmq.hpo.hu 30100; echo
 :source-highlighter: rouge
 :toc:
 
-== helm
+== rancher
 
 
 === update
