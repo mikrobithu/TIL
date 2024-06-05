@@ -150,6 +150,32 @@ for i in *.xml; do podman run --rm -v $PWD:/data  pandoc/core -f docbook -t mark
 - https://docs.asciidoctor.org/asciidoctor/latest/tooling/#web-browser-add-ons-preview-only
 
 
+=== diagram (mermaid)
+:toc:
+:source-highlighter: rouge
+
+
+.diagram.adoc
+[source,shell]
+
+....
+
+[mermaid]
+----
+\include::diagram.mmd[]
+----
+....
+
+.diagram.mmd
+[source,mermaid]
+....
+graph LR
+....
+
+
+
+
+
 == amavis
 :toc:
 :source-highlighter: rouge
@@ -1183,6 +1209,27 @@ echo '{
 == Troubleshooting Kubernetes commands
 
 https://gist.github.com/superseb/3cccbfa910bf2fbe831ede4f201284c3
+
+
+== kscreen-doctor
+:toc:
+:source-highlighter: rouge
+
+[mermaid]
+----
+graph
+
+DP-1["DP-1 <br /><br /> position: 0,0"]
+eDP-1["eDP-1 <br /><br /> position: 1920,0"]
+DP-3["DP-3<br /><br />position:3840,0"]
+----
+
+[source,shell]
+----
+kscreen-doctor --json | jq -r '.outputs[]|"\(.name) \(.enabled) \(.pos) \(.connected)"'| grep true
+kscreen-doctor output.DP-1.position.0,0 output.eDP-1.position.1920,0 output.DP-3.position.3840,0
+----
+
 
 :source-highlighter: rouge
 :toc:

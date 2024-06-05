@@ -52,6 +52,8 @@ include::adoc/jq.adoc[adoc/jq]
 
 include::adoc/k8s-troubleshoot.adoc[adoc/k8s-troubleshoot]
 
+include::adoc/kscreen-doctor.adoc[adoc/kscreen-doctor]
+
 include::adoc/kubectl.adoc[adoc/kubectl]
 
 include::adoc/kubeval.adoc[adoc/kubeval]
