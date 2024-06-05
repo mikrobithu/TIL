@@ -3,7 +3,7 @@
 :toc:
 :source-highlighter: rouge
 
-[mermaid]
+[,mermaid]
 ----
 include::kscreen-doctor.mmd[]
 ----
