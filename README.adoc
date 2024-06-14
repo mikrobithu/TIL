@@ -1943,6 +1943,13 @@ end
 
 * https://github.com/dotless-de/vagrant-vbguest
 
+== remove all vm
+
+[,bash]
+----
+for i in $(vagrant global-status | grep virtualbox | awk '{print $5}') ; do cd $i ; vagrant destroy -f ; done
+----
+
 :source-highlighter: rouge
 :toc:
 
