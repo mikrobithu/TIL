@@ -1,0 +1,142 @@
+
+== elasticsearch
+:toc:
+:source-highlighter: rouge
+
+== red status
+
+[source,shell]
+----
+GET "/_cluster/health/pretty"
+----
+
+[quote,terminal]
+----
+{
+  "cluster_name": "elk",
+  "status": "red", # <============
+  "timed_out": true,
+  "number_of_nodes": 1,
+  "number_of_data_nodes": 1,
+  "active_primary_shards": 0,
+  "active_shards": 0,
+  "relocating_shards": 0,
+  "initializing_shards": 0,
+  "unassigned_shards": 0,
+  "delayed_unassigned_shards": 0,
+  "number_of_pending_tasks": 0,
+  "number_of_in_flight_fetch": 0,
+  "task_max_waiting_in_queue_millis": 0,
+  "active_shards_percent_as_number": 100
+}
+----
+
+
+[source,terminal]
+----
+GET /_cat/indices
+GET /_cat/indices?v&health=red
+----
+
+[source,terminal]
+----
+red    open local-k8s.202406    6eHfC-xASuiOOWwieuxvnQ 1 1
+----
+
+
+[source,terminal]
+----
+GET _cat/shards?v&h=n,index,shard,prirep,state,sto,sc,unassigned.reason,unassigned.details&s=sto,index"| grep UNASSIGNED | grep local-k8s.202406
+----
+
+[source,terminal]
+----
+local-k8s.202406  0     p      UNASSIGNED    INDEX_CREATED     
+local-k8s.202406  0     r      UNASSIGNED    INDEX_CREATED
+----
+
+[source,terminal]
+----
+curl -X GET "localhost:9200/_cluster/allocation/explain?pretty" -H 'Content-Type: application/json' -d'
+{
+  "index": "local-k8s.202406",
+  "shard": 0,
+  "primary": true
+}
+'
+----
+
+
+[source,terminal]
+----
+{
+  "index": "local-k8s.202406",
+  "shard": 0,
+  "primary": true
+}
+'
+{
+  "index" : "local-k8s.202406",
+  "shard" : 0,
+  "primary" : true,
+  "current_state" : "unassigned",
+  "unassigned_info" : {
+    "reason" : "INDEX_CREATED",
+    "at" : "2024-06-01T10:41:03.304Z",
+    "last_allocation_status" : "no"
+  },
+  "can_allocate" : "no",
+  "allocate_explanation" : "Elasticsearch isn't allowed to allocate this shard to any of the nodes in the cluster. Choose a node to which you expect this shard to be allocated, find this node in the node-by-node explanation, and address the reasons which prevent Elasticsearch from allocating this shard there.",
+  "node_allocation_decisions" : [
+    {
+      "node_id" : "ODSeJLJYQFiU6Au87J6ttw",
+      "node_name" : "node-1",
+      "transport_address" : "10.11.12.13:9300",
+      "node_attributes" : {
+        "ml.machine_memory" : "16680517632",
+        "ml.allocated_processors" : "4",
+        "ml.allocated_processors_double" : "4.0",
+        "ml.max_jvm_size" : "2147483648",
+        "ml.config_version" : "12.0.0",
+        "xpack.installed" : "true",
+        "transform.config_version" : "10.0.0"
+      },
+      "roles" : [
+        "data",
+        "data_cold",
+        "data_content",
+        "data_frozen",
+        "data_hot",
+        "data_warm",
+        "ingest",
+        "master",
+        "ml",
+        "remote_cluster_client",
+        "transform"
+      ],
+      "node_decision" : "no",
+      "weight_ranking" : 1,
+      "deciders" : [
+        {
+          "decider" : "disk_threshold",
+          "decision" : "NO",
+          "explanation" : "the node is above the high watermark cluster setting [cluster.routing.allocation.disk.watermark.high=90%], having less than the minimum required [19.9gb] free space, actual free: [16.7gb], actual used: [91.6%]"
+        }
+      ]
+    }
+  ]
+}
+----
+
+Some common issues include:
+
+* Low Disk Space — No room to allocate
+* Shard Count Limits — Too many shards per node, common when new indexes are created or some nodes are removed and the system can’t find a place for them.
+* JVM or Heap Limits — Some versions can limit allocations when they are low on RAM
+* Routing or Allocation Rules — Common HA cloud or large complex systems
+* Corruption or Serious Problems — There are many more issues that can arise, each needing special attention or solutions, or, in many cases, just removing the old shards and adding new replicas or primaries.
+
+references:
+
+* https://steve-mushero.medium.com/elasticsearch-index-red-yellow-why-1c4a4a0256ca
+* https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-allocation-explain.html
