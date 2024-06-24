@@ -35,6 +35,8 @@ include::adoc/diff.adoc[adoc/diff]
 
 include::adoc/du.adoc[adoc/du]
 
+include::adoc/elasticsearch.adoc[adoc/elasticsearch]
+
 include::adoc/etcd.adoc[adoc/etcd]
 
 include::adoc/ffmpeg.adoc[adoc/ffmpeg]
