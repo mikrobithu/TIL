@@ -4,3 +4,115 @@
 == Troubleshooting Kubernetes commands
 
 https://gist.github.com/superseb/3cccbfa910bf2fbe831ede4f201284c3
+
+
+== Deleting the Kubernetes namespace stuck in terminating state
+
+[,shell]
+----
+k get ns -o json cattle-monitoring-system
+----
+
+[,json]
+----
+{
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+        "annotations": {
+            "cattle.io/status": "{\"Conditions\":[{\"Type\":\"ResourceQuotaInit\",\"Status\":\"True\",\"Message\":\"\",\"LastUpdateTime\":\"2024-03-20T11:27:27Z\"},{\"Type\":\"InitialRolesPopulated\",\"Status\":\"True\",\"Message\":\"\",\"LastUpdateTime\":\"2024-03-20T11:27:28Z\"}]}",
+            "field.cattle.io/projectId": "c-m-s2gjcrwx:p-m48vq",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Namespace\",\"metadata\":{\"annotations\":{},\"name\":\"cattle-monitoring-system\"}}\n",
+            "lifecycle.cattle.io/create.namespace-auth": "true",
+            "management.cattle.io/no-default-sa-token": "true",
+            "meta.helm.sh/release-name": "rancher-monitoring",
+            "meta.helm.sh/release-namespace": "cattle-monitoring-system",
+            "objectset.rio.cattle.io/id": "default-smtp-alert-alertmanager-rancher-monitoring"
+        },
+        "creationTimestamp": "2024-03-20T11:27:26Z",
+        "deletionTimestamp": "2024-06-27T07:57:38Z",
+        "labels": {
+            "app.kubernetes.io/managed-by": "Helm",
+            "field.cattle.io/projectId": "p-m48vq",
+            "kubernetes.io/metadata.name": "cattle-monitoring-system",
+            "objectset.rio.cattle.io/hash": "db91c173a6cb6696f8334e6a0abd0fe4db2186dd"
+        },
+        "name": "cattle-monitoring-system",
+        "resourceVersion": "217675132",
+        "uid": "0c1e7839-1dbf-464b-b184-2894918896ec"
+    },
+    "spec": {
+        "finalizers": [
+            "kubernetes"
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastTransitionTime": "2024-06-27T07:57:51Z",
+                "message": "Discovery failed for some groups, 1 failing: unable to retrieve the complete list of server APIs: custom.metrics.k8s.io/v1beta1: the server is currently unable to handle the request",
+                "reason": "DiscoveryFailed",
+                "status": "True",
+                "type": "NamespaceDeletionDiscoveryFailure"
+            },
+            {
+                "lastTransitionTime": "2024-06-27T07:57:45Z",
+                "message": "All legacy kube types successfully parsed",
+                "reason": "ParsedGroupVersions",
+                "status": "False",
+                "type": "NamespaceDeletionGroupVersionParsingFailure"
+            },
+            {
+                "lastTransitionTime": "2024-06-27T07:57:45Z",
+                "message": "All content successfully deleted, may be waiting on finalization",
+                "reason": "ContentDeleted",
+                "status": "False",
+                "type": "NamespaceDeletionContentFailure"
+            },
+            {
+                "lastTransitionTime": "2024-06-27T07:57:51Z",
+                "message": "All content successfully removed",
+                "reason": "ContentRemoved",
+                "status": "False",
+                "type": "NamespaceContentRemaining"
+            },
+            {
+                "lastTransitionTime": "2024-06-27T07:57:51Z",
+                "message": "All content-preserving finalizers finished",
+                "reason": "ContentHasNoFinalizers",
+                "status": "False",
+                "type": "NamespaceFinalizersRemaining"
+            }
+        ],
+        "phase": "Terminating"
+    }
+}
+----
+
+[,shell]
+----
+kubectl api-resources -o name --verbs=list --namespaced | xargs -n 1 kubectl get --show-kind --ignore-not-found -n cattle-monitoring-system
+----
+[,console]
+----
+E0627 11:25:02.857331   28602 memcache.go:287] couldn't get resource list for custom.metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0627 11:25:03.066288   28602 memcache.go:121] couldn't get resource list for custom.metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+error: unable to retrieve the complete list of server APIs: custom.metrics.k8s.io/v1beta1: the server is currently unable to handle the reques
+----
+
+[,shell]
+----
+kubectl get apiservices
+----
+
+[,console]
+----
+v1beta1.custom.metrics.k8s.io                cattle-monitoring-system/rancher-monitoring-prometheus-adapter   False (ServiceNotFound)   98d
+----
+
+[,shell]
+----
+ kubectl get namespace cattle-monitoring-system -o json   | tr -d "\n" | sed "s/\"finalizers\": \[[^]]\+\]/\"finalizers\": []/"   | kubectl replace --raw /api/v1/namespaces/cattle-monitoring-system/finalize -f -
+kubectl edit namespace cattle-monitoring-system
+# delete finalizer
+----
