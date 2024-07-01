@@ -1,5 +1,5 @@
 
-== 
+== HAproxy 
 :toc:
 :source-highlighter: rouge
 
