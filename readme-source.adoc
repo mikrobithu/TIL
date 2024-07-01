@@ -45,6 +45,8 @@ include::adoc/find.adoc[adoc/find]
 
 include::adoc/git.adoc[adoc/git]
 
+include::adoc/haproxy.adoc[adoc/haproxy]
+
 include::adoc/har.adoc[adoc/har]
 
 include::adoc/hpacucli-hpssacli.adoc[adoc/hpacucli-hpssacli]
