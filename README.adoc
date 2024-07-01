@@ -1102,7 +1102,7 @@ server cert
 -----END CERTIFICATE-----
 
 -----BEGIN CERTIFICATE-----
-server privae key
+server private key
 -----END CERTIFICATE-----
 
 -----BEGIN CERTIFICATE-----
