@@ -1,0 +1,23 @@
+
+== 
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+cat /etc/haproxy/haproxy/cert.pem
+-----BEGIN CERTIFICATE-----
+server cert
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
+server privae key
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
+CA cert
+-----END CERTIFICATE-----
+
+----
+
