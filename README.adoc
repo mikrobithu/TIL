@@ -1986,6 +1986,60 @@ kubectl -n cattle-system exec $(kubectl -n cattle-system get pods | grep ^ranche
 ----
 
 
+=== delete rancher-agent
+
+[,terminal]
+----
+k get namespaces
+NAME                          STATUS        AGE
+cattle-system                 Terminating   209d
+
+
+kubectl get customresourcedefinitions |grep management.cattle.io
+
+apiservices.management.cattle.io                                  2023-12-08T18:45:58Z
+authconfigs.management.cattle.io                                  2023-12-08T18:46:04Z
+clusterregistrationtokens.management.cattle.io                    2023-12-08T18:45:58Z
+clusters.management.cattle.io                                     2023-12-08T18:45:58Z
+features.management.cattle.io                                     2023-12-08T18:45:54Z
+groupmembers.management.cattle.io                                 2023-12-08T18:46:04Z
+groups.management.cattle.io                                       2023-12-08T18:46:04Z
+podsecurityadmissionconfigurationtemplates.management.cattle.io   2023-12-08T18:45:58Z
+preferences.management.cattle.io                                  2023-12-08T18:45:59Z
+settings.management.cattle.io                                     2023-12-08T18:45:58Z
+tokens.management.cattle.io                                       2023-12-08T18:46:04Z
+userattributes.management.cattle.io                               2023-12-08T18:46:04Z
+users.management.cattle.io                                        2023-12-08T18:46:04Z
+
+kubectl get customresourcedefinitions |grep management.cattle.io  |awk '{print $1}' | xargs kubectl delete customresourcedefinitions
+
+kubectl get namespaces --field-selector status.phase=Terminating -o name | xargs -i  kubectl patch {}  -p '{"metadata":{"finalizers":[]}}' --type merge
+Error from server (InternalError): Internal error occurred: failed calling webhook "rancher.cattle.io.namespaces": failed to call webhook: Post "https://rancher-webhook.cattle-system.svc:443/v1/webhook/validation/namespaces?timeout=10s": service "rancher-webhook" not found
+Error from server (InternalError): Internal error occurred: failed calling webhook "rancher.cattle.io.namespaces": failed to call webhook: Post "https://rancher-webhook.cattle-system.svc:443/v1/webhook/validation/namespaces?timeout=10s": service "rancher-webhook" not found
+
+
+kubectl create ns cattle-system
+Error from server (InternalError): Internal error occurred: failed calling webhook "rancher.cattle.io.namespaces.create-non-kubesystem": failed to call webhook: Post "https://rancher-webhook.cattle-system.svc:443/v1/webhook/validation/namespaces?timeout=10s": service "rancher-webhook" not found
+
+
+k get validatingwebhookconfigurations.admissionregistration.k8s.io | grep rancher.cattle.io
+NAME                                    WEBHOOKS   AGE
+rancher.cattle.io                       7          208d
+
+kubectl delete validatingwebhookconfigurations rancher.cattle.io
+validatingwebhookconfiguration.admissionregistration.k8s.io "rancher.cattle.io" deleted
+
+kubectl create ns cattle-system
+Error from server (AlreadyExists): object is being deleted: namespaces "cattle-system" already exists
+
+kubectl get namespaces --field-selector status.phase=Terminating -o name | xargs -i  kubectl patch {}  -p '{"metadata":{"finalizers":[]}}' --type mergenamespace/baikal patched
+namespace/cattle-system patched
+
+----
+
+kubectl get customresourcedefinitions |grep management.cattle.io  |awk '{print $1}' | xargs kubectl delete customresourcedefinitions
+
+
 == regexp
 :toc:
 :source-highlighter: rouge
