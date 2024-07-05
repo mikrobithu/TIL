@@ -55,6 +55,8 @@ include::adoc/ipsec.adoc[adoc/ipsec]
 
 include::adoc/jq.adoc[adoc/jq]
 
+include::adoc/k3d.adoc[adoc/k3d]
+
 include::adoc/k8s-troubleshoot.adoc[adoc/k8s-troubleshoot]
 
 include::adoc/kscreen-doctor.adoc[adoc/kscreen-doctor]
