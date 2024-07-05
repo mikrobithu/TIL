@@ -112,7 +112,8 @@ v1beta1.custom.metrics.k8s.io                cattle-monitoring-system/rancher-mo
 
 [,shell]
 ----
- kubectl get namespace cattle-monitoring-system -o json   | tr -d "\n" | sed "s/\"finalizers\": \[[^]]\+\]/\"finalizers\": []/"   | kubectl replace --raw /api/v1/namespaces/cattle-monitoring-system/finalize -f -
+kubectl delete apiservices v1beta1.custom.metrics.k8s.io
+kubectl get namespace cattle-monitoring-system -o json   | tr -d "\n" | sed "s/\"finalizers\": \[[^]]\+\]/\"finalizers\": []/"   | kubectl replace --raw /api/v1/namespaces/cattle-monitoring-system/finalize -f -
 kubectl edit namespace cattle-monitoring-system
 # delete finalizer
 ----
