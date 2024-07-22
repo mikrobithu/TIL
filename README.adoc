@@ -2322,7 +2322,7 @@ end
 
 * https://github.com/dotless-de/vagrant-vbguest
 
-== remove all vm
+=== remove all vm
 
 [,bash]
 ----
