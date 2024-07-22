@@ -1,0 +1,14 @@
+
+== openssl
+:toc:
+:source-highlighter: rouge
+
+=== pfx
+
+[source,shell]
+----
+openssl pkcs12 -in file.pfx -nocerts -out priv.key
+openssl pkcs12 -in file.pfx -clcerts -nokeys -out srv.crt
+openssl rsa -in priv.key -out priv-nopass.key
+----
+
