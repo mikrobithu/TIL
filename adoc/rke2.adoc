@@ -9,6 +9,19 @@
 
 https://gist.github.com/superseb/3b78f47989e0dbc1295486c186e944bf
 
+
+=== Manual upgrade
+
+[,bash]
+----
+curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.28 sh -
+rke2-killall.sh
+systemctl status rke2-server.service
+systemctl stop rke2-server.service
+systemctl start rke2-server.service
+journalctl -fu rke2-server.service
+----
+
 === automated upgrade
 
 https://docs.rke2.io/upgrade/automated_upgrade
