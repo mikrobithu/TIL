@@ -2304,7 +2304,7 @@ sed '2 i new-line' input.txt 		# Insert line before
 === ssh-copy-id
 [source,shell]
 ----
-sshpass -p server_password ssh-copy-id -oStrictHostKeyChecking=no root@$i -p 22
+for i in srv1 srv2 srv3 ; do sshpass -p server_password ssh-copy-id -oStrictHostKeyChecking=no root@$i -p 22; done
 ----
 
 
