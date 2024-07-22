@@ -1878,6 +1878,21 @@ netcat -v -w 3 192.168.45.166 1556
 
 
 
+== openssl
+:toc:
+:source-highlighter: rouge
+
+=== pfx
+
+[source,shell]
+----
+openssl pkcs12 -in file.pfx -nocerts -out priv.key
+openssl pkcs12 -in file.pfx -clcerts -nokeys -out srv.crt
+openssl rsa -in priv.key -out priv-nopass.key
+----
+
+
+
 == php
 :toc:
 :source-highlighter: rouge
@@ -2090,6 +2105,19 @@ vcode:
 
 
 https://gist.github.com/superseb/3b78f47989e0dbc1295486c186e944bf
+
+
+=== Manual upgrade
+
+[,bash]
+----
+curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=v1.28 sh -
+rke2-killall.sh
+systemctl status rke2-server.service
+systemctl stop rke2-server.service
+systemctl start rke2-server.service
+journalctl -fu rke2-server.service
+----
 
 === automated upgrade
 

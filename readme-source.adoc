@@ -73,6 +73,8 @@ include::adoc/meld.adoc[adoc/meld]
 
 include::adoc/netcat.adoc[adoc/netcat]
 
+include::adoc/openssl.adoc[adoc/openssl]
+
 include::adoc/php.adoc[adoc/php]
 
 include::adoc/ponymail-foal.adoc[adoc/ponymail-foal]
