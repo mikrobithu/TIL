@@ -1,0 +1,13 @@
+
+== markdown
+:toc:
+:source-highlighter: rouge
+
+
+=== convert markdown to asciidoc
+
+[source,shell]
+----
+podman run --rm -v $PWD:/media docker.io/naszuf/kramdoc:1.0 -o /media/README.adoc /media/README.md
+----
+
