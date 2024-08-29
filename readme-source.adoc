@@ -71,6 +71,8 @@ include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
 include::adoc/lvm.adoc[adoc/lvm]
 
+include::adoc/markdown.adoc[adoc/markdown]
+
 include::adoc/meld.adoc[adoc/meld]
 
 include::adoc/netcat.adoc[adoc/netcat]
