@@ -51,6 +51,8 @@ include::adoc/har.adoc[adoc/har]
 
 include::adoc/hpacucli-hpssacli.adoc[adoc/hpacucli-hpssacli]
 
+include::adoc/inotifywait.adoc[adoc/inotifywait]
+
 include::adoc/ipsec.adoc[adoc/ipsec]
 
 include::adoc/jq.adoc[adoc/jq]
