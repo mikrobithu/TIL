@@ -1,0 +1,11 @@
+
+== inotifywait
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+inotifywait -r -m -e modify vagrant/README.adoc adoc/README.adoc | while read file_path file_event file_name; do         echo ${file_path}${file_name} event: ${file_event}; echo "generate pdf"; podman run --rm -v $PWD:/media registry.local/documentation:1.0 daps -d /media/MAIN pdf ;    done
+----
+
