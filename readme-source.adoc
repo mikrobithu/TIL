@@ -43,6 +43,8 @@ include::adoc/ffmpeg.adoc[adoc/ffmpeg]
 
 include::adoc/find.adoc[adoc/find]
 
+include::adoc/fluentd.adoc[adoc/fluentd]
+
 include::adoc/git.adoc[adoc/git]
 
 include::adoc/haproxy.adoc[adoc/haproxy]

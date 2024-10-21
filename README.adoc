@@ -1041,6 +1041,19 @@ ffmpeg -i {$pathFileName} -y {$destinationFile}
 find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 ----
 
+
+== FluentD
+:toc:
+:source-highlighter: rouge
+
+=== flush buffers
+
+[source,shell]
+----
+k -n cattle-logging-system exec -it rancher-logging-root-fluentd-0 -- sh -c 'kill -s SIGHUP `grep -l "[E]ascii" /proc/[0-9]*/cmdline|cut -d "/" -f 3`'
+----
+
+
 :source-highlighter: rouge
 :toc:
 
@@ -1783,7 +1796,11 @@ kubectl graph -t 100 $(kubectl api-resources --verbs=list --namespaced -o name |
 [soruce,bash]
 ----
 kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains("Evicted")) | "kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)"' | xargs -n 1 bash -c
+
+kubectl get pods | grep Evicted | awk ‘{print $1}’ | xargs kubectl delete pods -n <namespace-name>
+
 ----
+
 
 
 === node conditions
