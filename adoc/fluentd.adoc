@@ -1,0 +1,12 @@
+
+== FluentD
+:toc:
+:source-highlighter: rouge
+
+=== flush buffers
+
+[source,shell]
+----
+k -n cattle-logging-system exec -it rancher-logging-root-fluentd-0 -- sh -c 'kill -s SIGHUP `grep -l "[E]ascii" /proc/[0-9]*/cmdline|cut -d "/" -f 3`'
+----
+
