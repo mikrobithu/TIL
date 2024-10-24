@@ -1,0 +1,36 @@
+
+== yamllint
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+cat << EOF > .gitlab-ci.yml
+stages:
+  - linting
+
+yamllint:
+  stage: linting
+  image: registry.gitlab.com/pipeline-components/yamllint:latest
+  script:
+    - yamllint --no-warnings -f colored -c ./yamllint.config .
+EOF
+
+cat << EOF > ./yamllint.config
+extends: default
+
+rules:
+  # 80 chars should be enough, but don't fail if a line is longer
+  line-length:
+    max: 80
+    level: warning
+  # empty lines
+  empty-lines:
+    max: 2
+    max-start: 0
+    max-end: 1
+EOF
+----
+
+
