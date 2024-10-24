@@ -71,6 +71,8 @@ include::adoc/kubeval.adoc[adoc/kubeval]
 
 include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
+include::adoc/locate.adoc[adoc/locate]
+
 include::adoc/lvm.adoc[adoc/lvm]
 
 include::adoc/markdown.adoc[adoc/markdown]
