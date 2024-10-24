@@ -117,5 +117,7 @@ include::adoc/vsphere.adoc[adoc/vsphere]
 
 include::adoc/xz.adoc[adoc/xz]
 
+include::adoc/yamllint.adoc[adoc/yamllint]
+
 include::adoc/zypper.adoc[adoc/zypper]
 
