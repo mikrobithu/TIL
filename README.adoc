@@ -2428,6 +2428,8 @@ xz -vv --lzma2=dict=192MiB big_foo.tar
 
 
 == yamllint
+
+=== Gitlab CI
 :toc:
 :source-highlighter: rouge
 
@@ -2442,10 +2444,10 @@ yamllint:
   stage: linting
   image: registry.gitlab.com/pipeline-components/yamllint:latest
   script:
-    - yamllint --no-warnings -f colored -c ./yamllint.config .
+    - yamllint --no-warnings -f colored -c ./yamllint-rules .
 EOF
 
-cat << EOF > ./yamllint.config
+cat << EOF > ./yamllint-rules
 extends: default
 
 rules:
@@ -2461,7 +2463,7 @@ rules:
 EOF
 ----
 
-
+* https://gitlab.com/pipeline-components/yamllint
 
 :source-highlighter: rouge
 :toc:
