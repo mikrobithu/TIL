@@ -1,0 +1,11 @@
+
+== locate
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+systemctl enable --now plocate-updatedb.timer
+----
+
