@@ -2444,7 +2444,7 @@ yamllint:
   stage: linting
   image: registry.gitlab.com/pipeline-components/yamllint:latest
   script:
-    - yamllint --no-warnings -f colored -c ./yamllint-rules .
+    - yamllint --no-warnings -f colored -c ./.yamllint-rules .
 EOF
 
 cat << EOF > ./yamllint-rules
