@@ -2125,7 +2125,20 @@ namespace/cattle-system patched
 
 ----
 
+----
 kubectl get customresourcedefinitions |grep management.cattle.io  |awk '{print $1}' | xargs kubectl delete customresourcedefinitions
+----
+
+=== enable embedded registry mirror
+
+rancher/cluster managment/select cluster/edit yaml
+
+[,yaml]
+----
+spec:
+  machineGlobalConfig:
+    embedded-registry: true
+----
 
 
 == regexp
