@@ -2136,8 +2136,9 @@ rancher/cluster managment/select cluster/edit yaml
 [,yaml]
 ----
 spec:
-  machineGlobalConfig:
-    embedded-registry: true
+  rkeConfig:
+    machineGlobalConfig:
+      embedded-registry: true
 ----
 
 
@@ -2344,6 +2345,19 @@ bar:
 ----
 salt '*' state.sls_id bar foo
 ----
+
+
+== screen
+:toc:
+:source-highlighter: rouge
+
+.screenrc
+[source,shell]
+----
+caption always # activates window caption
+caption string '%{= wk}[ %{k}%H %{k}][%= %{= wk}%?%-Lw%?%{r}(%{r}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %{k}][%{b} %Y-%m-%d %{k}%c %{k}]'
+----
+
 
 
 == sed

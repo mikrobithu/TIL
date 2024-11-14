@@ -105,6 +105,8 @@ include::adoc/rsyslog.adoc[adoc/rsyslog]
 
 include::adoc/salt.adoc[adoc/salt]
 
+include::adoc/screen.adoc[adoc/screen]
+
 include::adoc/sed.adoc[adoc/sed]
 
 include::adoc/ssh.adoc[adoc/ssh]
