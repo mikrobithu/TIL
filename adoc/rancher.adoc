@@ -88,6 +88,7 @@ rancher/cluster managment/select cluster/edit yaml
 [,yaml]
 ----
 spec:
-  machineGlobalConfig:
-    embedded-registry: true
+  rkeConfig:
+    machineGlobalConfig:
+      embedded-registry: true
 ---- 
