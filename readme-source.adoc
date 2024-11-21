@@ -29,6 +29,8 @@ include::adoc/bash-scripting.adoc[adoc/bash-scripting]
 
 include::adoc/cgroups.adoc[adoc/cgroups]
 
+include::adoc/containerd.adoc[adoc/containerd]
+
 include::adoc/curl.adoc[adoc/curl]
 
 include::adoc/diff.adoc[adoc/diff]
