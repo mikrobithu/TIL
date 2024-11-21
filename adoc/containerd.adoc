@@ -1,0 +1,20 @@
+
+== containerd
+:toc:
+:source-highlighter: rouge
+
+=== image import / export (airgap)
+
+[source,shell]
+----
+ssh srv1 
+
+ctr image pull docker.io/rancher/rancher-webhook:v0.5.1
+ctr image export docker.io_rancher_rancher-webhook:v0.5.1.tar docker.io/rancher/rancher-webhook:v0.5.1
+rsync -avz ./docker.io_rancher_rancher-webhook:v0.5.1.tar airgap:~/
+
+ssh airgap
+export CRI_CONFIG_FILE=/var/lib/rancher/rke2/agent/etc/crictl.yaml KUBECONFIG=/etc/rancher/rke2/rke2.yaml PATH=/sbin:/usr/sbin:/usr/local/sbin:/root/bin:/usr/local/bin:/usr/bin:/bin:/var/lib/rancher/rke2/bin:/opt/rke2/bin:/var/lib/rancher/rke2/bin:/opt/rke2/bin
+ctr --address=/run/k3s/containerd/containerd.sock -n k8s.io image import docker.io_rancher_rancher-webhook:v0.5.1.tar
+----
+
