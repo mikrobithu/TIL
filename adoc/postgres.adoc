@@ -22,4 +22,19 @@ pg_archivecleanup -nd /var/lib/pgsql/data/pg_wal/ $WAL_CLEAN
 ----
 
 
+=== pgbadger
 
+
+.postgresql.conf
+----
+log_min_duration_statement = 0 # pgbadger 
+log_line_prefix = '%t [%p]: user=%u,db=%d,app=%a,client=%h ' # pgbadger 
+log_checkpoints = on # pgbadger 
+log_connections = on # pgbadger 
+log_disconnections = on # pgbadger 
+log_lock_waits = on # pgbadger 
+log_temp_files = 0 # pgbadger 
+log_autovacuum_min_duration = 0 # pgbadger 
+log_error_verbosity = default # pgbadger 
+lc_messages='en_US.UTF-8'0 # pgbadger 
+----
