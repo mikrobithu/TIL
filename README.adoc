@@ -2478,8 +2478,9 @@ for i in srv1 srv2 srv3 ; do sshpass -p server_password ssh-copy-id -oStrictHost
 ----
 source ../scripts/ubuntu-repo-size.sh
 ubuntu-repo-size -s noble,jammy,focal,bionic -a amd64 > result.txt
-grep jammy  result.txt|tr '/' ' ' | awk '{print $1" "$5" GB "}'
+cat result.txt | sed 's/noble/24.04(noble)/I' | sed 's/jammy/22.04(jammy)/I' | sed 's/focal/20.04(focal)/I' | sed 's/bionic/18.04(bionic)/I'
 ----
+
 
 https://gist.github.com/ThinGuy/30998b4c89a3d050feb359baf96627fc
 
