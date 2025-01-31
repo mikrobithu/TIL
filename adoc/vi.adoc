@@ -1,6 +1,11 @@
 :source-highlighter: rouge
 :toc:
 
+[,text]
+----
+:g/^$/d # delete empty/blank lines
+----
+
 == vimdiff
 
 [,text]
