@@ -113,6 +113,8 @@ include::adoc/sed.adoc[adoc/sed]
 
 include::adoc/ssh.adoc[adoc/ssh]
 
+include::adoc/ubuntu.adoc[adoc/ubuntu]
+
 include::adoc/vagrant.adoc[adoc/vagrant]
 
 include::adoc/vi.adoc[adoc/vi]

@@ -2468,6 +2468,22 @@ for i in srv1 srv2 srv3 ; do sshpass -p server_password ssh-copy-id -oStrictHost
 
 
 
+== Ubuntu
+:toc:
+:source-highlighter: rouge
+
+
+=== repo size
+[source,shell]
+----
+source ../scripts/ubuntu-repo-size.sh
+ubuntu-repo-size -s noble,jammy,focal,bionic -a amd64 > result.txt
+grep jammy  result.txt|tr '/' ' ' | awk '{print $1" "$5" GB "}'
+----
+
+https://gist.github.com/ThinGuy/30998b4c89a3d050feb359baf96627fc
+
+
 == Vagrant
 :toc:
 :source-highlighter: rouge
