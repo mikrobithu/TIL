@@ -826,7 +826,7 @@ du -bch archive/00000012* # total size
 :toc:
 :source-highlighter: rouge
 
-== red status
+=== red status
 
 [source,shell]
 ----
@@ -963,6 +963,39 @@ references:
 
 * https://steve-mushero.medium.com/elasticsearch-index-red-yellow-why-1c4a4a0256ca
 * https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-allocation-explain.html
+
+
+=== high disk watermark exceeded
+
+[,bash]
+----
+curl -k -u 'USER:PASS' -X GET "https://local:9200_nodes/stats/fs"| jq
+curl -k -u 'USER:PASS' -X GET "https://local:9200/_cluster/health/"| jq
+curl -k -u 'USER:PASS' -X GET "https://local:9200/_cat/shards"| jq
+curl -k -u 'USER:PASS' -X GET "https://local:9200/_cat/indices/?v=true"
+----
+
+delete unnecessery index
+
+[,bash]
+----
+curl -k -u 'USER:PASS' -X DELETE "https://local:9200/indexname"
+----
+
+change setting from percentage to absolute value
+
+[,bash]
+----
+PUT _cluster/settings
+{
+  "persistent": {
+    "cluster.routing.allocation.disk.threshold_enabled": true,
+    "cluster.routing.allocation.disk.watermark.low": "1g",
+    "cluster.routing.allocation.disk.watermark.high": "500m",
+    "cluster.info.update.interval": "5m"
+  }
+}
+----
 
 :source-highlighter: rouge
 :toc:
@@ -2457,6 +2490,11 @@ for i in $(vagrant global-status | grep virtualbox | awk '{print $5}') ; do cd $
 
 :source-highlighter: rouge
 :toc:
+
+[,text]
+----
+:g/^$/d # delete empty/blank lines
+----
 
 == vimdiff
 
