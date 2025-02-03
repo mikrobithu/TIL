@@ -2485,6 +2485,14 @@ cat result.txt | sed 's/noble/24.04(noble)/I' | sed 's/jammy/22.04(jammy)/I' | s
 https://gist.github.com/ThinGuy/30998b4c89a3d050feb359baf96627fc
 
 
+=== repos description
+
+. Main - Canonical-supported free and open-source software.
+. Universe - Community-maintained free and open-source software.
+. Restricted - Proprietary drivers for devices.
+. Multiverse - Software restricted by copyright or legal issues.
+
+
 == Vagrant
 :toc:
 :source-highlighter: rouge
