@@ -2492,6 +2492,8 @@ https://gist.github.com/ThinGuy/30998b4c89a3d050feb359baf96627fc
 . Restricted - Proprietary drivers for devices.
 . Multiverse - Software restricted by copyright or legal issues.
 
+https://help.ubuntu.com/community/Repositories/Ubuntu
+
 
 == Vagrant
 :toc:
