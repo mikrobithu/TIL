@@ -71,6 +71,8 @@ include::adoc/kubectl.adoc[adoc/kubectl]
 
 include::adoc/kubeval.adoc[adoc/kubeval]
 
+include::adoc/ldapsearch.adoc[adoc/ldapsearch]
+
 include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
 include::adoc/locate.adoc[adoc/locate]
