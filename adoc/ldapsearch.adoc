@@ -1,0 +1,13 @@
+
+== ldapsearch 
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+ldapsearch -o ldif-wrap=no -LLL  -h server.com -p 389/636 -x -D "binduser@server.com" -b "DC=server,DC=com" -w <PASS> -s sub "sAMAccountName=USERNAME"
+# with base64 decode
+-o ldif-wrap=no "$@" | perl -MMIME::Base64 -Mutf8 -pe 's/^([-a-zA-Z0-9;]+):(:\s+)(\S+)$/$1.$2.&decode_base64($3)/e'
+----
+
