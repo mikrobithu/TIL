@@ -51,8 +51,12 @@ kubectl -n system-upgrade apply -f rke2-upgrade.yaml
 for node in $(kubectl get node -o name | awk -F '/' '{print $2}'); do kubectl label node ${node} rke2-upgrade=true --overwrite ; done
 kubectl -n system-upgrade events -w
 kubectl -n system-upgrade get plans -o yaml
+kubectl -n system-upgrade get plans 
+kubectl -n system-upgrade get plans --selector='upgrade.cattle.io/plan=<PLAN>'
+kubectl -n system-upgrade logs <PODNAME>
 kubectl -n system-upgrade get jobs -o yaml
 ----
+
 
 
 === uninstall
