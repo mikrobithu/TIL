@@ -3,10 +3,22 @@
 :toc:
 :source-highlighter: rouge
 
-.screenrc
+.~/.screenrc
 [source,shell]
 ----
 caption always # activates window caption
 caption string '%{= wk}[ %{k}%H %{k}][%= %{= wk}%?%-Lw%?%{r}(%{r}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %{k}][%{b} %Y-%m-%d %{k}%c %{k}]'
 ----
 
+
+.~/.bashrc
+[,terminal]
+----
+# Set screen window title
+case "$TERM" in
+screen)
+  PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
+  ;;
+esac
+#
+----
