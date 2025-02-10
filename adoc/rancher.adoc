@@ -92,3 +92,51 @@ spec:
     machineGlobalConfig:
       embedded-registry: true
 ---- 
+
+
+
+=== Rancher managed RKE2 clusters stuck in "Waiting for probes: kube-controller-manager, kube-scheduler"
+
+[,bash]
+----
+(
+curl  --cacert /var/lib/rancher/rke2/server/tls/kube-controller-manager/kube-controller-manager.crt \
+  https://127.0.0.1:10257/healthz >/dev/null 2>&1 \
+  && echo "[OK] Kube Controller probe" \
+  || echo "[FAIL] Kube Controller probe";
+
+curl --cacert /var/lib/rancher/rke2/server/tls/kube-scheduler/kube-scheduler.crt \
+  https://127.0.0.1:10259/healthz >/dev/null 2>&1  \
+  && echo "[OK] Scheduler probe" \
+  || echo "[FAIL] Scheduler probe";
+)
+
+[FAIL] Kube Controller probe
+[FAIL] Scheduler probe
+
+
+echo "Rotating kube-controller-manager certificate"
+rm /var/lib/rancher/rke2/server/tls/kube-controller-manager/kube-controller-manager.{crt,key}
+crictl rm -f $(crictl ps -q --name kube-controller-manager)
+
+echo "Rotating kube-scheduler certificate"
+rm /var/lib/rancher/rke2/server/tls/kube-scheduler/kube-scheduler.{crt,key}
+crictl rm -f $(crictl ps -q --name kube-scheduler)
+
+(
+curl  --cacert /var/lib/rancher/rke2/server/tls/kube-controller-manager/kube-controller-manager.crt \
+  https://127.0.0.1:10257/healthz >/dev/null 2>&1 \
+  && echo "[OK] Kube Controller probe" \
+  || echo "[FAIL] Kube Controller probe";
+
+curl --cacert /var/lib/rancher/rke2/server/tls/kube-scheduler/kube-scheduler.crt \
+  https://127.0.0.1:10259/healthz >/dev/null 2>&1  \
+  && echo "[OK] Scheduler probe" \
+  || echo "[FAIL] Scheduler probe";
+)
+
+
+
+[OK] Kube Controller probe
+[OK] Scheduler probe
+----
