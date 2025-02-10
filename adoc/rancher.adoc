@@ -97,6 +97,10 @@ spec:
 
 === Rancher managed RKE2 clusters stuck in "Waiting for probes: kube-controller-manager, kube-scheduler"
 
+https://www.suse.com/support/kb/doc/?id=000021676
+
+https://github.com/rancher/rancher/issues/41125#issuecomment-1506620040
+
 [,bash]
 ----
 (
