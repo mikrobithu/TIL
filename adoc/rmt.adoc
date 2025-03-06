@@ -3,11 +3,19 @@
 :toc:
 :source-highlighter: rouge
 
-
-[source,shell]
+[,shell]
 ----
 zypper in -y suseconnect-ng awk
 curl -kL --remote-name https://rmt-server.example.com/tools/rmt-client-setup
 echo -e "y\ny\n"| sh rmt-client-setup https://rmt-server.example.com
 ----
 
+
+
+[,shell]
+----
+rmt-cli repos  list --all | grep 15 |grep -e SP5 -e SP6 | grep -i -e legacy
+rmt-cli repos enable 
+rmt-cli repos enable ID1 ID2
+for i in ID1 ID2 ; do rmt-cli mirror repository $i ; done
+----
