@@ -1,0 +1,14 @@
+
+== csync2
+:toc:
+:source-highlighter: rouge
+
+
+
+ERROR from peer node1: Identification failed!
+
+[source,shell]
+----
+csync2 -Rv # Remove files from database which do not match config entries.
+----
+

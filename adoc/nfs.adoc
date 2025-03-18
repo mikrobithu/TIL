@@ -1,0 +1,21 @@
+
+== NFS 
+:toc:
+:source-highlighter: rouge
+
+=== list connected clients
+
+[source,shell]
+----
+grep '^name:' /proc/fs/nfsd/clients/*/info
+# or
+nfsdclnts --hostname | cut -d '|' -f5 | sort -u
+----
+
+=== list opened files: 
+
+[,shell]
+----
+nfsdclnts --hostname
+----
+

@@ -243,4 +243,11 @@ kubectl get pods | grep Evicted | awk ‘{print $1}’ | xargs kubectl delete po
 [source,bash]
 ----
 kubectl get nodes -o jsonpath='{range .items[*]}{@.metadata.name}:{" "}{range @.status.conditions[*]}{@.type}={@.status};  {end}{"\n"}{end}'
+----
+
+=== display which pods have ti PVC in use
+
+[,bash]
+----
+kubectl get pods --all-namespaces -o=json | jq -c '.items[] | {name: .metadata.name, namespace: .metadata.namespace, claimName:.spec.volumes[] | select( has ("persistentVolumeClaim") ).persistentVolumeClaim.claimName }'
 ---- 
