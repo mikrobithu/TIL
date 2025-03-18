@@ -31,6 +31,8 @@ include::adoc/cgroups.adoc[adoc/cgroups]
 
 include::adoc/containerd.adoc[adoc/containerd]
 
+include::adoc/csync2.adoc[adoc/csync2]
+
 include::adoc/curl.adoc[adoc/curl]
 
 include::adoc/diff.adoc[adoc/diff]
@@ -84,6 +86,8 @@ include::adoc/markdown.adoc[adoc/markdown]
 include::adoc/meld.adoc[adoc/meld]
 
 include::adoc/netcat.adoc[adoc/netcat]
+
+include::adoc/nfs.adoc[adoc/nfs]
 
 include::adoc/openssl.adoc[adoc/openssl]
 

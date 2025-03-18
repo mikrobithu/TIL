@@ -756,6 +756,21 @@ ctr --address=/run/k3s/containerd/containerd.sock -n k8s.io image import docker.
 ----
 
 
+
+== csync2
+:toc:
+:source-highlighter: rouge
+
+
+
+ERROR from peer node1: Identification failed!
+
+[source,shell]
+----
+csync2 -Rv # Remove files from database which do not match config entries.
+----
+
+
 :source-highlighter: rouge
 :toc:
 
@@ -1863,6 +1878,13 @@ kubectl get pods | grep Evicted | awk ‘{print $1}’ | xargs kubectl delete po
 kubectl get nodes -o jsonpath='{range .items[*]}{@.metadata.name}:{" "}{range @.status.conditions[*]}{@.type}={@.status};  {end}{"\n"}{end}'
 ----
 
+=== display which pods have ti PVC in use
+
+[,bash]
+----
+kubectl get pods --all-namespaces -o=json | jq -c '.items[] | {name: .metadata.name, namespace: .metadata.namespace, claimName:.spec.volumes[] | select( has ("persistentVolumeClaim") ).persistentVolumeClaim.claimName }'
+----
+
 :toc:
 :source-highlighter: rouge
 
@@ -1997,6 +2019,28 @@ nc -l --proxy-type http localhost 8888
 # send data (-z not send data)
 netcat -v -w 3 192.168.45.166 1556
 
+----
+
+
+
+== NFS
+:toc:
+:source-highlighter: rouge
+
+=== list connected clients
+
+[source,shell]
+----
+grep '^name:' /proc/fs/nfsd/clients/*/info
+# or
+nfsdclnts --hostname | cut -d '|' -f5 | sort -u
+----
+
+=== list opened files:
+
+[,shell]
+----
+nfsdclnts --hostname
 ----
 
 
