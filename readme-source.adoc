@@ -51,6 +51,8 @@ include::adoc/fluentd.adoc[adoc/fluentd]
 
 include::adoc/git.adoc[adoc/git]
 
+include::adoc/gopass.adoc[adoc/gopass]
+
 include::adoc/haproxy.adoc[adoc/haproxy]
 
 include::adoc/har.adoc[adoc/har]
