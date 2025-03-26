@@ -1,0 +1,20 @@
+
+== gopass  
+:toc:
+:source-highlighter: rouge
+
+add otp 
+
+[source,shell]
+----
+zbarimg qrcode.png
+QR-Code:otpauth://totp/username@example.com?secret=123456789
+
+gopass insert secretname otpauth
+secretname:otpauth []: //totp/username@example.com?secret=123456789
+----
+
+generate token
+----
+gopass otp secretname
+----
