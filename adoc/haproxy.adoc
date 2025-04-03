@@ -25,3 +25,15 @@ CA cert
 
 ----
 
+
+check order:
+----
+cd /tmp
+mkdir cert
+cd cert
+echo |openssl s_client -connect <server_name>:<port> -servername <server_name> -showcerts 2>&1 |csplit - '/-----BEGIN CERTIFICATE-----/' '{*}'
+rm xx00; for i in `ls xx*`; do openssl x509 -in $i -noout -subject -hash -issuer_hash; done
+----
+
+https://www.suse.com/support/kb/doc/?id=000018152
+https://www.suse.com/support/kb/doc/?id=000019003
