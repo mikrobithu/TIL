@@ -16,6 +16,10 @@ server private key
 -----END CERTIFICATE-----
 
 -----BEGIN CERTIFICATE-----
+subCA cert
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
 CA cert
 -----END CERTIFICATE-----
 
