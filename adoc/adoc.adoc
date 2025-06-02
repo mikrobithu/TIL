@@ -11,9 +11,9 @@
 
 
 
-footnote:[]
+footnote:[URL]
 
-footnote:id[]
+footnote:id[URL]
 
 # example
 Ported from upstreamsfootnote:[https://git.home.lan/app1],footnote:[https://git.home.lan/app2]

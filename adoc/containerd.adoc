@@ -9,6 +9,8 @@
 ----
 ssh srv1 
 
+# podman image save IMAGE-NAME > IMAGE-NAME.tar
+podman image save docker.io/rancher/rancher-webhook:v0.5.1 > docker.io_rancher_rancher-webhook:v0.5.1.tar
 ctr image pull docker.io/rancher/rancher-webhook:v0.5.1
 ctr image export docker.io_rancher_rancher-webhook:v0.5.1.tar docker.io/rancher/rancher-webhook:v0.5.1
 rsync -avz ./docker.io_rancher_rancher-webhook:v0.5.1.tar airgap:~/
