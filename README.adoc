@@ -716,7 +716,11 @@ read -s -p"pass: " SPASS; for i in $(cat ~serverek.txt); do echo $SPASS | sudo -
 +-----------------------------'---------------------------------------------'
 ----
 
-
+* https://explainshell.com/
+* https://devhints.io/bash
+* https://tldr.sh/
+* https://linuxcommandlibrary.com/
+* https://mywiki.wooledge.org/BashPitfalls
 
 
 == cgroups
