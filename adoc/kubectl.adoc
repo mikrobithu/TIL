@@ -251,3 +251,12 @@ kubectl get nodes -o jsonpath='{range .items[*]}{@.metadata.name}:{" "}{range @.
 ----
 kubectl get pods --all-namespaces -o=json | jq -c '.items[] | {name: .metadata.name, namespace: .metadata.namespace, claimName:.spec.volumes[] | select( has ("persistentVolumeClaim") ).persistentVolumeClaim.claimName }'
 ---- 
+
+
+=== create pod
+
+
+----
+podman run --rm -it --entrypoint=/bin/bash registry.suse.com/suse/git:2.43
+kubectl run git-bash --rm -i -t --restart=Never --image=registry.suse.com/suse/git:2.43 --command -- /bin/bash
+----
