@@ -12,6 +12,10 @@ QR-Code:otpauth://totp/username@example.com?secret=123456789
 
 gopass insert secretname otpauth
 secretname:otpauth []: //totp/username@example.com?secret=123456789
+
+# oneliner
+echo otpauth://totp/username@example.com?secret=123456789 | gopass insert -a account/secret
+
 ----
 
 generate token
