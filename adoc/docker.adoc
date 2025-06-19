@@ -1,0 +1,13 @@
+
+== docker
+:toc:
+:source-highlighter: rouge
+
+add CA for private registry
+[source,shell]
+----
+mkdir -p /etc/docker/certs.d/harbor.local
+cp ca.pem /etc/docker/certs.d/harbor.kozut.local/ca.crt
+docker  login -u USER -p PASS harbor.kozut.local
+----
+
