@@ -37,6 +37,8 @@ include::adoc/curl.adoc[adoc/curl]
 
 include::adoc/diff.adoc[adoc/diff]
 
+include::adoc/docker.adoc[adoc/docker]
+
 include::adoc/du.adoc[adoc/du]
 
 include::adoc/elasticsearch.adoc[adoc/elasticsearch]
