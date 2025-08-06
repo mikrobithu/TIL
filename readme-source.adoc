@@ -55,6 +55,8 @@ include::adoc/git.adoc[adoc/git]
 
 include::adoc/gopass.adoc[adoc/gopass]
 
+include::adoc/gpg.adoc[adoc/gpg]
+
 include::adoc/haproxy.adoc[adoc/haproxy]
 
 include::adoc/har.adoc[adoc/har]
