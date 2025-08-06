@@ -1,0 +1,16 @@
+
+==  gpg
+:toc:
+:source-highlighter: rouge
+
+renew key
+[source,shell]
+----
+gpg --list-keys
+gpg --edit-key (key id)
+# By default, you're working on the primary key.) If you need to update a sub-key: 
+# gpg> key 1
+gpg> expire
+gpg> save
+----
+
