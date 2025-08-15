@@ -1,0 +1,12 @@
+
+== promethues
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+
+----
+
+https://github.com/prometheus/prometheus/blob/release-3.5/config/testdata/scrape_configs/scrape_config_files1.good.yml
