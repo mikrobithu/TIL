@@ -103,6 +103,8 @@ include::adoc/ponymail-foal.adoc[adoc/ponymail-foal]
 
 include::adoc/postgres.adoc[adoc/postgres]
 
+include::adoc/prometheus.adoc[adoc/prometheus]
+
 include::adoc/ps.adoc[adoc/ps]
 
 include::adoc/rabbitmq.adoc[adoc/rabbitmq]
