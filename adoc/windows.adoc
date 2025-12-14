@@ -1,0 +1,13 @@
+
+==  Windows
+:toc:
+:source-highlighter: rouge
+
+=== Make bootable USB device from installer iso
+
+[source,shell]
+----
+zypper in WoeUSB
+woeusb --workaround-bios-boot-flag --device Downloads/ISOs/Win11_25H2_Hungarian_x64.iso /dev/sdX
+----
+

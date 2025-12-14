@@ -1,0 +1,15 @@
+
+== rocketchat
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+Ctrl+Shift+I
+
+Console:
+
+document.querySelectorAll('.rcx-banner').forEach(el => el.style.display = 'none');
+----
+

@@ -43,4 +43,39 @@ git push origin --delete remotebranch # delete branch remotely
 ----
 
 
+=== history of file in git repo (follow renames)
 
+----
+$ git log --follow -p -- filename
+----
+
+
+=== search string in all files
+
+----
+git log -S STRING
+----
+
+=== create remote repo from existing local repo
+
+
+----
+cd repo
+git init
+touch README.adoc
+git add -A
+git commit -a -m "add readme"
+----
+
+----
+git status
+----
+
+----
+On branch main <----- local branch name
+nothing to commit, working tree clean
+----
+
+----
+git push --set-upstream git@doma.in:project/repo.git main # <---- same as local branch name
+----

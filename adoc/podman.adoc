@@ -1,0 +1,22 @@
+
+== podman
+:toc:
+:source-highlighter: rouge
+
+=== extract content from container 
+
+[source,shell]
+----
+podman create --name tst registry.local/agent:f769de33
+# list content
+podman export tst| tar -t| less
+# extract all content
+podman export tst -o tst.tar
+# extract 1 file
+podman export tst| tar -t| grep kubernetes-rbac-agent
+# determine file type
+podman export tst1| tar --extract usr/bin/kubernetes-rbac-agent -O | file -
+# 
+podman export tst1| tar --extract usr/bin/kubernetes-rbac-agent
+----
+

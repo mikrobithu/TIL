@@ -17,4 +17,8 @@ openssl rsa -in priv.key -out priv-nopass.key
 ----
 
 echo |openssl s_client -connect sites.example.com:443 -servername site1.example.com -showcerts 2>/dev/null | sed --quiet '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'  | openssl x509 -text -noout
+
+openssl s_client -connect sites.examle.com:443 2>/dev/null </dev/null| sed -n '/^-----BEGIN CERTIFICATE-----/,/^-----END CERTIFICATE-----/p' | openssl x509 -text -noout
+
 ----
+

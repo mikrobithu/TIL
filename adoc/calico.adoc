@@ -1,0 +1,11 @@
+
+== calico
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+kubectl -n calico-system set env daemonset/calico-node FELIX_IGNORELOOSERPF=true
+----
+

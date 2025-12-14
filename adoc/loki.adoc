@@ -1,0 +1,28 @@
+
+==  Grafana Loki
+:toc:
+:source-highlighter: rouge
+
+
+=== API
+
+[source,shell]
+----
+k -n loki get ep
+k -n loki get svc
+
+----
+
+=== delete logs 
+
+
+
+[source,shell]
+----
+GET /compactor/ring
+
+POST /loki/api/v1/delete
+PUT /loki/api/v1/delete
+----
+
+https://grafana.com/docs/loki/latest/reference/loki-http-api/#compactor
