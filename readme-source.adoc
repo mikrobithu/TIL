@@ -27,6 +27,8 @@ include::adoc/bash.adoc[adoc/bash]
 
 include::adoc/bash-scripting.adoc[adoc/bash-scripting]
 
+include::adoc/calico.adoc[adoc/calico]
+
 include::adoc/cgroups.adoc[adoc/cgroups]
 
 include::adoc/containerd.adoc[adoc/containerd]
@@ -85,6 +87,8 @@ include::adoc/liquidprompt.adoc[adoc/liquidprompt]
 
 include::adoc/locate.adoc[adoc/locate]
 
+include::adoc/loki.adoc[adoc/loki]
+
 include::adoc/lvm.adoc[adoc/lvm]
 
 include::adoc/markdown.adoc[adoc/markdown]
@@ -98,6 +102,8 @@ include::adoc/nfs.adoc[adoc/nfs]
 include::adoc/openssl.adoc[adoc/openssl]
 
 include::adoc/php.adoc[adoc/php]
+
+include::adoc/podman.adoc[adoc/podman]
 
 include::adoc/ponymail-foal.adoc[adoc/ponymail-foal]
 
@@ -116,6 +122,8 @@ include::adoc/regexp.adoc[adoc/regexp]
 include::adoc/rke2.adoc[adoc/rke2]
 
 include::adoc/rmt.adoc[adoc/rmt]
+
+include::adoc/rocketchat.adoc[adoc/rocketchat]
 
 include::adoc/rsyslog.adoc[adoc/rsyslog]
 
@@ -136,6 +144,8 @@ include::adoc/vagrant.adoc[adoc/vagrant]
 include::adoc/vi.adoc[adoc/vi]
 
 include::adoc/vsphere.adoc[adoc/vsphere]
+
+include::adoc/windows.adoc[adoc/windows]
 
 include::adoc/xz.adoc[adoc/xz]
 
