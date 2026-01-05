@@ -176,7 +176,7 @@ kubectl config use-context <CLUSTER>
 
 ---- 
 
-=== delete nodes legacy objects from rancher deployed cluster
+=== remove heritage object of deleted nodes from rancher deployed cluster
 
 [,bash]
 ----
