@@ -1,0 +1,20 @@
+
+== helm
+:toc:
+:source-highlighter: rouge
+
+=== Helm release stuck in uninstalling
+
+[source,shell]
+----
+helm plugin install https://github.com/helm/helm-mapkubeapis
+
+helm mapkubeapis RELEASE_NAME
+helm del RELEASE_NAME
+
+helm uninstall --debug <release name>
+
+----
+
+
+

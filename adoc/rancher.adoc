@@ -175,3 +175,43 @@ kubectl config get-contexts
 kubectl config use-context <CLUSTER>
 
 ---- 
+
+=== delete nodes legacy objects from rancher deployed cluster
+
+[,bash]
+----
+$ kubectl get nodes.management.cattle.io -A --show-labels
+NAMESPACE      NAME            AGE    LABELS
+c-m-dsfbj2ln   machine-2wfk8   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafmaster03
+c-m-dsfbj2ln   machine-7pc62   168d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafworker03
+c-m-dsfbj2ln   machine-k4fjs   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafmaster05
+c-m-dsfbj2ln   machine-n6c9c   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafworker01
+c-m-dsfbj2ln   machine-w7d57   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafmaster01
+c-m-dsfbj2ln   machine-zll2k   168d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafworker05
+c-m-fkk65d24   machine-25drx   68d    cattle.io/creator=norman,management.cattle.io/nodename=int-kiafworker09
+c-m-fkk65d24   machine-cb8nh   68d    cattle.io/creator=norman,management.cattle.io/nodename=int-kiafworker11
+
+
+
+$ kubectl get nodes.management.cattle.io -A --show-labels | grep -E 'c-m-dsfbj2ln|test'
+c-m-dsfbj2ln   machine-2wfk8   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafmaster03
+c-m-dsfbj2ln   machine-7pc62   168d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafworker03
+c-m-dsfbj2ln   machine-k4fjs   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafmaster05
+c-m-dsfbj2ln   machine-n6c9c   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafworker01
+c-m-dsfbj2ln   machine-w7d57   223d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafmaster01
+c-m-dsfbj2ln   machine-zll2k   168d   cattle.io/creator=norman,management.cattle.io/nodename=test-kiafworker05
+
+$ kubectl -n c-m-t2rpkhbg get nodes.management.cattle.io -o json | jq -r '.items[] | [.metadata.name, (.spec.nodeName // ""),  (.status.nodeIP // ""), ((.status.conditions[]? | select(.type=="Ready") | .status) // "n/a"), (.status.state // "n/a")] | @tsv'
+machine-4qw7b                   True    n/a
+machine-hf2kh                   True    n/a
+machine-kc2xt                   True    n/a
+machine-vkkht                   True    n/a
+machine-x5zvg                   True    n/a
+machine-xlw5v                   True    n/a
+m-1e132d45b796                  n/a     n/a  <==
+m-50b9ad96996e                  n/a     n/a  <==
+m-cb41c5436278                  n/a     n/a  <==
+
+kubectl -n c-m-t2rpkhbg delete nodes.management.cattle.io m-1e132d45b796 m-50b9ad96996e m-cb41c5436278
+----
+
