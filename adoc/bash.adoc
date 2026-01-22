@@ -12,3 +12,10 @@
 HISTTIMEFORMAT=${HISTTIMEFORMAT:-"%F %H:%M:%S "} HISTFILE=/home/user1/.bash_history history
 ----
 
+=== oneliners
+
+----
+# find file without find command (ex: cp)
+
+ls / | while read d; do ls "/$d/cp" 2>/dev/null; done
+----
