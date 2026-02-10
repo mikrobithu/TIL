@@ -33,3 +33,32 @@ systemctl start rke2-server
 kubectl uncordon node1
 ----
 
+[source,shell]
+----
+mv /var/lib/rancher/rke2/server/db/etcd/ /var/lib/rancher/rke2/server/db/etcd_
+mkdir /var/lib/rancher/rke2/server/db/etcd/
+fdisk -l | grep '10 GiB' | cut -d ' ' -f2 | cut -d':' -f1
+
+parted --script /dev/sdb mklabel gpt mkpart primary 0% 100%
+sleep 3
+mkfs.xfs -L etcd /dev/sdb1
+blkid /dev/sdb1
+ 
+echo 'LABEL="etcd" /var/lib/rancher/rke2/server/db/etcd xfs  defaults  0  2' >> /etc/fstab
+mount -a
+mount | grep etcd
+df -h | grep etcd
+
+
+rsync -avz /var/lib/rancher/rke2/server/db/etcd_/ /var/lib/rancher/rke2/server/db/etcd
+df -h | grep etcd
+
+systemctl start rke2-server.service
+
+kubectl -n kube-system get po | grep etc
+
+export CRI_CONFIG_FILE=/var/lib/rancher/rke2/agent/etc/crictl.yaml
+etcdcontainer=$(/var/lib/rancher/rke2/bin/crictl ps --label io.kubernetes.container.name=etcd --quiet)
+/var/lib/rancher/rke2/bin/crictl exec $etcdcontainer etcdctl --cert /var/lib/rancher/rke2/server/tls/etcd/server-client.crt --key /var/lib/rancher/rke2/server/tls/etcd/server-client.key --cacert /var/lib/rancher/rke2/server/tls/etcd/server-ca.crt endpoint health --cluster --write-out=table
+
+----

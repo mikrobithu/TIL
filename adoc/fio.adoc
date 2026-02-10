@@ -1,0 +1,15 @@
+
+== fio 
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+cd /var/lib/rancher/rke2/server/db/etcd
+mkdir test-data
+for i in {1..10} ; do fio --rw=write --ioengine=sync --fdatasync=1  --directory=test-data --size=100m --bs=2300 --name=mytest --output=fio${i}.txt; done
+----
+
+https://support.scc.suse.com/s/kb/slow-etcd-performance-testing-and-optimization?language=en_US
+
