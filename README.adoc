@@ -1086,6 +1086,35 @@ systemctl start rke2-server
 kubectl uncordon node1
 ----
 
+[source,shell]
+----
+mv /var/lib/rancher/rke2/server/db/etcd/ /var/lib/rancher/rke2/server/db/etcd_
+mkdir /var/lib/rancher/rke2/server/db/etcd/
+fdisk -l | grep '10 GiB' | cut -d ' ' -f2 | cut -d':' -f1
+
+parted --script /dev/sdb mklabel gpt mkpart primary 0% 100%
+sleep 3
+mkfs.xfs -L etcd /dev/sdb1
+blkid /dev/sdb1
+
+echo 'LABEL="etcd" /var/lib/rancher/rke2/server/db/etcd xfs  defaults  0  2' >> /etc/fstab
+mount -a
+mount | grep etcd
+df -h | grep etcd
+
+
+rsync -avz /var/lib/rancher/rke2/server/db/etcd_/ /var/lib/rancher/rke2/server/db/etcd
+df -h | grep etcd
+
+systemctl start rke2-server.service
+
+kubectl -n kube-system get po | grep etc
+
+export CRI_CONFIG_FILE=/var/lib/rancher/rke2/agent/etc/crictl.yaml
+etcdcontainer=$(/var/lib/rancher/rke2/bin/crictl ps --label io.kubernetes.container.name=etcd --quiet)
+/var/lib/rancher/rke2/bin/crictl exec $etcdcontainer etcdctl --cert /var/lib/rancher/rke2/server/tls/etcd/server-client.crt --key /var/lib/rancher/rke2/server/tls/etcd/server-client.key --cacert /var/lib/rancher/rke2/server/tls/etcd/server-ca.crt endpoint health --cluster --write-out=table
+
+----
 
 
 == ffmpeg
@@ -1148,6 +1177,22 @@ ffmpeg -i {$pathFileName} -y {$destinationFile}
 ----
 find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 ----
+
+
+== fio
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+cd /var/lib/rancher/rke2/server/db/etcd
+mkdir test-data
+for i in {1..10} ; do fio --rw=write --ioengine=sync --fdatasync=1  --directory=test-data --size=100m --bs=2300 --name=mytest --output=fio${i}.txt; done
+----
+
+https://support.scc.suse.com/s/kb/slow-etcd-performance-testing-and-optimization?language=en_US
+
 
 
 == FluentD
@@ -3469,6 +3514,36 @@ end
 ----
 for i in $(vagrant global-status | grep virtualbox | awk '{print $5}') ; do cd $i ; vagrant destroy -f ; done
 ----
+
+
+== velero
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+$ kubectl -n velero get backups.velero.io daily-backup-20260119190349 -o json | jq '.status|"errors: \(.errors) warnings: \(.warnings)"'
+"errors: 63 warnings: 113"
+
+$ kubectl -n velero create -f - << EOF
+apiVersion: velero.io/v1
+kind: DownloadRequest
+metadata:
+  name: log-20260119190349
+spec:
+  target:
+    kind: BackupLog
+    name: daily-backup-20260119190349
+EOF
+----
+# 1
+kubectl -n velero get downloadrequest log-20260119190349 -o jsonpath='{.status.phase}'
+Processed # <-- its ready
+# 2
+kubectl -n velero get downloadrequest log-20260119190349 -o jsonpath='{.status.downloadURL}'
+# 3
+curl -kL '<downloadURL>' -o daily-backup-20260119190349-logs.gz
 
 :source-highlighter: rouge
 :toc:

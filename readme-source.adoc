@@ -51,6 +51,8 @@ include::adoc/ffmpeg.adoc[adoc/ffmpeg]
 
 include::adoc/find.adoc[adoc/find]
 
+include::adoc/fio.adoc[adoc/fio]
+
 include::adoc/fluentd.adoc[adoc/fluentd]
 
 include::adoc/git.adoc[adoc/git]
@@ -142,6 +144,8 @@ include::adoc/ssh.adoc[adoc/ssh]
 include::adoc/ubuntu.adoc[adoc/ubuntu]
 
 include::adoc/vagrant.adoc[adoc/vagrant]
+
+include::adoc/velero.adoc[adoc/velero]
 
 include::adoc/vi.adoc[adoc/vi]
 
