@@ -2096,6 +2096,20 @@ kubectl run git-bash --rm -i -t --restart=Never --image=registry.suse.com/suse/g
 ----
 
 
+=== list pvc-s which attach node01
+
+----
+kubectl get pods -A -o json | jq -r '
+  .items[]
+  | select(.spec.nodeName=="node01")
+  | .metadata.namespace as $ns
+  | .spec.volumes[]?
+  | select(.persistentVolumeClaim != null)
+  | "\($ns)\t\(.persistentVolumeClaim.claimName)"
+' | sort -u
+----
+
+
 === cheatsheet
 
 source: https://archive.ph/jpDzU#selection-1166.0-1166.1
@@ -2521,6 +2535,7 @@ alias klog='kubectl logs'
 alias kex='kubectl exec -it'
 alias kpf='kubectl port-forward'
 ----
+
 
 
 :toc:
