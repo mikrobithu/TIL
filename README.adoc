@@ -1832,6 +1832,16 @@ kscreen-doctor output.DP-1.position.0,0 output.eDP-1.position.1920,0 output.DP-3
 :source-highlighter: rouge
 :toc:
 
+== daemonset scale down/up
+
+[,shell]
+----
+# down
+kubectl -n <namespace> patch daemonset <daemonsetname> -p '{"spec": {"template": {"spec": {"nodeSelector": {"non-existing": "true"}}}}}'
+# up
+kubectl -n <namespace> patch daemonset <daemonsetname> --type json -p='[{"op": "remove", "path": "/spec/template/spec/nodeSelector/non-existing"}]'
+----
+
 == bash completion
 
 [,shell]
