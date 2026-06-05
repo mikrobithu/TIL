@@ -3602,6 +3602,17 @@ dp # diff push, Push the changes to the current file.
 
 ----
 
+== yamlpath
+
+https://github.com/psycofdj/yaml-path/tree/master/plugin
+
+----
+vi
+::Yamlpath "."
+----
+
+F12
+
 :toc:
 :source-highlighter: rouge
 
