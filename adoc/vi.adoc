@@ -16,3 +16,14 @@ dp # diff push, Push the changes to the current file.
 :diffupdate # rescan diff
 
 ----
+
+== yamlpath
+
+https://github.com/psycofdj/yaml-path/tree/master/plugin
+
+----
+vi 
+::Yamlpath "."
+----
+
+F12 
