@@ -143,6 +143,8 @@ include::adoc/slemicro.adoc[adoc/slemicro]
 
 include::adoc/ssh.adoc[adoc/ssh]
 
+include::adoc/thudnerbird.adoc[adoc/thudnerbird]
+
 include::adoc/ubuntu.adoc[adoc/ubuntu]
 
 include::adoc/vagrant.adoc[adoc/vagrant]

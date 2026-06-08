@@ -3497,6 +3497,21 @@ for i in srv1 srv2 srv3 ; do sshpass -p server_password ssh-copy-id -oStrictHost
 
 
 
+== Thunderbird
+
+=== AI
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+C-A-A - open thunderbirdAI
+C-A-M - open Mail Merge
+----
+
+
+
 == Ubuntu
 :toc:
 :source-highlighter: rouge
