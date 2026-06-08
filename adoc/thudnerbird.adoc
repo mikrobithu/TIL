@@ -1,0 +1,14 @@
+
+== Thunderbird
+
+=== AI   
+:toc:
+:source-highlighter: rouge
+
+
+[source,shell]
+----
+C-A-A - open thunderbirdAI
+C-A-M - open Mail Merge
+----
+
