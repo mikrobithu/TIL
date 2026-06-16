@@ -117,6 +117,8 @@ include::adoc/prometheus.adoc[adoc/prometheus]
 
 include::adoc/ps.adoc[adoc/ps]
 
+include::adoc/qcow2.adoc[adoc/qcow2]
+
 include::adoc/rabbitmq.adoc[adoc/rabbitmq]
 
 include::adoc/rancher.adoc[adoc/rancher]
