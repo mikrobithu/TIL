@@ -1,0 +1,44 @@
+
+== QCOW2
+:toc:
+:source-highlighter: rouge
+
+=== expand
+
+[source,shell]
+----
+ssh vm1
+halt -p
+
+qemu-img resize vm1/disk.qcow2 +150G
+virsh start vm1
+
+
+ssh vm1
+fdisk -l
+Disk /dev/vda: 182 GiB, 195421011968 bytes, 381681664 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 8023268E-C5B7-466C-BEC9-E843454473BF
+
+Device     Start       End   Sectors  Size Type
+/dev/vda1   2048      6143      4096    2M BIOS boot
+/dev/vda2   6144     47103     40960   20M EFI System
+/dev/vda3  47104 381681630 381634527  182G Linux root (x86-64)
+
+
+Disk /dev/vdb: 10 MiB, 10485760 bytes, 20480 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+growpart /dev/vda 3
+transactional-update -c shell
+btrfs filesystem resize max /
+exit
+reboot
+----
+
