@@ -1195,6 +1195,23 @@ https://support.scc.suse.com/s/kb/slow-etcd-performance-testing-and-optimization
 
 
 
+== Fleet
+:toc:
+:source-highlighter: rouge
+
+=== bundle stuck
+
+
+[source,shell]
+----
+kubectl --context downstream-cluster1 -n cattle-fleet-system delete po -l app=fleet-agent
+kubectl --context local -n cluster-fleet-default-downstream-cluster1-d143efe17fbc get bundledeployments.fleet.cattle.io
+kubectl --context local -n cluster-fleet-default-downstream-cluster1-d143efe17fbc delete bundledeployments.fleet.cattle.io rancher-monitoring-rancher-monitoring-10-ranche-5b2ba
+
+----
+
+
+
 == FluentD
 :toc:
 :source-highlighter: rouge

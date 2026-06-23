@@ -53,6 +53,8 @@ include::adoc/find.adoc[adoc/find]
 
 include::adoc/fio.adoc[adoc/fio]
 
+include::adoc/fleet.adoc[adoc/fleet]
+
 include::adoc/fluentd.adoc[adoc/fluentd]
 
 include::adoc/git.adoc[adoc/git]
