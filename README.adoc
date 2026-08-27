@@ -1195,6 +1195,11 @@ bash instant-fio-master.sh
 ----
 
 
+[source,shell]
+----
+podman cp 0f34557186fc:/usr/local/bin/fio /tmp/
+----
+
 
 
 == Fleet
