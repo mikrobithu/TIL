@@ -14,3 +14,11 @@ kubectl --context local -n cluster-fleet-default-downstream-cluster1-d143efe17fb
 
 ----
 
+
+=== Generating Diffs to Ignore Modified GitRepos
+
+----
+k -n cluster-fleet-default-test-cluster-eb18fca9681 get bundledeployments.fleet.cattle.io | grep modified
+
+fleet bundlediff --fleet-yaml --bundle-deployment middleware-k8s-keycloak-operator -n cluster-fleet-default-test-cluster-eb18fca9681c >> fleet.yaml
+----
