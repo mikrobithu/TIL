@@ -1179,19 +1179,21 @@ find / -name "*.rpmnew" -not -path "/var/lib/docker*"
 ----
 
 
-== fio
+==  fio
 :toc:
 :source-highlighter: rouge
 
+=== build
 
 [source,shell]
 ----
-cd /var/lib/rancher/rke2/server/db/etcd
-mkdir test-data
-for i in {1..10} ; do fio --rw=write --ioengine=sync --fdatasync=1  --directory=test-data --size=100m --bs=2300 --name=mytest --output=fio${i}.txt; done
+podman run -it --entrypoint=bin/bash registry.suse.com/bci/gcc:15
+git clone https://github.com/rancherlabs/support-tools.git
+cd instant-fio-master/
+git checkout nodes-yaml
+bash instant-fio-master.sh
 ----
 
-https://support.scc.suse.com/s/kb/slow-etcd-performance-testing-and-optimization?language=en_US
 
 
 
@@ -1210,6 +1212,14 @@ kubectl --context local -n cluster-fleet-default-downstream-cluster1-d143efe17fb
 
 ----
 
+
+=== Generating Diffs to Ignore Modified GitRepos
+
+----
+k -n cluster-fleet-default-test-cluster-eb18fca9681 get bundledeployments.fleet.cattle.io | grep modified
+
+fleet bundlediff --fleet-yaml --bundle-deployment middleware-k8s-keycloak-operator -n cluster-fleet-default-test-cluster-eb18fca9681c >> fleet.yaml
+----
 
 
 == FluentD
