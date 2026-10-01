@@ -9,3 +9,17 @@
 kubectl -n calico-system set env daemonset/calico-node FELIX_IGNORELOOSERPF=true
 ----
 
+
+=== Warning  FailedCreatePodSandBox  kubelet  (combined from similar events): Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox: plugin type="calico" failed (add): cannot allocate new block due to per host block limit
+
+[,shell]
+----
+CVER=$(kubectl -n calico-system get ds calico-node -o yaml | grep 'rancher/mirrored-calico-node:v' | tail -n1 | cut -d: -f3)
+echo $CVER
+curl -L https://github.com/projectcalico/calico/releases/download/${CVER}/calicoctl-linux-amd64 -o calicoctl
+chmod +x calicoctl
+./calicoctl datastore migrate lock
+./calicoctl ipam check -o report.json
+./calicoctl ipam release --from-report report.json
+./calicoctl datastore migrate unlock
+----
